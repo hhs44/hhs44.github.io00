@@ -368,6 +368,30 @@
   </url>
   
   <url>
+    <loc>https://hhs44.github.io/en/about/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://hhs44.github.io/about/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hhs44.github.io/es/about/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://hhs44.github.io/de/about/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hhs44.github.io/en/about/about/"
+                />
+  </url>
+  
+  <url>
     <loc>https://hhs44.github.io/en/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -376,13 +400,13 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="https://hhs44.github.io/es/about/"
+                hreflang="de"
+                href="https://hhs44.github.io/de/about/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
-                href="https://hhs44.github.io/de/about/"
+                hreflang="es"
+                href="https://hhs44.github.io/es/about/"
                 />
     <xhtml:link
                 rel="alternate"

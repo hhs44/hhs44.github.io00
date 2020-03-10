@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hhs44.github.io/about/</loc>
+    <lastmod>2020-03-10T21:13:28+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://hhs44.github.io/de/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hhs44.github.io/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hhs44.github.io/es/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://hhs44.github.io/about/"
+                />
+  </url>
+  
+  <url>
     <loc>https://hhs44.github.io/data/</loc>
     <lastmod>2020-03-10T21:13:28+08:00</lastmod>
   </url>
@@ -248,27 +273,27 @@
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/about/</loc>
+    <loc>https://hhs44.github.io/about/about/</loc>
     <lastmod>2020-03-09T23:13:22+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hhs44.github.io/en/about/"
+                href="https://hhs44.github.io/en/about/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://hhs44.github.io/es/about/"
+                href="https://hhs44.github.io/es/about/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://hhs44.github.io/de/about/"
+                href="https://hhs44.github.io/de/about/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://hhs44.github.io/about/"
+                href="https://hhs44.github.io/about/about/"
                 />
   </url>
   

@@ -46,11 +46,11 @@
     
     <item>
       <title>About</title>
-      <link>https://hhs44.github.io/about/</link>
+      <link>https://hhs44.github.io/about/about/</link>
       <pubDate>Mon, 09 Mar 2020 23:13:22 +0800</pubDate>
       
-      <guid>https://hhs44.github.io/about/</guid>
-      <description>快速入门一个新的博客框架 -hugo </description>
+      <guid>https://hhs44.github.io/about/about/</guid>
+      <description> 本站为个人使用  </description>
     </item>
     
   </channel>
