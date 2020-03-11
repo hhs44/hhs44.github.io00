@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>re on Huang`s Hugo</title>
+    <link>https://hhs44.github.io/tags/re/</link>
+    <description>Recent content in re on Huang`s Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Mar 2020 22:52:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/tags/re/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python3 正则表达式之深入源码</title>
+      <link>https://hhs44.github.io/2020/03/python3-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81/</link>
+      <pubDate>Tue, 10 Mar 2020 22:52:41 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/2020/03/python3-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81/</guid>
+      <description>&lt;p&gt;正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。re 模块使 Python 语言拥有全部的正则表达式功能。&lt;/p&gt;
+&lt;p&gt;首先我们以一个案例引入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户民匹配问题：&lt;/p&gt;
+&lt;p&gt;要求：&lt;/p&gt;
+&lt;p&gt;1. 用户名只能包含数字 字母 下划线
+2. 不能以数字开头
+3. 长度在 6 到 16 位范围内&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
