@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+  <meta charset="utf-8">
+<title>My First Blog - Huanghs blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="My First Blog">
+<meta itemprop="description" content="对主题的简单了解与处理
+
+
+此处使用的主题为hugo-theme-bootstrap4-blog
+
+简单初始化后的见面如下，其中home，about，contact的页面内容直接使用 hugo new name.md 即可进行内容的填充。posts则为自己自定义的文章分类。
+">
+<meta itemprop="datePublished" content="2020-03-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="35">
+<meta itemprop="image" content="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw">
+
+
+
+<meta itemprop="keywords" content="demo,hugo,theme," /><meta property="og:title" content="My First Blog" />
+<meta property="og:description" content="对主题的简单了解与处理
+
+
+此处使用的主题为hugo-theme-bootstrap4-blog
+
+简单初始化后的见面如下，其中home，about，contact的页面内容直接使用 hugo new name.md 即可进行内容的填充。posts则为自己自定义的文章分类。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs44.github.io/blog/my-first-blog/" />
+<meta property="og:image" content="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw" />
+<meta property="article:published_time" content="2020-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw"/>
+
+<meta name="twitter:title" content="My First Blog"/>
+<meta name="twitter:description" content="对主题的简单了解与处理
+
+
+此处使用的主题为hugo-theme-bootstrap4-blog
+
+简单初始化后的见面如下，其中home，about，contact的页面内容直接使用 hugo new name.md 即可进行内容的填充。posts则为自己自定义的文章分类。
+"/>
+<link rel="stylesheet" href="/css/bundle.min.0f503091f6d182aa9efae8375b9f0c39ddf92885c03bfed720bbed36d184e783.css" integrity="sha256-D1AwkfbRgqqe&#43;ug3W58MOd35KIXAO/7XILvtNtGE54M=">
+        <link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            博客
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> 首页</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> 博客</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> 分类</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='far fa-envelope'></i> 标签</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> 关于</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="zh-cn">zh-cn</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh-cn" class="link active">中文 (zh-cn)</a>
+  
+    
+      
+        <a href="/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
+  <header>
+    <h1>Huanghs的个人博客 </h1>
+  </header>
+  <main>
+    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/my-first-blog/">My First Blog</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-03-10 00:00:00 &#43;0000 UTC">
+      March 10, 2020
+    </time>
+    <span class="author">Huanghs</span>
+    
+      <p>1 分钟</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+
+  </section>
+  
+  <a href="/blog/my-first-blog/" class="image featured">
+    
+      <img src="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <h1 id="对主题的简单了解与处理">对主题的简单了解与处理</h1>
+<hr>
+<blockquote>
+<p>此处使用的主题为<a href="https://github.com/alanorth/hugo-theme-bootstrap4-blog">hugo-theme-bootstrap4-blog</a></p>
+</blockquote>
+<p>简单初始化后的见面如下，其中home，about，contact的页面内容直接使用 <code>hugo new name.md </code>即可进行内容的填充。posts则为自己自定义的文章分类。</p>
+<p><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200310134218.png" alt=""></p>
+<h4 id="用法">用法</h4>
+<hr>
+<p>将存储库克隆到您站点的<code>themes</code>目录。</p>
+<p>然后修改 <code>config.toml</code> 或 <code>config.yaml</code> 增加一行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;主题文件夹的名称&#34;</span>
+</code></pre></div><h4 id="内容的建议">内容的建议</h4>
+<hr>
+<ul>
+<li>将博客文章保留在<code>content/posts</code>目录中，例如：<code>content/posts/my-first-post.md</code></li>
+</ul>
+<ul>
+<li>
+<p>将静态页面保留在<code>content</code>目录中，例如：<code>content/about.md</code></p>
+</li>
+<li>
+<p>将类似图像的媒体保留在<code>static</code>目录中，例如：<code>static/2016/10/screenshot.png</code></p>
+</li>
+<li>
+<p>如果您希望在社交媒体上分享帖子时显示图片，请在帖子的首页中至少指定一张图片，例如： <code>images: [&quot;/2016/10/screenshot.png&quot;]</code></p>
+</li>
+<li>
+<p>使用<code>&lt;!--more--&gt;</code>帖子中的标签控制摘要页面上显示的帖子数量</p>
+</li>
+<li>
+<p>通过设置帖子的<code>comments = false</code>前沿禁用评论</p>
+</li>
+<li>
+<p>通过设置禁用整个站点（或单个页面/帖子）上的社交共享图标 <code>sharingicons = false</code></p>
+</li>
+<li>
+<p>如果您的内容存储在git中，请添加<code>enableGitInfo = true</code>到您的网站配置中，Hugo将使用git历史记录在页面元数据中设置更准确的修改日期</p>
+</li>
+</ul>
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/development">Development</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/golang">golang</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/demo">demo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/hugo">hugo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/theme">theme</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+  
+    <a href="/blog/python3-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81/" class="button"><div class="next"><div>python3 正则表达式</div></div></a>
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最新文章</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/markdown-reference-/" class="image featured">
+    
+      <img src="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/markdown-reference-/">Markdown For Typora</a></h1>
+          <time class="published" datetime="">March 12, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/python3-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81/" class="image featured">
+    
+      <img src="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/python3-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81/">python3 正则表达式</a></h1>
+          <time class="published" datetime="">March 11, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/my-first-blog/" class="image featured">
+    
+      <img src="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/my-first-blog/">My First Blog</a></h1>
+          <time class="published" datetime="">March 10, 2020</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">查看更多</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">分类</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/development/">development<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/golang/">golang<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/syntax/">syntax<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>关于</h1>
+      </header>
+      <p>test</p>
+      <footer>
+        <a href="/about" class="button">了解更多</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Huanghs blog
+      
+    . <br>
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.66.0'>Hugo</a> 驱动
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

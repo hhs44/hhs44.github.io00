@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Huanghs blog</title>
+    <link>https://hhs44.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Blog</title>
+      <link>https://hhs44.github.io/blog/my-first-blog/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/my-first-blog/</guid>
+      <description>&lt;h1 id=&#34;对主题的简单了解与处理&#34;&gt;对主题的简单了解与处理&lt;/h1&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此处使用的主题为&lt;a href=&#34;https://github.com/alanorth/hugo-theme-bootstrap4-blog&#34;&gt;hugo-theme-bootstrap4-blog&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单初始化后的见面如下，其中home，about，contact的页面内容直接使用 &lt;code&gt;hugo new name.md &lt;/code&gt;即可进行内容的填充。posts则为自己自定义的文章分类。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200310134218.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

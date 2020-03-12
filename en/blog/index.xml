@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Huanghs blog</title>
+    <link>https://hhs44.github.io/en/blog/</link>
+    <description>Recent content in Blog on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://hhs44.github.io/en/blog/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/en/blog/migrate-from-jekyll/</guid>
+      <description>+++ author = &amp;ldquo;Huanghs&amp;rdquo; title = &amp;ldquo;Migrate to Hugo from Jekyll&amp;rdquo; date = &amp;ldquo;2020-03-10&amp;rdquo; tags = [] categories = [ ] images = [&amp;ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&amp;rdquo;] type = &amp;ldquo;post&amp;rdquo; aliases = [&amp;ldquo;migrate-from-jekyl&amp;rdquo;]
++++
+Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like</description>
+    </item>
+    
+    <item>
+      <title>Markdown For Typora</title>
+      <link>https://hhs44.github.io/en/blog/markdown-reference-/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/en/blog/markdown-reference-/</guid>
+      <description>Markdown For Typora Overview Markdown is created by Daring Fireball; the original guideline is here. Its syntax, however, varies between different parsers or editors. Typora is using GitHub Flavored Markdown.
+[toc]
+Block Elements Paragraph and line breaks A paragraph is simply one or more consecutive lines of text. In markdown source code, paragraphs are separated by two or more blank lines. In Typora, you only need one blank line (press Return once) to create a new paragraph.</description>
+    </item>
+    
+    <item>
+      <title>Markdown语法指南</title>
+      <link>https://hhs44.github.io/en/blog/markdown-syntax/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/en/blog/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>https://hhs44.github.io/en/blog/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/en/blog/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
+pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://hhs44.github.io/en/blog/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/en/blog/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
