@@ -18,7 +18,7 @@
       
       <guid>https://hhs44.github.io/blog/my-first-blog/</guid>
       <description>&lt;h1 id=&#34;对主题的简单了解与处理&#34;&gt;对主题的简单了解与处理&lt;/h1&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;此处使用的主题为&lt;a href=&#34;https://github.com/alanorth/hugo-theme-bootstrap4-blog&#34;&gt;hugo-theme-bootstrap4-blog&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

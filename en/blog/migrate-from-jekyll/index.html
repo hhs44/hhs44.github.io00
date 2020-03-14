@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,10 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
 <meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="Migrate to Hugo from Jekyll">
-<meta itemprop="description" content="&#43;&#43;&#43; author = &ldquo;Huanghs&rdquo; title = &ldquo;Migrate to Hugo from Jekyll&rdquo; date = &ldquo;2020-03-10&rdquo; tags = [] categories = [ ] images = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;] type = &ldquo;post&rdquo; aliases = [&ldquo;migrate-from-jekyl&rdquo;]
+<meta itemprop="description" content="&#43;&#43;&#43;
+author = &ldquo;Huanghs&rdquo;
+title = &ldquo;Migrate to Hugo from Jekyll&rdquo;
+date = &ldquo;2020-03-10&rdquo;
+tags = []
+categories = [ ]
+images = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;]
+type = &ldquo;post&rdquo;
+aliases = [&ldquo;migrate-from-jekyl&rdquo;]
 &#43;&#43;&#43;
-Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like">
+Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there.
+With Jekyll, something that looked like">
 <meta itemprop="datePublished" content="2014-03-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-03-10T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="844">
@@ -17,24 +39,119 @@ Move static content to static Jekyll has a rule that any directory not starting 
 
 
 <meta itemprop="keywords" content="" /><meta property="og:title" content="Migrate to Hugo from Jekyll" />
-<meta property="og:description" content="&#43;&#43;&#43; author = &ldquo;Huanghs&rdquo; title = &ldquo;Migrate to Hugo from Jekyll&rdquo; date = &ldquo;2020-03-10&rdquo; tags = [] categories = [ ] images = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;] type = &ldquo;post&rdquo; aliases = [&ldquo;migrate-from-jekyl&rdquo;]
+<meta property="og:description" content="&#43;&#43;&#43;
+author = &ldquo;Huanghs&rdquo;
+title = &ldquo;Migrate to Hugo from Jekyll&rdquo;
+date = &ldquo;2020-03-10&rdquo;
+tags = []
+categories = [ ]
+images = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;]
+type = &ldquo;post&rdquo;
+aliases = [&ldquo;migrate-from-jekyl&rdquo;]
 &#43;&#43;&#43;
-Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like" />
+Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there.
+With Jekyll, something that looked like" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hhs44.github.io/en/blog/migrate-from-jekyll/" />
 <meta property="article:published_time" content="2014-03-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2014-03-10T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Migrate to Hugo from Jekyll"/>
-<meta name="twitter:description" content="&#43;&#43;&#43; author = &ldquo;Huanghs&rdquo; title = &ldquo;Migrate to Hugo from Jekyll&rdquo; date = &ldquo;2020-03-10&rdquo; tags = [] categories = [ ] images = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;] type = &ldquo;post&rdquo; aliases = [&ldquo;migrate-from-jekyl&rdquo;]
+<meta name="twitter:description" content="&#43;&#43;&#43;
+author = &ldquo;Huanghs&rdquo;
+title = &ldquo;Migrate to Hugo from Jekyll&rdquo;
+date = &ldquo;2020-03-10&rdquo;
+tags = []
+categories = [ ]
+images = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;]
+type = &ldquo;post&rdquo;
+aliases = [&ldquo;migrate-from-jekyl&rdquo;]
 &#43;&#43;&#43;
-Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like"/>
-<link rel="stylesheet" href="/css/bundle.min.0f503091f6d182aa9efae8375b9f0c39ddf92885c03bfed720bbed36d184e783.css" integrity="sha256-D1AwkfbRgqqe&#43;ug3W58MOd35KIXAO/7XILvtNtGE54M=">
+Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there.
+With Jekyll, something that looked like"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/css/bundle.min.b2b2abee095149a60c0a1a2c4fab4b7c140b32ca88abc3d2f83d0dd903b6f634.css" integrity="sha256-srKr7glRSaYMChosT6tLfBQLMsqIq8PS&#43;D0N2QO29jQ=">
         <link rel="stylesheet" href="/css/add-on.css">
+
 </head>
 
   <body>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/en/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
+  <header>
+    <h1>Huanghs的个人博客 </h1>
+  </header>
+  <main>
+    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+
+      <main id="site-main">
+        <article class="post">
+            
+            <header>
+  <div class="title">
     
+      <h1><a href="/en/blog/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></h1>
+      
+    
+    
+  </div>
+</header>
+
+			      
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
@@ -119,92 +236,20 @@ Move static content to static Jekyll has a rule that any directory not starting 
   
 </header>
 
-    <div id="wrapper">
-      <section id="site-intro">
-  <a href="/en/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
-  <header>
-    <h1>Huanghs的个人博客 </h1>
-  </header>
-  <main>
-    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
-  </main>
-  
-    <footer>
-      <ul class="socnet-icons">
-        
-
-        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
-<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
-
-      </ul>
-    </footer>
-  
-</section>
-
-      <main id="site-main">
-        <article class="post">
-            
-            <header>
-  <div class="title">
-    
-      <h1><a href="/en/blog/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></h1>
-      
-    
-    
-  </div>
-</header>
-
+			
             <div id="content">
-                <p>+++
-author = &ldquo;Huanghs&rdquo;
-title = &ldquo;Migrate to Hugo from Jekyll&rdquo;
-date = &ldquo;2020-03-10&rdquo;
-tags = []
-categories = [ ]
-images  = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;]
-type = &ldquo;post&rdquo;
+                <p>+++<br />
+author = &ldquo;Huanghs&rdquo;<br />
+title = &ldquo;Migrate to Hugo from Jekyll&rdquo;<br />
+date = &ldquo;2020-03-10&rdquo;<br />
+tags = []<br />
+categories = [ ]<br />
+images  = [&ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&rdquo;]<br />
+type = &ldquo;post&rdquo;<br />
 aliases = [&ldquo;migrate-from-jekyl&rdquo;]</p>
 <p>+++</p>
 <h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
-<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
+<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.<br />
 With Jekyll, something that looked like</p>
 <pre><code>▾ &lt;root&gt;/
     ▾ images/
@@ -340,6 +385,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
             </div>
         </article>
       </main>
+	  
       <section id="site-sidebar">
   
     <section id="recent-posts">
@@ -352,7 +398,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
           
   <a href="/en/blog/markdown-reference-/" class="image featured">
     
-      <img src="https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw" alt="">
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/pic02.jpg" alt="">
     
   </a>
 
@@ -456,18 +502,18 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 
 
 
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
 
 
 
 
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
-
-
-
-
-
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
 
 
 
@@ -475,19 +521,19 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 
 <li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
 <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
 
 
 
-
-
-
-
-
-
-
-
-
-
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
 <li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
 
       </ul>
@@ -505,7 +551,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b17fef5a58c033a8a59f57c83aa975a251aecff921cbd36c12e975d530fa023b.js" integrity="sha256-sX/vWljAM6iln1fIOql1olGuz/khy9NsEul11TD6Ajs="></script>
     <script src="/js/add-on.js"></script>
     </div>
   </body>

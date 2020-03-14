@@ -37,7 +37,7 @@ Block Elements Paragraph and line breaks A paragraph is simply one or more conse
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hhs44.github.io/en/blog/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de&lt;br /&gt;
 pectora summo.&lt;/p&gt;</description>
     </item>
     

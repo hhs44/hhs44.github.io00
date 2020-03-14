@@ -17,9 +17,18 @@
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://hhs44.github.io/en/blog/migrate-from-jekyll/</guid>
-      <description>+++ author = &amp;ldquo;Huanghs&amp;rdquo; title = &amp;ldquo;Migrate to Hugo from Jekyll&amp;rdquo; date = &amp;ldquo;2020-03-10&amp;rdquo; tags = [] categories = [ ] images = [&amp;ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&amp;rdquo;] type = &amp;ldquo;post&amp;rdquo; aliases = [&amp;ldquo;migrate-from-jekyl&amp;rdquo;]
+      <description>+++
+author = &amp;ldquo;Huanghs&amp;rdquo;
+title = &amp;ldquo;Migrate to Hugo from Jekyll&amp;rdquo;
+date = &amp;ldquo;2020-03-10&amp;rdquo;
+tags = []
+categories = [ ]
+images = [&amp;ldquo;https://lh3.googleusercontent.com/proxy/HLWgY5JARb39FVmAX5JivlzFDzAwyMufiK6UbBAwNtqdhoGtitbNfZYiJKyM0vDnqyjrLJTtUFfRU8inzX5NpLcbjGA3tUJ-Dw67WOzej_Uh14jOD0Wadw&amp;rdquo;]
+type = &amp;ldquo;post&amp;rdquo;
+aliases = [&amp;ldquo;migrate-from-jekyl&amp;rdquo;]
 +++
-Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like</description>
+Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there.
+With Jekyll, something that looked like</description>
     </item>
     
     <item>
@@ -61,7 +70,7 @@ Block Elements Paragraph and line breaks A paragraph is simply one or more conse
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hhs44.github.io/en/blog/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de&lt;br /&gt;
 pectora summo.&lt;/p&gt;</description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test on Huanghs blog</title>
+    <link>https://hhs44.github.io/categories/test/</link>
+    <description>Recent content in test on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>系统管理和自动化运维(网络篇)</title>
+      <link>https://hhs44.github.io/blog/2020-03-13-python-linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E4%B8%80/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/2020-03-13-python-linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E4%B8%80/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
