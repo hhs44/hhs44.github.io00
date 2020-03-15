@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 14 Mar 2020 23:14:42 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Django</title>
+      <link>https://hhs44.github.io/tags/django/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://hhs44.github.io/tags/html/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://hhs44.github.io/tags/mysql/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>基础</title>
+      <link>https://hhs44.github.io/tags/%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://hhs44.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>test</title>
@@ -80,6 +125,69 @@
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hhs44.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongoDB</title>
+      <link>https://hhs44.github.io/tags/mongodb/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://hhs44.github.io/tags/redis/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hibernate5</title>
+      <link>https://hhs44.github.io/tags/hibernate5/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/hibernate5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>idea</title>
+      <link>https://hhs44.github.io/tags/idea/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/idea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csitool</title>
+      <link>https://hhs44.github.io/tags/csitool/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/csitool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pycharm</title>
+      <link>https://hhs44.github.io/tags/pycharm/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/pycharm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>next</title>
+      <link>https://hhs44.github.io/tags/next/</link>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/next/</guid>
       <description></description>
     </item>
     

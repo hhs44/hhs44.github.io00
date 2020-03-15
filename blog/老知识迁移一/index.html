@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+  <meta charset="utf-8">
+<title>老知识迁移（一） - Huanghs blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="老知识迁移（一）">
+<meta itemprop="description" content="从本地整合的一些年代久远的知识">
+<meta itemprop="datePublished" content="2020-03-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="501">
+<meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png">
+
+
+
+<meta itemprop="keywords" content="mysql,Django,基础,html," /><meta property="og:title" content="老知识迁移（一）" />
+<meta property="og:description" content="从本地整合的一些年代久远的知识" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/" />
+<meta property="og:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" />
+<meta property="article:published_time" content="2020-03-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png"/>
+
+<meta name="twitter:title" content="老知识迁移（一）"/>
+<meta name="twitter:description" content="从本地整合的一些年代久远的知识"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/css/bundle.min.b2b2abee095149a60c0a1a2c4fab4b7c140b32ca88abc3d2f83d0dd903b6f634.css" integrity="sha256-srKr7glRSaYMChosT6tLfBQLMsqIq8PS&#43;D0N2QO29jQ=">
+        <link rel="stylesheet" href="/css/add-on.css">
+
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            博客
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> 首页</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> 博客</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> 分类</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='far fa-envelope'></i> 标签</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> 关于</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="zh-cn">zh-cn</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh-cn" class="link active">中文 (zh-cn)</a>
+  
+    
+      
+        <a href="/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+
+    </menu>
+  
+</header>
+
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
+  <header>
+    <h1>Huanghs的个人博客 </h1>
+  </header>
+  <main>
+    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/">老知识迁移（一）</a></h2>
+    
+    
+        <p>从本地整合的一些年代久远的知识</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-03-15 00:00:00 &#43;0000 UTC">
+      March 15, 2020
+    </time>
+    <span class="author">浩书</span>
+    
+      <p>3 分钟</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+
+  </section>
+  
+  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p>有前端基础，mysql基础，django基础。</p>
+<h2 id="一前端html标签简述">一、前端html标签简述</h2>
+<h3 id="11基本结构">1.1基本结构</h3>
+<ul>
+<li>
+<p>&lt;开始标签 属性名=”属性值”&gt;内容&lt;/&gt;</p>
+</li>
+<li>
+<p>&lt;开始标签/&gt;  /自结束符</p>
+</li>
+</ul>
+<h3 id="12基本规范规范">1.2基本规范规范</h3>
+<ul>
+<li>
+<p>有尖括号把关键字括起来</p>
+</li>
+<li>
+<p>关键字要小写</p>
+</li>
+<li>
+<p>标签中可以嵌套其他标签，但不能交叉嵌套</p>
+</li>
+<li>
+<p>属性值要用双引号括起来</p>
+</li>
+</ul>
+<h3 id="13文本标签">1.3文本标签</h3>
+<p>1》b strong  文本加粗</p>
+<p><b>文本标签</b>   <strong></strong></p>
+<p>2》i em   文本斜体</p>
+<p><i>文本</i>    <em ></em></p>
+<p>3》u ins 文本加下划线</p>
+<p><u></u>    <ins></ins></p>
+<p>4》del s 删除</p>
+<p><del></del> <s></s></p>
+<p>5》sup sub  文本的上（p）下标（b）</p>
+<p><sup></sup>  <sub></sub></p>
+<p>6》big samll 变大变小</p>
+<p><big></big></p>
+<p>7》font  字体</p>
+<p><font size=”1-7” color=”字体”></font></p>
+<p>一颜色单词</p>
+<p>二六位十六进制数</p>
+<h3 id="14排版标签">1.4排版标签</h3>
+<p>1》hn 标题标签</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> &lt;h1&gt;&lt;/h1&gt;
+</code></pre></div><p>2》 p 段落标签</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;p&gt;&lt;/p&gt;
+</code></pre></div><p>3》hr   画一条横线</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> &lt;hr size =”&#34; width=&#34;&#34; align=&#34;&#34; noshade/&gt;
+</code></pre></div><p>4》br 强制换行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> &lt;br/&gt;
+</code></pre></div><p>5》 pre 预排版</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;pre&gt;文本中空格和换行，会保存&lt;/pre&gt;
+</code></pre></div><p>6》figure 图文并茂</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;figure&gt;给图片配的文字&lt;/figure&gt;
+</code></pre></div><h3 id="15列表标签">1.5列表标签</h3>
+<p>列表主要分三类</p>
+<h4 id="151无序列表">1.5.1无序列表</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;ul&gt;
+
+ &lt;li&gt;&lt;/li&gt;
+
+ &lt;/ul&gt;
+</code></pre></div><h4 id="152有序列表">1.5.2有序列表</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> &lt;ol type=&#34;&#34; start=&#34;&#34;&gt;
+
+ &lt;li&gt;&lt;/li&gt;
+
+ &lt;/ol&gt;
+</code></pre></div><h4 id="153自定义列表">1.5.3自定义列表</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> &lt;dl&gt;
+
+ &lt;li&gt;&lt;/li&gt;
+
+ &lt;/dl&gt;
+</code></pre></div><h4 id="154实体字符">1.5.4实体字符</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> &amp;nbsp空格 &amp;emsp &amp;ensp
+</code></pre></div><h2 id="二数据库相关">二、数据库相关</h2>
+<h3 id="21数据库知识汇总">2.1数据库知识汇总</h3>
+<ul>
+<li>关系型数据库（建立在关系模型基础上的数据，借助集合代数等数学方法来处理数据库中数据）
+<ul>
+<li>mysql</li>
+<li>sqlserver</li>
+<li>Mariadb</li>
+<li>Oracle</li>
+</ul>
+</li>
+<li>非关系型数据库（缓存）
+<ul>
+<li>mongodb</li>
+<li>redis</li>
+</ul>
+</li>
+</ul>
+<h2 id="22mysql的安装">2.2mysql的安装</h2>
+<ul>
+<li>
+<p>ubuntu系统上的安装</p>
+<p><code>sudo apt-get install mysql-server</code></p>
+<p><code>sudo apt-get update</code></p>
+</li>
+<li>
+<p>windows上的安装（多mysql安装踩坑记录）</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#自己原有mysql8，因为某软件只兼容5.7的MySQL，所以尝试在电脑上部署多个mysql。
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">安装准备</span> 
+<span style="color:#960050;background-color:#1e0010">清理</span><span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">！！！！</span>
+<span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">、把安装包里的</span>data文件夹删除
+<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">、在”服务“查看有</span>MySQL服务没<span style="color:#960050;background-color:#1e0010">，，有的话</span> <span style="color:#960050;background-color:#1e0010">管理员进</span>cmd <span style="color:#960050;background-color:#1e0010">输入</span>sc delete <span style="color:#960050;background-color:#1e0010">服务</span>
+<span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">、注册列表清理</span>
+
+
+<span style="color:#960050;background-color:#1e0010">第一步：下载</span>mysql5<span style="color:#ae81ff">.7</span><span style="color:#960050;background-color:#1e0010">的压缩文件，解压到你想要的地址</span>
+<span style="color:#960050;background-color:#1e0010">如：</span>D:<span style="color:#960050;background-color:#1e0010">\</span>mysql57
+
+<span style="color:#960050;background-color:#1e0010">第二步：在与</span>bin同目录下新建my.ini(<span style="color:#960050;background-color:#1e0010">新建记事本更改后缀即可</span>)
+<span style="color:#960050;background-color:#1e0010">配置你的</span>mysql
+<span style="color:#960050;background-color:#1e0010">如：</span>[mysql]
+
+<span style="color:#960050;background-color:#1e0010">设置</span>mysql客户端默认字符集 
+ <span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>character<span style="color:#f92672">-</span>set<span style="color:#f92672">=</span>utf8  
+ [mysqld] 
+ 
+ <span style="color:#960050;background-color:#1e0010">#设置</span><span style="color:#ae81ff">3307</span><span style="color:#960050;background-color:#1e0010">端口</span> 
+port<span style="color:#f92672">=</span><span style="color:#ae81ff">3307</span>  
+    
+<span style="color:#960050;background-color:#1e0010">设置</span>mysql的安装目录 
+basedir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;D:\mysql57&#34;</span> 
+    
+<span style="color:#960050;background-color:#1e0010">设置</span>mysql数据库的数据的存放目录 
+datadir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;D:\mysql57\data&#34;</span>
+    
+<span style="color:#960050;background-color:#1e0010">服务端使用的字符集默认为</span><span style="color:#ae81ff">8</span><span style="color:#960050;background-color:#1e0010">比特编码的</span>latin1字符集  
+character<span style="color:#f92672">-</span>set<span style="color:#f92672">-</span>server <span style="color:#f92672">=</span> utf8
+
+<span style="color:#960050;background-color:#1e0010">创建新表时将使用的默认存储引擎</span>
+<span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>storage<span style="color:#f92672">-</span>engine<span style="color:#f92672">=</span>INNODB
+
+<span style="color:#960050;background-color:#1e0010">允许最大连接数</span>
+max_connections<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>
+<span style="color:#960050;background-color:#1e0010">注：</span>data文件夹无需创建
+
+<span style="color:#960050;background-color:#1e0010">第三步：管理员身份进入</span>cmd <span style="color:#960050;background-color:#1e0010">并进入</span>D:<span style="color:#960050;background-color:#1e0010">\</span>mysql57<span style="color:#960050;background-color:#1e0010">\</span>bin <span style="color:#960050;background-color:#1e0010">安装</span>mysql
+<span style="color:#960050;background-color:#1e0010">输入</span> mysqld <span style="color:#f92672">-</span>install mysqlXXX
+<span style="color:#960050;background-color:#1e0010">注：因为是电脑上的第二个</span>MySQL  <span style="color:#960050;background-color:#1e0010">所以用“</span>XXX<span style="color:#960050;background-color:#1e0010">”（内容自定）区别与之前服务</span> 
+
+<span style="color:#960050;background-color:#1e0010">第四步：</span>mysqld <span style="color:#f92672">--</span>initialize <span style="color:#960050;background-color:#1e0010">初始化</span>  <span style="color:#960050;background-color:#1e0010">这是</span>data文件会自动创建
+
+<span style="color:#960050;background-color:#1e0010">第五步：最重要的一步注册列表，在如下地址中找到</span>mysqlXXX
+<span style="color:#960050;background-color:#1e0010">计算机\</span>HKEY_LOCAL_MACHINE<span style="color:#960050;background-color:#1e0010">\</span>SYSTEM<span style="color:#960050;background-color:#1e0010">\</span>CurrentControlSet<span style="color:#960050;background-color:#1e0010">\</span>Services<span style="color:#960050;background-color:#1e0010">\</span>mysql3307
+<span style="color:#960050;background-color:#1e0010">编辑</span>imagepath <span style="color:#960050;background-color:#1e0010">将地址改为你安装的新的</span>MySQL的地址<span style="color:#960050;background-color:#1e0010">。。。。。</span>
+</code></pre></div><h2 id="23mysql-操作">2.3mysql 操作</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#75715e">#登录
+</span><span style="color:#75715e"></span>su <span style="color:#f92672">-</span>u root <span style="color:#f92672">-</span>p password
+<span style="color:#75715e">#创建
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> xxx;
+<span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">exists</span> xxx;
+<span style="color:#75715e">#使用数据库
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">use</span> database_name;
+<span style="color:#75715e">#显示
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">databases</span>;
+<span style="color:#66d9ef">show</span> <span style="color:#66d9ef">tables</span>;
+<span style="color:#66d9ef">show</span> <span style="color:#66d9ef">tables</span> <span style="color:#66d9ef">from</span> <span style="color:#66d9ef">database</span>;
+<span style="color:#66d9ef">show</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> xxx;
+<span style="color:#66d9ef">show</span> warnings;
+<span style="color:#75715e">#表操作
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> <span style="color:#a6e22e">name</span>();
+<span style="color:#66d9ef">show</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> name;
+<span style="color:#66d9ef">desc</span> name;
+<span style="color:#66d9ef">drop</span> table_name;
+<span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">table</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">exists</span> name;
+truncate <span style="color:#66d9ef">table</span> name;
+<span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> name <span style="color:#66d9ef">add</span> row[<span style="color:#960050;background-color:#1e0010">约束</span>]
+<span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">from</span> name <span style="color:#66d9ef">where</span> xx
+<span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> name <span style="color:#66d9ef">values</span>(x,y);
+<span style="color:#66d9ef">update</span> name <span style="color:#66d9ef">set</span> row<span style="color:#f92672">=</span>new,row2<span style="color:#f92672">=</span>new <span style="color:#66d9ef">where</span> xxx;
+<span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> name <span style="color:#66d9ef">where</span> xxx;
+<span style="color:#75715e">#其他关键字
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span>
+<span style="color:#66d9ef">DESC</span>(<span style="color:#960050;background-color:#1e0010">降序</span>)
+<span style="color:#66d9ef">ASC</span><span style="color:#960050;background-color:#1e0010">（升序）</span>
+<span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span>
+<span style="color:#66d9ef">limit</span>
+<span style="color:#66d9ef">like</span>
+<span style="color:#66d9ef">between</span> <span style="color:#66d9ef">and</span>
+<span style="color:#75715e">#函数
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">。。。。</span>
+</code></pre></div><h2 id="三django概述">三、Django概述</h2>
+<h3 id="31主从路由的映射和命名空间">3.1主从路由的映射和命名空间</h3>
+<ul>
+<li>
+<p>主从路由</p>
+<p>理解：从project的urls到app中的urls</p>
+</li>
+<li>
+<p>命名空间</p>
+<p>为自己的app开辟一个独立的空间，进而定义自己的方法。<br />
+它的作用就是即使不同的APP使用相同的url名称，</p>
+</li>
+</ul>
+<h3 id="32模板的复用和block的提取">3.2模板的复用和block的提取</h3>
+<ul>
+<li>步骤一：取共同模块较多的html文件</li>
+<li>步骤二：使用{%block xxx%}{%endblock xxx%}为其他html留出更新空位</li>
+<li>步骤三：在使用模板html时要在文件开头加入{%extend &lsquo;模板文件&rsquo;%}</li>
+<li>注：自定义的模板使用还有不同</li>
+</ul>
+<h3 id="33redirct和reverse的使用">3.3redirct和reverse的使用</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># user/logout</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LogoutView</span>(View):   
+    <span style="color:#e6db74">&#34;&#34;&#34;退出登录&#34;&#34;&#34;</span>    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, request):       
+        <span style="color:#e6db74">&#34;&#34;&#34;退出登录&#34;&#34;&#34;</span>        
+        <span style="color:#75715e"># 清除用户的session信息        </span>
+        logout(request)        
+        <span style="color:#75715e"># 跳转到首页        </span>
+        <span style="color:#66d9ef">return</span> redirect(reverse(<span style="color:#e6db74">&#39;goods:index&#39;</span>))
+</code></pre></div><h3 id="34正则路由参数的传递和接收">3.4正则路由参数的传递和接收</h3>
+<ul>
+<li>
+<p>re_path((\d+),views.re_handler)</p>
+<p>正则表达式匹配原则</p>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.</td>
+<td>除了\n和\r的所有字符</td>
+</tr>
+<tr>
+<td align="center">\d</td>
+<td>数字</td>
+</tr>
+<tr>
+<td align="center">\D</td>
+<td>非数字</td>
+</tr>
+<tr>
+<td align="center">\w</td>
+<td>数字字母和下划线</td>
+</tr>
+<tr>
+<td align="center">\W</td>
+<td>非。。</td>
+</tr>
+<tr>
+<td align="center">\s</td>
+<td>空格包括制表符，换页符等*</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>出现次数大于等于0</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td>出现次数大于等于1</td>
+</tr>
+<tr>
+<td align="center">{n}</td>
+<td>出现n次</td>
+</tr>
+<tr>
+<td align="center">{m，n}</td>
+<td>n&gt;=出现次数&gt;=m</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td>以开头</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td>以结尾</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="35django的模板语法">3.5django的模板语法</h3>
+<ul>
+<li>和python的字典类型或json结构类似</li>
+<li>在html中有一下模板语法
+<ul>
+<li>{%for x in range%} —{{hobby}}–{%endfor%} #hobby 定义的变量</li>
+<li>{%if xx%}—-{%elif xxx%}—{%else xxx%}—-{%endif%}</li>
+<li>{%url &lsquo;namespace&rsquo;:&lsquo;name&rsquo;% [传递的参数]}</li>
+<li>{%bolck xxx%}—-{%endclock xxx%}</li>
+<li>其他  自定义</li>
+</ul>
+</li>
+<li>过滤语法
+<ul>
+<li>{{变量|过滤器|过滤器}}   从左到右</li>
+<li>关键字
+<ul>
+<li>safe：禁止Html转义</li>
+<li>length:长度</li>
+<li>date：日期</li>
+<li>default:默认值</li>
+<li>upper/lower</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="36上下文模板调用">3.6上下文模板调用</h3>
+<p>​	在templates中的html可以在视图中直接调用</p>
+<p>​	context的定义内容可以作为参数，通过render（）函数进行传参</p>
+<h3 id="37request和response">3.7Request和Response</h3>
+<ul>
+<li>request对象关键字
+<ul>
+<li>method：GET/POST（封装数据的QueryDict对象）</li>
+<li>path：返回页面路径</li>
+<li>META：封装请求头的数据？？？</li>
+<li>FILES：封装上传文件数据</li>
+<li>COOKIES：类是字典的对象</li>
+<li>session：可以读写类是字典的对象</li>
+</ul>
+</li>
+<li>Response对象关键字
+<ul>
+<li>状态码</li>
+<li>相应体</li>
+<li>mime类型</li>
+</ul>
+</li>
+</ul>
+<h2 id="四django数据库操作">四、Django数据库操作</h2>
+<h3 id="41settingpy配置数据库选择">4.1setting.py配置–数据库选择</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">setting.py配置数据库
+</span><span style="color:#e6db74">DATABASES：
+</span><span style="color:#e6db74">ENGINE -- 可选值有
+</span><span style="color:#e6db74">&#39;django.db.backends.sqlite3&#39;，&#39;django.db.backends.postgresql&#39;，&#39;django.db.backends.mysql&#39;，或 &#39;django.db.backends.oracle&#39;
+</span><span style="color:#e6db74">NAME：数据库名称
+</span><span style="color:#e6db74">注：sqlite外数据库，需要确保数据库存在
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</code></pre></div><h3 id="42创建模型">4.2创建模型</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#对象类描述</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>(BaseModel):
+    <span style="color:#e6db74">&#39;&#39;&#39;地址模型类&#39;&#39;&#39;</span>
+    user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(<span style="color:#e6db74">&#39;User&#39;</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;所属账户&#39;</span>,on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
+    receiver <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;收件人&#39;</span>)
+    addr <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;收件地址&#39;</span>)
+    zip_code <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,null<span style="color:#f92672">=</span>True,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;邮政编码&#39;</span>)
+    phone <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;联系电话&#39;</span>)
+    is_default <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>BooleanField(default<span style="color:#f92672">=</span>False,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;是否默认&#39;</span>)
+
+    objects <span style="color:#f92672">=</span> AddressManager()
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meta</span>:
+        db_table <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;df_address&#39;</span>
+        verbose_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;地址&#39;</span>
+        verbose_name_plural <span style="color:#f92672">=</span> verbose_name
+    
+
+</code></pre></div><h3 id="43数据迁移维护">4.3数据迁移维护</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">#生成initial文件，数据库迁移文件
+python3 manage.py makemigrations xxx(app名)
+
+#该命令查看setting.py中的数据库设置和app中的附带数据库迁移创建任何必须的数据库表
+python3 manage.py migrate #该命令只会对已声明应用进行数据库迁移
+
+#检测对模型文件的修改，并把修改的部分存储为一次迁移
+ python manage.py makemigrations appname
+ 
+#接受一个迁移命令并返回对应的sql
+ python manage.py sqlmigrate appname 0001
+#对项目进行检查。不会多数据库进行任何操作
+python manage.py check 
+</code></pre></div><h3 id="44模型类的操作">4.4模型类的操作</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#75715e">#可以进行的操作，可以通过 python manage.py shell 进入交互</span>
+user<span style="color:#f92672">.</span>id <span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+save() <span style="color:#75715e">#id存在,无值则加有值则减</span>
+delete() <span style="color:#75715e">#更具id删除</span>
+user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create()
+user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filer(<span style="color:#960050;background-color:#1e0010">条件</span>)<span style="color:#f92672">.</span>update(<span style="color:#960050;background-color:#1e0010">属性</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">值</span>)
+user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filer(<span style="color:#960050;background-color:#1e0010">条件</span>)<span style="color:#f92672">.</span>delete()
+
+</code></pre></div><h3 id="45表字段定义和常用字段约束">4.5表字段定义和常用字段约束</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">user <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(<span style="color:#e6db74">&#39;User&#39;</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;所属账户&#39;</span>,on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
+receiver <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;收件人&#39;</span>)
+addr <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;收件地址&#39;</span>)
+zip_code <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,null<span style="color:#f92672">=</span>True,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;邮政编码&#39;</span>)
+phone <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;联系电话&#39;</span>)
+is_default <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>BooleanField(default<span style="color:#f92672">=</span>False,verbose_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;是否默认&#39;</span>)
+</code></pre></div><h2 id="五queryset详解">五QuerySet详解</h2>
+<h3 id="51懒加载原理">5.1懒加载原理</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">user<span style="color:#f92672">=</span>User<span style="color:#f92672">.</span>object<span style="color:#f92672">.</span>all()
+<span style="color:#66d9ef">for</span> user <span style="color:#f92672">in</span> users:
+    <span style="color:#66d9ef">print</span>(user<span style="color:#f92672">.</span>username)
+    
+ <span style="color:#75715e">#节省内存？</span>
+</code></pre></div><h3 id="52链式调用">5.2链式调用</h3>
+<table>
+<thead>
+<tr>
+<th>QuerySet方法</th>
+<th>返回类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get()</td>
+<td>模型对象</td>
+<td>满足条件的唯一对象</td>
+</tr>
+<tr>
+<td>all()</td>
+<td>QuerySet</td>
+<td>所有对象</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td>QuerySet</td>
+<td>满足条件的对象</td>
+</tr>
+<tr>
+<td>exclude()</td>
+<td>QuerySet</td>
+<td>不满足条件的对象</td>
+</tr>
+<tr>
+<td>order_by()</td>
+<td>QuerySet</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>count()</td>
+<td>int</td>
+<td>结果的数量</td>
+</tr>
+<tr>
+<td>exists()</td>
+<td>boolean</td>
+<td>结果是否存在</td>
+</tr>
+</tbody>
+</table>
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/%E5%89%8D%E7%AB%AF">前端</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/python">python</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/mysql">mysql</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/django">Django</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/%E5%9F%BA%E7%A1%80">基础</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/html">html</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+      
+<div>
+  <h2>说些什么</h2>
+    <form id="post-js-form" class="post-new-comment" method="POST">
+      
+      <h5 class='post-reply-notice hidden'>
+        <span class='post-reply-arrow'></span><span class='post-reply-name'></span>
+      </h5>
+
+      
+      <input type="hidden" name="options[entryId]" value="af0065ba3a4dfc40c8c6470fb183a73b">
+      <input type='hidden' name='fields[replyThread]' value=''>
+      <input type='hidden' name='fields[replyID]' value=''>
+      <input type='hidden' name='fields[replyName]' value=''>
+
+      
+      <input required name='fields[name]' type='text' placeholder='您的名字（必填）'>
+      <input name='fields[website]' type='text' placeholder='您的网站'>
+      <input required name='fields[email]' type='email' placeholder='您的电邮地址（必填，用于 Gravatar 头象）'>
+      <textarea required name='fields[body]' placeholder='您的留言。可使用 Markdown。（搜索 &#39;Markdown 語法速查&#39;）' rows='10'></textarea>
+
+      
+      
+
+      
+      <p class='post-submit-notice'>
+        <strong class='post-submit-notice-text submit-success hidden'>感谢您的评论！被批准后它会立即在此站点展示。</strong>
+        <strong class='post-submit-notice-text submit-failed hidden'>很抱歉，您的提交存在错误。请确保所有必填字段都已填写正确，然后再试一次。</strong>
+      </p>
+
+      
+      <input type='submit' value='送出' class='button'>
+      <input type='submit' value='已送出' class='hidden button' disabled>
+      <input type='reset' value='重设' class='button'>
+    </form>
+</div>
+
+
+<div>
+  <h2>评论</h2>
+
+  
+    
+      <p>还沒有留言。</p>
+    
+  
+</div>
+
+    </article>
+
+
+<div class="pagination">
+  
+    <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/" class="button"><div class="previous"><div>老知识迁移（二）</div></div></a>
+  
+  
+</div>
+
+
+      </main>
+      <div class="post-toc">
+     
+    <aside>
+        <header>
+        <h4>老知识迁移（一）的字数: 501</h4> 
+        </header><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一前端html标签简述">一、前端html标签简述</a>
+          <ul>
+            <li><a href="#11基本结构">1.1基本结构</a></li>
+            <li><a href="#12基本规范规范">1.2基本规范规范</a></li>
+            <li><a href="#13文本标签">1.3文本标签</a></li>
+            <li><a href="#14排版标签">1.4排版标签</a></li>
+            <li><a href="#15列表标签">1.5列表标签</a>
+              <ul>
+                <li><a href="#151无序列表">1.5.1无序列表</a></li>
+                <li><a href="#152有序列表">1.5.2有序列表</a></li>
+                <li><a href="#153自定义列表">1.5.3自定义列表</a></li>
+                <li><a href="#154实体字符">1.5.4实体字符</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#二数据库相关">二、数据库相关</a>
+          <ul>
+            <li><a href="#21数据库知识汇总">2.1数据库知识汇总</a></li>
+          </ul>
+        </li>
+        <li><a href="#22mysql的安装">2.2mysql的安装</a></li>
+        <li><a href="#23mysql-操作">2.3mysql 操作</a></li>
+        <li><a href="#三django概述">三、Django概述</a>
+          <ul>
+            <li><a href="#31主从路由的映射和命名空间">3.1主从路由的映射和命名空间</a></li>
+            <li><a href="#32模板的复用和block的提取">3.2模板的复用和block的提取</a></li>
+            <li><a href="#33redirct和reverse的使用">3.3redirct和reverse的使用</a></li>
+            <li><a href="#34正则路由参数的传递和接收">3.4正则路由参数的传递和接收</a></li>
+            <li><a href="#35django的模板语法">3.5django的模板语法</a></li>
+            <li><a href="#36上下文模板调用">3.6上下文模板调用</a></li>
+            <li><a href="#37request和response">3.7Request和Response</a></li>
+          </ul>
+        </li>
+        <li><a href="#四django数据库操作">四、Django数据库操作</a>
+          <ul>
+            <li><a href="#41settingpy配置数据库选择">4.1setting.py配置–数据库选择</a></li>
+            <li><a href="#42创建模型">4.2创建模型</a></li>
+            <li><a href="#43数据迁移维护">4.3数据迁移维护</a></li>
+            <li><a href="#44模型类的操作">4.4模型类的操作</a></li>
+            <li><a href="#45表字段定义和常用字段约束">4.5表字段定义和常用字段约束</a></li>
+          </ul>
+        </li>
+        <li><a href="#五queryset详解">五QuerySet详解</a>
+          <ul>
+            <li><a href="#51懒加载原理">5.1懒加载原理</a></li>
+            <li><a href="#52链式调用">5.2链式调用</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></aside>
+    <a href="#" id="toc-toggle"></a>
+     
+</div>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最新文章</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/">老知识迁移（一）</a></h1>
+          <time class="published" datetime="">March 15, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/">老知识迁移（二）</a></h1>
+          <time class="published" datetime="">March 15, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/">ubuntu_图形界面系统修复</a></h1>
+          <time class="published" datetime="">March 15, 2020</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">查看更多</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">分类</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hexo/">hexo<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/jetbrain/">jetbrain<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/test/">test<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/conda/">conda<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/development/">development<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/golang/">golang<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/java/">java<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/syntax/">syntax<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web/">web<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E9%80%9A%E4%BF%A1/">通信<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>关于</h1>
+      </header>
+      <p>test</p>
+      <footer>
+        <a href="/about" class="button">了解更多</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Huanghs blog
+      
+    . <br>
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.66.0'>Hugo</a> 驱动
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b17fef5a58c033a8a59f57c83aa975a251aecff921cbd36c12e975d530fa023b.js" integrity="sha256-sX/vWljAM6iln1fIOql1olGuz/khy9NsEul11TD6Ajs="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

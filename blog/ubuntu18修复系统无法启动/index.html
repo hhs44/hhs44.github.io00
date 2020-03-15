@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+  <meta charset="utf-8">
+<title>ubuntu18修复（系统无法启动） - Huanghs blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="ubuntu18修复（系统无法启动）">
+<meta itemprop="description" content=" ">
+<meta itemprop="datePublished" content="2019-06-19T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-19T00:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="36">
+<meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png">
+
+
+
+<meta itemprop="keywords" content="ubuntu," /><meta property="og:title" content="ubuntu18修复（系统无法启动）" />
+<meta property="og:description" content=" " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs44.github.io/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" />
+<meta property="og:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png" />
+<meta property="article:published_time" content="2019-06-19T00:00:00+08:00" />
+<meta property="article:modified_time" content="2019-06-19T00:00:00+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png"/>
+
+<meta name="twitter:title" content="ubuntu18修复（系统无法启动）"/>
+<meta name="twitter:description" content=" "/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/css/bundle.min.b2b2abee095149a60c0a1a2c4fab4b7c140b32ca88abc3d2f83d0dd903b6f634.css" integrity="sha256-srKr7glRSaYMChosT6tLfBQLMsqIq8PS&#43;D0N2QO29jQ=">
+        <link rel="stylesheet" href="/css/add-on.css">
+
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            博客
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> 首页</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> 博客</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> 分类</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='far fa-envelope'></i> 标签</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> 关于</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="zh-cn">zh-cn</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh-cn" class="link active">中文 (zh-cn)</a>
+  
+    
+      
+        <a href="/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+
+    </menu>
+  
+</header>
+
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
+  <header>
+    <h1>Huanghs的个人博客 </h1>
+  </header>
+  <main>
+    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">ubuntu18修复（系统无法启动）</a></h2>
+    
+    
+        <p> </p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2019-06-19 00:00:00 &#43;0800 CST">
+      June 19, 2019
+    </time>
+    <span class="author">Huanghs</span>
+    
+      <p>1 分钟</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+
+  </section>
+  
+  <a href="/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <h1 id="解决方案使用u盘启动盘进入系统安装boot-repair">解决方案：使用U盘启动盘，进入系统安装boot-repair</h1>
+<blockquote>
+<p>问题描述：最近在工作的ubuntu系统中尝试安装了deepin桌面，在进行桌面主题设置后重启，ubuntu无法启动，开机启动失败后进入biso界面<br />
+环境描述：双显卡的笔记本（在进行U盘引导时需要禁用n卡，不禁用会导致各种卡死）</p>
+</blockquote>
+<h2 id="步骤">步骤：</h2>
+<ul>
+<li>第一步：还是进入ubuntu图形界面<br />
+　　在插上U盘后重启，通过键盘进入U盘引导界面 先使用键盘上下选择，以避免超时，以ubuntu18为例，移动到第一个tryxxx（因为你已经安装了ubuntu系统，不到万不得已不选择重装），按下e进入grob界面，找到quiet splash或linux开头行 该行直接在末尾空格+nomodeset，按下F10启动系统。（在期间也许会再次发生卡死，不要灰心，重启电脑，按原步骤检查输入是否正确）</li>
+<li>第二步：安装boot-repair<br />
+　　进入系统后打开终端完成以下命令：（需要联网）<br />
+　　安装boot-repair的源，并更新<br />
+<code>sudo add-apt-repository ppa:yannubuntu/boot-repair &amp;&amp; sudo apt-get update</code><br />
+　　安装并开启boot-repair<br />
+<code>sudo apt-get install -y boot-repair &amp;&amp; boot-repair</code></li>
+<li>第三步：进行恢复<br />
+　　在安装成功后弹出的窗口选择Recommended repair，<br />
+　　恢复成功后，就会弹出我们的盘的各种信息以及引导的信息。<br />
+　 如果有些人不小心点击了Create a BootInfo summary的话，那你的开机启动界面将会出来一大堆你以前没见过的东西。<br />
+本攻略无视这些，总感觉后面会用到。</li>
+</ul>
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/linux">linux</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/ubuntu">ubuntu</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+      
+<div>
+  <h2>说些什么</h2>
+    <form id="post-js-form" class="post-new-comment" method="POST">
+      
+      <h5 class='post-reply-notice hidden'>
+        <span class='post-reply-arrow'></span><span class='post-reply-name'></span>
+      </h5>
+
+      
+      <input type="hidden" name="options[entryId]" value="3fc162b336cf73132f8ecd585ad52684">
+      <input type='hidden' name='fields[replyThread]' value=''>
+      <input type='hidden' name='fields[replyID]' value=''>
+      <input type='hidden' name='fields[replyName]' value=''>
+
+      
+      <input required name='fields[name]' type='text' placeholder='您的名字（必填）'>
+      <input name='fields[website]' type='text' placeholder='您的网站'>
+      <input required name='fields[email]' type='email' placeholder='您的电邮地址（必填，用于 Gravatar 头象）'>
+      <textarea required name='fields[body]' placeholder='您的留言。可使用 Markdown。（搜索 &#39;Markdown 語法速查&#39;）' rows='10'></textarea>
+
+      
+      
+
+      
+      <p class='post-submit-notice'>
+        <strong class='post-submit-notice-text submit-success hidden'>感谢您的评论！被批准后它会立即在此站点展示。</strong>
+        <strong class='post-submit-notice-text submit-failed hidden'>很抱歉，您的提交存在错误。请确保所有必填字段都已填写正确，然后再试一次。</strong>
+      </p>
+
+      
+      <input type='submit' value='送出' class='button'>
+      <input type='submit' value='已送出' class='hidden button' disabled>
+      <input type='reset' value='重设' class='button'>
+    </form>
+</div>
+
+
+<div>
+  <h2>评论</h2>
+
+  
+    
+      <p>还沒有留言。</p>
+    
+  
+</div>
+
+    </article>
+
+
+<div class="pagination">
+  
+    <a href="/blog/%E5%9F%BA%E4%BA%8Ewifi%E8%AE%BE%E5%A4%87csi%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%BA%E4%BD%93%E7%9D%A1%E7%9C%A0%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B-csi-tool%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%AE%89%E8%A3%85/" class="button"><div class="previous"><div>csiTool相关</div></div></a>
+  
+  
+    <a href="/blog/hibernate%E4%B8%80%E7%AE%80%E5%8D%95%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0/" class="button"><div class="next"><div>hibernate（一）简单登陆界面实现</div></div></a>
+  
+</div>
+
+
+      </main>
+      <div class="post-toc">
+     
+</div>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最新文章</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/">老知识迁移（一）</a></h1>
+          <time class="published" datetime="">March 15, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/">老知识迁移（二）</a></h1>
+          <time class="published" datetime="">March 15, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/">ubuntu_图形界面系统修复</a></h1>
+          <time class="published" datetime="">March 15, 2020</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">查看更多</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">分类</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hexo/">hexo<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/jetbrain/">jetbrain<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/test/">test<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/conda/">conda<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/development/">development<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/golang/">golang<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/java/">java<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/syntax/">syntax<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web/">web<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E9%80%9A%E4%BF%A1/">通信<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>关于</h1>
+      </header>
+      <p>test</p>
+      <footer>
+        <a href="/about" class="button">了解更多</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Huanghs blog
+      
+    . <br>
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.66.0'>Hugo</a> 驱动
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b17fef5a58c033a8a59f57c83aa975a251aecff921cbd36c12e975d530fa023b.js" integrity="sha256-sX/vWljAM6iln1fIOql1olGuz/khy9NsEul11TD6Ajs="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jetbrain on Huanghs blog</title>
+    <link>https://hhs44.github.io/categories/jetbrain/</link>
+    <description>Recent content in jetbrain on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/categories/jetbrain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hibernate（一）简单登陆界面实现</title>
+      <link>https://hhs44.github.io/blog/hibernate%E4%B8%80%E7%AE%80%E5%8D%95%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/hibernate%E4%B8%80%E7%AE%80%E5%8D%95%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;p&gt;在实训期间无聊，尝试学习一些框架的东西，正好在进行数据处理，我选择了hibernate5作为我操作数据库的框架。（以前做过ssh架构下的网站的课程设计，因为专业不对口没有深入，现在做一个简单回顾也不会深入）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyCharm快捷键</title>
+      <link>https://hhs44.github.io/blog/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>&lt;h1 id=&#34;代码编辑快捷键&#34;&gt;代码编辑快捷键&lt;/h1&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

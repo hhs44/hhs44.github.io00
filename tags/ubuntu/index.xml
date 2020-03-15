@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on Huanghs blog</title>
+    <link>https://hhs44.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ubuntu_图形界面系统修复</title>
+      <link>https://hhs44.github.io/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/</guid>
+      <description>&lt;h1 id=&#34;ubuntu错误修改系统配置文件&#34;&gt;ubuntu错误修改系统配置文件&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;问题描述：&lt;/p&gt;
+&lt;p&gt;各种无法开机，无法进入图形界面，或者各种修复方法失效，这是一个不错的尝试。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu18修复（系统无法启动）</title>
+      <link>https://hhs44.github.io/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</guid>
+      <description>&lt;h1 id=&#34;解决方案使用u盘启动盘进入系统安装boot-repair&#34;&gt;解决方案：使用U盘启动盘，进入系统安装boot-repair&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题描述：最近在工作的ubuntu系统中尝试安装了deepin桌面，在进行桌面主题设置后重启，ubuntu无法启动，开机启动失败后进入biso界面&lt;br /&gt;
+环境描述：双显卡的笔记本（在进行U盘引导时需要禁用n卡，不禁用会导致各种卡死）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>E:无法获得锁</title>
+      <link>https://hhs44.github.io/blog/e-%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/e-%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxidc.com/topicnews.aspx?tid=2&#34;&gt;Ubuntu&lt;/a&gt; 18.04，其他版的Ubuntu也一样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当运行sudo apt-get install/update/或其他命令时，由于各种说不清的原因有时会出现如下提示：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;E: 无法获得锁 /var/lib/dpkg/lock-frontend - open (11: 资源暂时不可用)&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

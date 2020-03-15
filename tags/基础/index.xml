@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基础 on Huanghs blog</title>
+    <link>https://hhs44.github.io/tags/%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 基础 on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>老知识迁移（一）</title>
+      <link>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</guid>
+      <description>&lt;p&gt;有前端基础，mysql基础，django基础。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>conda相关（一）</title>
+      <link>https://hhs44.github.io/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;conda简介&#34;&gt;conda简介&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。&lt;/p&gt;
+&lt;p&gt;Conda作为软件包管理器可以帮助您查找和安装软件包。如果您需要一个需要使用其他版本的Python的软件包，则无需切换到其他环境管理器，因为conda也是环境管理器。仅需几个命令，您就可以设置一个完全独立的环境来运行该不同版本的Python，同时继续在正常环境中运行您通常的Python版本。(来自&lt;a href=&#34;https://docs.conda.io/en/latest/&#34;&gt;官网&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nosql学习（一）</title>
+      <link>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</guid>
+      <description>1、NoSQL（非关系型数据库）  nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。    类型 数据模型 应用场景 代表数据库 主要特征        Redis，MemcacheDB                     2、mongoDB </description>
+    </item>
+    
+    <item>
+      <title>hexo与GitHub构建个人博客</title>
+      <link>https://hhs44.github.io/blog/hexo%E4%B8%8Egithub%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 06 Feb 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/hexo%E4%B8%8Egithub%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;目录：
+1.1前言
+1.2准备工作 
+2.1创建GitHub仓库  
+2.2环境安装  
+2.3ssh key绑定
+3.1hexo安装
+3.2第一篇博客
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

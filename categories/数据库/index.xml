@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on Huanghs blog</title>
+    <link>https://hhs44.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>老知识迁移（一）</title>
+      <link>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</guid>
+      <description>&lt;p&gt;有前端基础，mysql基础，django基础。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nosql学习（一）</title>
+      <link>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</guid>
+      <description>1、NoSQL（非关系型数据库）  nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。    类型 数据模型 应用场景 代表数据库 主要特征        Redis，MemcacheDB                     2、mongoDB </description>
+    </item>
+    
+  </channel>
+</rss>

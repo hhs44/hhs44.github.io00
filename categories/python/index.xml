@@ -6,10 +6,28 @@
     <description>Recent content in python on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>老知识迁移（一）</title>
+      <link>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</guid>
+      <description>&lt;p&gt;有前端基础，mysql基础，django基础。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>老知识迁移（二）</title>
+      <link>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>系统管理和自动化运维(网络篇)</title>
@@ -35,6 +53,28 @@
 &lt;li&gt;不能以数字开头&lt;/li&gt;
 &lt;li&gt;长度在 6 到 16 位范围内&lt;/li&gt;
 &lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>conda相关（一）</title>
+      <link>https://hhs44.github.io/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;conda简介&#34;&gt;conda简介&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。&lt;/p&gt;
+&lt;p&gt;Conda作为软件包管理器可以帮助您查找和安装软件包。如果您需要一个需要使用其他版本的Python的软件包，则无需切换到其他环境管理器，因为conda也是环境管理器。仅需几个命令，您就可以设置一个完全独立的环境来运行该不同版本的Python，同时继续在正常环境中运行您通常的Python版本。(来自&lt;a href=&#34;https://docs.conda.io/en/latest/&#34;&gt;官网&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyCharm快捷键</title>
+      <link>https://hhs44.github.io/blog/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>&lt;h1 id=&#34;代码编辑快捷键&#34;&gt;代码编辑快捷键&lt;/h1&gt;</description>
     </item>
     
   </channel>

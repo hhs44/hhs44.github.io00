@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on Huanghs blog</title>
+    <link>https://hhs44.github.io/tags/redis/</link>
+    <description>Recent content in Redis on Huanghs blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://hhs44.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nosql学习（一）</title>
+      <link>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</guid>
+      <description>1、NoSQL（非关系型数据库）  nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。    类型 数据模型 应用场景 代表数据库 主要特征        Redis，MemcacheDB                     2、mongoDB </description>
+    </item>
+    
+  </channel>
+</rss>

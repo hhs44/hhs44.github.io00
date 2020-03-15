@@ -6,10 +6,43 @@
     <description>Recent content in Blogs on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 14 Mar 2020 23:14:42 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>老知识迁移（一）</title>
+      <link>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/</guid>
+      <description>&lt;p&gt;有前端基础，mysql基础，django基础。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>老知识迁移（二）</title>
+      <link>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu_图形界面系统修复</title>
+      <link>https://hhs44.github.io/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/</guid>
+      <description>&lt;h1 id=&#34;ubuntu错误修改系统配置文件&#34;&gt;ubuntu错误修改系统配置文件&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;问题描述：&lt;/p&gt;
+&lt;p&gt;各种无法开机，无法进入图形界面，或者各种修复方法失效，这是一个不错的尝试。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>测试理论</title>
@@ -68,6 +101,135 @@
 &lt;p&gt;此处使用的主题为&lt;a href=&#34;https://github.com/alanorth/hugo-theme-bootstrap4-blog&#34;&gt;hugo-theme-bootstrap4-blog&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;简单初始化后的见面如下，其中home，about，contact的页面内容直接使用 &lt;code&gt;hugo new name.md &lt;/code&gt;即可进行内容的填充。posts则为自己自定义的文章分类。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>conda相关（一）</title>
+      <link>https://hhs44.github.io/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;conda简介&#34;&gt;conda简介&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。&lt;/p&gt;
+&lt;p&gt;Conda作为软件包管理器可以帮助您查找和安装软件包。如果您需要一个需要使用其他版本的Python的软件包，则无需切换到其他环境管理器，因为conda也是环境管理器。仅需几个命令，您就可以设置一个完全独立的环境来运行该不同版本的Python，同时继续在正常环境中运行您通常的Python版本。(来自&lt;a href=&#34;https://docs.conda.io/en/latest/&#34;&gt;官网&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nosql学习（一）</title>
+      <link>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</guid>
+      <description>1、NoSQL（非关系型数据库）  nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。    类型 数据模型 应用场景 代表数据库 主要特征        Redis，MemcacheDB                     2、mongoDB </description>
+    </item>
+    
+    <item>
+      <title>hibernate（一）简单登陆界面实现</title>
+      <link>https://hhs44.github.io/blog/hibernate%E4%B8%80%E7%AE%80%E5%8D%95%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/hibernate%E4%B8%80%E7%AE%80%E5%8D%95%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;p&gt;在实训期间无聊，尝试学习一些框架的东西，正好在进行数据处理，我选择了hibernate5作为我操作数据库的框架。（以前做过ssh架构下的网站的课程设计，因为专业不对口没有深入，现在做一个简单回顾也不会深入）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu18修复（系统无法启动）</title>
+      <link>https://hhs44.github.io/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/ubuntu18%E4%BF%AE%E5%A4%8D%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</guid>
+      <description>&lt;h1 id=&#34;解决方案使用u盘启动盘进入系统安装boot-repair&#34;&gt;解决方案：使用U盘启动盘，进入系统安装boot-repair&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题描述：最近在工作的ubuntu系统中尝试安装了deepin桌面，在进行桌面主题设置后重启，ubuntu无法启动，开机启动失败后进入biso界面&lt;br /&gt;
+环境描述：双显卡的笔记本（在进行U盘引导时需要禁用n卡，不禁用会导致各种卡死）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>csiTool相关</title>
+      <link>https://hhs44.github.io/blog/%E5%9F%BA%E4%BA%8Ewifi%E8%AE%BE%E5%A4%87csi%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%BA%E4%BD%93%E7%9D%A1%E7%9C%A0%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B-csi-tool%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E5%9F%BA%E4%BA%8Ewifi%E8%AE%BE%E5%A4%87csi%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%BA%E4%BD%93%E7%9D%A1%E7%9C%A0%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B-csi-tool%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;h1 id=&#34;csitool-安装及使用&#34;&gt;csitool 安装及使用&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装构建工具，Linux开发头和Git客户端&lt;/p&gt;
+&lt;p&gt;安装修改后的固件&lt;/p&gt;
+&lt;p&gt;构建用户空间日志记录工具&lt;/p&gt;
+&lt;p&gt;安装完成后，就可以使用CSI Tool记录CSI信号了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>E:无法获得锁</title>
+      <link>https://hhs44.github.io/blog/e-%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/e-%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linuxidc.com/topicnews.aspx?tid=2&#34;&gt;Ubuntu&lt;/a&gt; 18.04，其他版的Ubuntu也一样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当运行sudo apt-get install/update/或其他命令时，由于各种说不清的原因有时会出现如下提示：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;E: 无法获得锁 /var/lib/dpkg/lock-frontend - open (11: 资源暂时不可用)&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyCharm快捷键</title>
+      <link>https://hhs44.github.io/blog/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>&lt;h1 id=&#34;代码编辑快捷键&#34;&gt;代码编辑快捷键&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo优化（一）</title>
+      <link>https://hhs44.github.io/blog/hexo%E4%BC%98%E5%8C%96%E4%B8%80/</link>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/hexo%E4%BC%98%E5%8C%96%E4%B8%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo与GitHub构建个人博客</title>
+      <link>https://hhs44.github.io/blog/hexo%E4%B8%8Egithub%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 06 Feb 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/hexo%E4%B8%8Egithub%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;目录：
+1.1前言
+1.2准备工作 
+2.1创建GitHub仓库  
+2.2环境安装  
+2.3ssh key绑定
+3.1hexo安装
+3.2第一篇博客
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于错误Assetrenderfailed:css/main.css</title>
+      <link>https://hhs44.github.io/blog/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFassetrenderfailed-css-main-css/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFassetrenderfailed-css-main-css/</guid>
+      <description>第一次使用next主题时，对其配置文件进行更改时发生以上错误。 对修改的部分进行注释发现，在添加GitHub 和邮箱的链接后产生以上错误。 注释后错误消失，因为刚开始使用这个博客暂不开启这些功能。  </description>
     </item>
     
   </channel>
