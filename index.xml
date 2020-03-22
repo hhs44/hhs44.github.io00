@@ -59,7 +59,16 @@
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://hhs44.github.io/blog/2020-03-13-python-linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E4%B8%80/</guid>
-      <description>&lt;p&gt;python的应用领域已经是众所周知的非常广泛，那么在网络上它是怎么大展神通的呢。&lt;/p&gt;</description>
+      <description>&lt;p&gt;python的应用领域已经是众所周知的非常广泛，那么在网络上它是怎么大展神通的呢。&lt;/p&gt;
+&lt;p&gt;本次主要会介绍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用python列出网络上活跃的所有主机。&lt;/li&gt;
+&lt;li&gt;python中的端口扫描工具&lt;/li&gt;
+&lt;li&gt;进行ip管理&lt;/li&gt;
+&lt;li&gt;一个DNS工具包&lt;/li&gt;
+&lt;li&gt;网络嗅探&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -122,7 +131,14 @@
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0800</pubDate>
       
       <guid>https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/</guid>
-      <description>1、NoSQL（非关系型数据库）  nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。    类型 数据模型 应用场景 代表数据库 主要特征        Redis，MemcacheDB                     2、mongoDB </description>
+      <description>1、NoSQL（非关系型数据库）   nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。各类型的数据库也有许多自己的相关产品，如：图数据库Neon4J就广泛用于知识图谱领域，文档类型数据库MongoDB广泛应用与自然语言处理领域。
+  下表按照常见的NoSQL数据库方式列存储，文档存储，键值对存储等，对其数据类型、应用场景、代表数据库，以及主要特征进行总结比对。
+  接下来会使用python对NoSQL数据库的操作，这选取里Mongo DB数据库
+2、python操作mongoDB MongoDB是一个基于分布式文件存储的数据库，由C++编写，旨在为web应用提供可拓展的高性能数据存储解决方案。
+MongoDB是一个介于关系型数据库和非关系型数据库的之间的产品，是非关系数据库中功能最丰富，最像关系型数据库的。
+首先python3中使用的是Pymongo操作MongoDB，
+ 查看pymongo的版本  import pymongo print(pymongo.__version__) # 3.10.1  python操作MongoDB  from pymongo import MongoClient client = MongoClient(host=&amp;#39;127.0.0.1&amp;#39;,port=27017) db =client.pymongodb db #Out[6]: Database(MongoClient(host=[&amp;#39;127.0.0.1:27017&amp;#39;], document_class=dict, tz_aware=False, connect=True), &amp;#39;pymongodb&amp;#39;)  插入数据和读取数据  这里的数据是字典
+#插入数据 dic ={&amp;#39;name&amp;#39;:&amp;#39;huang&amp;#39;,&amp;#39;sex&amp;#39;:&amp;#39;M&amp;#39;,&amp;#39;age&amp;#39;:25} db.pycollection.insert(dic) #读取数据 data =db.pycollection.find() #这里数据是可迭代的 for x in data: print(x) #output：{&amp;#39;_id&amp;#39;: ObjectId(&amp;#39;5e7787b15e5d088115660687&amp;#39;), &amp;#39;name&amp;#39;: &amp;#39;huang&amp;#39;, &amp;#39;sex&amp;#39;: &amp;#39;M&amp;#39;, &amp;#39;age&amp;#39;: 25} </description>
     </item>
     
     <item>
