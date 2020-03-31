@@ -339,53 +339,53 @@
 <p>windows上的安装（多mysql安装踩坑记录）</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#自己原有mysql8，因为某软件只兼容5.7的MySQL，所以尝试在电脑上部署多个mysql。
-</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">安装准备</span> 
-<span style="color:#960050;background-color:#1e0010">清理</span><span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">！！！！</span>
-<span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">、把安装包里的</span>data文件夹删除
-<span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">、在”服务“查看有</span>MySQL服务没<span style="color:#960050;background-color:#1e0010">，，有的话</span> <span style="color:#960050;background-color:#1e0010">管理员进</span>cmd <span style="color:#960050;background-color:#1e0010">输入</span>sc delete <span style="color:#960050;background-color:#1e0010">服务</span>
-<span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">、注册列表清理</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">#自己原有mysql8，因为某软件只兼容5.7的MySQL，所以尝试在电脑上部署多个mysql。
+安装准备 
+清理~！！！！
+1、把安装包里的data文件夹删除
+2、在”服务“查看有MySQL服务没，，有的话 管理员进cmd 输入sc delete 服务
+3、注册列表清理
 
 
-<span style="color:#960050;background-color:#1e0010">第一步：下载</span>mysql5<span style="color:#ae81ff">.7</span><span style="color:#960050;background-color:#1e0010">的压缩文件，解压到你想要的地址</span>
-<span style="color:#960050;background-color:#1e0010">如：</span>D:<span style="color:#960050;background-color:#1e0010">\</span>mysql57
+第一步：下载mysql5.7的压缩文件，解压到你想要的地址
+如：D:\mysql57
 
-<span style="color:#960050;background-color:#1e0010">第二步：在与</span>bin同目录下新建my.ini(<span style="color:#960050;background-color:#1e0010">新建记事本更改后缀即可</span>)
-<span style="color:#960050;background-color:#1e0010">配置你的</span>mysql
-<span style="color:#960050;background-color:#1e0010">如：</span>[mysql]
+第二步：在与bin同目录下新建my.ini(新建记事本更改后缀即可)
+配置你的mysql
+如：[mysql]
 
-<span style="color:#960050;background-color:#1e0010">设置</span>mysql客户端默认字符集 
- <span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>character<span style="color:#f92672">-</span>set<span style="color:#f92672">=</span>utf8  
+设置mysql客户端默认字符集 
+ default-character-set=utf8  
  [mysqld] 
  
- <span style="color:#960050;background-color:#1e0010">#设置</span><span style="color:#ae81ff">3307</span><span style="color:#960050;background-color:#1e0010">端口</span> 
-port<span style="color:#f92672">=</span><span style="color:#ae81ff">3307</span>  
+ #设置3307端口 
+port=3307  
     
-<span style="color:#960050;background-color:#1e0010">设置</span>mysql的安装目录 
-basedir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;D:\mysql57&#34;</span> 
+设置mysql的安装目录 
+basedir=&#34;D:\mysql57&#34; 
     
-<span style="color:#960050;background-color:#1e0010">设置</span>mysql数据库的数据的存放目录 
-datadir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;D:\mysql57\data&#34;</span>
+设置mysql数据库的数据的存放目录 
+datadir=&#34;D:\mysql57\data&#34;
     
-<span style="color:#960050;background-color:#1e0010">服务端使用的字符集默认为</span><span style="color:#ae81ff">8</span><span style="color:#960050;background-color:#1e0010">比特编码的</span>latin1字符集  
-character<span style="color:#f92672">-</span>set<span style="color:#f92672">-</span>server <span style="color:#f92672">=</span> utf8
+服务端使用的字符集默认为8比特编码的latin1字符集  
+character-set-server = utf8
 
-<span style="color:#960050;background-color:#1e0010">创建新表时将使用的默认存储引擎</span>
-<span style="color:#66d9ef">default</span><span style="color:#f92672">-</span>storage<span style="color:#f92672">-</span>engine<span style="color:#f92672">=</span>INNODB
+创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
 
-<span style="color:#960050;background-color:#1e0010">允许最大连接数</span>
-max_connections<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>
-<span style="color:#960050;background-color:#1e0010">注：</span>data文件夹无需创建
+允许最大连接数
+max_connections=200
+注：data文件夹无需创建
 
-<span style="color:#960050;background-color:#1e0010">第三步：管理员身份进入</span>cmd <span style="color:#960050;background-color:#1e0010">并进入</span>D:<span style="color:#960050;background-color:#1e0010">\</span>mysql57<span style="color:#960050;background-color:#1e0010">\</span>bin <span style="color:#960050;background-color:#1e0010">安装</span>mysql
-<span style="color:#960050;background-color:#1e0010">输入</span> mysqld <span style="color:#f92672">-</span>install mysqlXXX
-<span style="color:#960050;background-color:#1e0010">注：因为是电脑上的第二个</span>MySQL  <span style="color:#960050;background-color:#1e0010">所以用“</span>XXX<span style="color:#960050;background-color:#1e0010">”（内容自定）区别与之前服务</span> 
+第三步：管理员身份进入cmd 并进入D:\mysql57\bin 安装mysql
+输入 mysqld -install mysqlXXX
+注：因为是电脑上的第二个MySQL  所以用“XXX”（内容自定）区别与之前服务 
 
-<span style="color:#960050;background-color:#1e0010">第四步：</span>mysqld <span style="color:#f92672">--</span>initialize <span style="color:#960050;background-color:#1e0010">初始化</span>  <span style="color:#960050;background-color:#1e0010">这是</span>data文件会自动创建
+第四步：mysqld --initialize 初始化  这是data文件会自动创建
 
-<span style="color:#960050;background-color:#1e0010">第五步：最重要的一步注册列表，在如下地址中找到</span>mysqlXXX
-<span style="color:#960050;background-color:#1e0010">计算机\</span>HKEY_LOCAL_MACHINE<span style="color:#960050;background-color:#1e0010">\</span>SYSTEM<span style="color:#960050;background-color:#1e0010">\</span>CurrentControlSet<span style="color:#960050;background-color:#1e0010">\</span>Services<span style="color:#960050;background-color:#1e0010">\</span>mysql3307
-<span style="color:#960050;background-color:#1e0010">编辑</span>imagepath <span style="color:#960050;background-color:#1e0010">将地址改为你安装的新的</span>MySQL的地址<span style="color:#960050;background-color:#1e0010">。。。。。</span>
+第五步：最重要的一步注册列表，在如下地址中找到mysqlXXX
+计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mysql3307
+编辑imagepath 将地址改为你安装的新的MySQL的地址。。。。。
 </code></pre></div><h2 id="23mysql-操作">2.3mysql 操作</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#75715e">#登录
 </span><span style="color:#75715e"></span>su <span style="color:#f92672">-</span>u root <span style="color:#f92672">-</span>p password
@@ -787,6 +787,8 @@ is_default <span style="color:#f92672">=</span> models<span style="color:#f92672
     <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/" class="button"><div class="previous"><div>老知识迁移（二）</div></div></a>
   
   
+    <a href="/blog/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/" class="button"><div class="next"><div>JavaScript学习（一）</div></div></a>
+  
 </div>
 
 
@@ -866,51 +868,51 @@ is_default <span style="color:#f92672">=</span> models<span style="color:#f92672
       <article class="mini-post">
         <section>
           
-  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/" class="image featured">
+  <a href="/blog/css%E5%AD%A6%E4%B9%A0%E4%B8%80/" class="image featured">
     
-      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200331114355.png" alt="">
     
   </a>
 
 
         </section>
         <header>
-          <h1><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%B8%80/">老知识迁移（一）</a></h1>
-          <time class="published" datetime="">March 15, 2020</time>
+          <h1><a href="/blog/css%E5%AD%A6%E4%B9%A0%E4%B8%80/">CSS学习一</a></h1>
+          <time class="published" datetime="">March 31, 2020</time>
         </header>
       </article>
       
       <article class="mini-post">
         <section>
           
-  <a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/" class="image featured">
+  <a href="/blog/html%E5%AD%A6%E4%B9%A0%E4%B8%80/" class="image featured">
     
-      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315231938.png" alt="">
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200331114355.png" alt="">
     
   </a>
 
 
         </section>
         <header>
-          <h1><a href="/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/">老知识迁移（二）</a></h1>
-          <time class="published" datetime="">March 15, 2020</time>
+          <h1><a href="/blog/html%E5%AD%A6%E4%B9%A0%E4%B8%80/">HTML学习一</a></h1>
+          <time class="published" datetime="">March 31, 2020</time>
         </header>
       </article>
       
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/" class="image featured">
+  <a href="/blog/web%E5%9F%BA%E7%A1%80/" class="image featured">
     
-      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200315233624.png" alt="">
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200331114355.png" alt="">
     
   </a>
 
 
         </section>
         <header>
-          <h1><a href="/blog/ubuntu-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D/">ubuntu_图形界面系统修复</a></h1>
-          <time class="published" datetime="">March 15, 2020</time>
+          <h1><a href="/blog/web%E5%9F%BA%E7%A1%80/">web基础</a></h1>
+          <time class="published" datetime="">March 31, 2020</time>
         </header>
       </article>
       
@@ -943,6 +945,11 @@ is_default <span style="color:#f92672">=</span> models<span style="color:#f92672
           
           <li>
             
+              <a href="/categories/web/">web<span class="count">4</span></a>
+            
+          
+          <li>
+            
               <a href="/categories/hexo/">hexo<span class="count">3</span></a>
             
           
@@ -954,6 +961,11 @@ is_default <span style="color:#f92672">=</span> models<span style="color:#f92672
           <li>
             
               <a href="/categories/test/">test<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="count">2</span></a>
             
           
           <li>
@@ -984,16 +996,6 @@ is_default <span style="color:#f92672">=</span> models<span style="color:#f92672
           <li>
             
               <a href="/categories/syntax/">syntax<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/web/">web<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="count">1</span></a>
             
           
           <li>
