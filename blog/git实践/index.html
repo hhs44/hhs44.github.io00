@@ -19,10 +19,7 @@
   <meta name="theme-color" content="#ffffff">
 
 <meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="Git实践">
-<meta itemprop="description" content="常用命令 # 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件 git init # 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配 # 跟踪文件 ，change to be commited ：下的文件即处于暂存状态 # git add *.txt # 提交到git仓库，并清空暂存区 git commit -m ‘message’ # 克隆仓库 git clone https/git # 检查当前文件状态 git status git status -s # 查看修改的地方 git diff # 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异 git diff --staged /--cached # 从暂存区移除文件 # rm 删除文件，git rm 记录这个删除 git rm Git的三种状态和三个阶段： 三个状态：
- 已提交（committed）  表示数据已经安全的保存在本地数据库中。
- 已修改（modified）  表示修改了文件，但是还没保存到数据库中
- 已暂存（staged）  表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。">
+<meta itemprop="description" content="根据git官方文档，进行实践学习">
 <meta itemprop="datePublished" content="2020-05-14T18:46:42&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-14T18:46:42&#43;08:00" />
 <meta itemprop="wordCount" content="182">
@@ -31,10 +28,7 @@
 
 
 <meta itemprop="keywords" content="git," /><meta property="og:title" content="Git实践" />
-<meta property="og:description" content="常用命令 # 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件 git init # 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配 # 跟踪文件 ，change to be commited ：下的文件即处于暂存状态 # git add *.txt # 提交到git仓库，并清空暂存区 git commit -m ‘message’ # 克隆仓库 git clone https/git # 检查当前文件状态 git status git status -s # 查看修改的地方 git diff # 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异 git diff --staged /--cached # 从暂存区移除文件 # rm 删除文件，git rm 记录这个删除 git rm Git的三种状态和三个阶段： 三个状态：
- 已提交（committed）  表示数据已经安全的保存在本地数据库中。
- 已修改（modified）  表示修改了文件，但是还没保存到数据库中
- 已暂存（staged）  表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。" />
+<meta property="og:description" content="根据git官方文档，进行实践学习" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hhs44.github.io/blog/git%E5%AE%9E%E8%B7%B5/" />
 <meta property="og:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png" />
@@ -44,10 +38,7 @@
 <meta name="twitter:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png"/>
 
 <meta name="twitter:title" content="Git实践"/>
-<meta name="twitter:description" content="常用命令 # 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件 git init # 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配 # 跟踪文件 ，change to be commited ：下的文件即处于暂存状态 # git add *.txt # 提交到git仓库，并清空暂存区 git commit -m ‘message’ # 克隆仓库 git clone https/git # 检查当前文件状态 git status git status -s # 查看修改的地方 git diff # 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异 git diff --staged /--cached # 从暂存区移除文件 # rm 删除文件，git rm 记录这个删除 git rm Git的三种状态和三个阶段： 三个状态：
- 已提交（committed）  表示数据已经安全的保存在本地数据库中。
- 已修改（modified）  表示修改了文件，但是还没保存到数据库中
- 已暂存（staged）  表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。"/>
+<meta name="twitter:description" content="根据git官方文档，进行实践学习"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/css/bundle.min.b2b2abee095149a60c0a1a2c4fab4b7c140b32ca88abc3d2f83d0dd903b6f634.css" integrity="sha256-srKr7glRSaYMChosT6tLfBQLMsqIq8PS&#43;D0N2QO29jQ=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -210,6 +201,8 @@
         <h2><a href="/blog/git%E5%AE%9E%E8%B7%B5/">Git实践</a></h2>
     
     
+        <p>根据git官方文档，进行实践学习</p>
+    
 </div>
   <div class="meta">
     <time class="published" datetime="2020-05-14 18:46:42 &#43;0800 CST">
@@ -340,7 +333,6 @@ git mv Readme.md readme
 </code></pre></div><h1 id="查看历史">查看历史</h1>
 <p>git log</p>
 <p>可供选项 -p &ndash;pacth ：显示每次提交引入的差异 -（num）显示提交的次数</p>
-
   </div>
   <footer>
     <ul class="stats">
