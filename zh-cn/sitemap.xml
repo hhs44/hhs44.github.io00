@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://hhs44.github.io/blog/</loc>
-    <lastmod>2020-03-31T11:46:11+08:00</lastmod>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://hhs44.github.io/categories/</loc>
-    <lastmod>2020-03-31T11:46:11+08:00</lastmod>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +30,51 @@
                 hreflang="zh-cn"
                 href="https://hhs44.github.io/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/tags/git/</loc>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/blog/git%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/</loc>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hhs44.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hhs44.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/tags/</loc>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hhs44.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hhs44.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-05-14T18:46:42+08:00</lastmod>
   </url>
   
   <url>
@@ -50,36 +95,6 @@
   <url>
     <loc>https://hhs44.github.io/blog/css%E5%AD%A6%E4%B9%A0%E4%B8%80/</loc>
     <lastmod>2020-03-31T11:46:11+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/</loc>
-    <lastmod>2020-03-31T11:46:11+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hhs44.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://hhs44.github.io/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/tags/</loc>
-    <lastmod>2020-03-31T11:46:11+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hhs44.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://hhs44.github.io/tags/"
-                />
   </url>
   
   <url>

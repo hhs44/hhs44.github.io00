@@ -6,10 +6,22 @@
     <description>Recent content in Blogs on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 31 Mar 2020 11:46:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 18:46:42 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git实践</title>
+      <link>https://hhs44.github.io/blog/git%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Thu, 14 May 2020 18:46:42 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/git%E5%AE%9E%E8%B7%B5/</guid>
+      <description>常用命令 # 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件 git init # 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配 # 跟踪文件 ，change to be commited ：下的文件即处于暂存状态 # git add *.txt # 提交到git仓库，并清空暂存区 git commit -m ‘message’ # 克隆仓库 git clone https/git # 检查当前文件状态 git status git status -s # 查看修改的地方 git diff # 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异 git diff --staged /--cached # 从暂存区移除文件 # rm 删除文件，git rm 记录这个删除 git rm Git的三种状态和三个阶段： 三个状态：
+ 已提交（committed）  表示数据已经安全的保存在本地数据库中。
+ 已修改（modified）  表示修改了文件，但是还没保存到数据库中
+ 已暂存（staged）  表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。</description>
+    </item>
     
     <item>
       <title>CSS学习一</title>
@@ -228,12 +240,10 @@ MongoDB是一个介于关系型数据库和非关系型数据库的之间的产�
       <description>&lt;h1 id=&#34;csitool-安装及使用&#34;&gt;csitool 安装及使用&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目录：&lt;/p&gt;
-&lt;blockquote&gt;
 &lt;p&gt;安装构建工具，Linux开发头和Git客户端&lt;/p&gt;
 &lt;p&gt;安装修改后的固件&lt;/p&gt;
 &lt;p&gt;构建用户空间日志记录工具&lt;/p&gt;
 &lt;p&gt;安装完成后，就可以使用CSI Tool记录CSI信号了&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

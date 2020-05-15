@@ -20,12 +20,10 @@
       <description>&lt;h1 id=&#34;csitool-安装及使用&#34;&gt;csitool 安装及使用&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目录：&lt;/p&gt;
-&lt;blockquote&gt;
 &lt;p&gt;安装构建工具，Linux开发头和Git客户端&lt;/p&gt;
 &lt;p&gt;安装修改后的固件&lt;/p&gt;
 &lt;p&gt;构建用户空间日志记录工具&lt;/p&gt;
 &lt;p&gt;安装完成后，就可以使用CSI Tool记录CSI信号了&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

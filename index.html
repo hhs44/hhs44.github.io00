@@ -23,7 +23,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hhs44.github.io/" />
-<meta property="og:updated_time" content="2020-03-31T11:46:11+08:00" />
+<meta property="og:updated_time" content="2020-05-14T18:46:42+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Huanghs blog"/>
 <meta name="twitter:description" content=""/>
@@ -181,6 +181,95 @@
   <header>
   <div class="title">
     
+        <h2><a href="/blog/git%E5%AE%9E%E8%B7%B5/">Git实践</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-05-14 18:46:42 &#43;0800 CST">
+      May 14, 2020
+    </time>
+    <span class="author">Huanghs</span>
+    
+      <p>1 分钟</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/blog/git%E5%AE%9E%E8%B7%B5/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png" alt="">
+    
+  </a>
+
+
+  
+  <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件
+git init
+# 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配  
+# 跟踪文件 ，change to be commited ：下的文件即处于暂存状态
+#
+git add *.txt
+# 提交到git仓库，并清空暂存区
+git commit -m ‘message’
+
+# 克隆仓库
+git clone https/git
+
+# 检查当前文件状态
+git status
+git status -s
+
+# 查看修改的地方
+git diff
+
+# 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异
+git diff --staged /--cached
+# 从暂存区移除文件
+# rm 删除文件，git rm 记录这个删除 
+git rm 
+</code></pre></div><h2 id="git的三种状态和三个阶段">Git的三种状态和三个阶段：</h2>
+<p>三个状态：</p>
+  <footer>
+    <a href="/blog/git%E5%AE%9E%E8%B7%B5/" class="button big">阅读全文</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/%E5%B7%A5%E5%85%B7">工具</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/git">git</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    
         <h2><a href="/blog/css%E5%AD%A6%E4%B9%A0%E4%B8%80/">CSS学习一</a></h2>
     
     
@@ -311,72 +400,6 @@
 </article>
 
         
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/web%E5%9F%BA%E7%A1%80/">web基础</a></h2>
-    
-    
-        <p>web开发是创建web页面或app等前端界面呈现给用户的过程，通过HTML，CSS，Javascript以及衍生出的各类框架解决方案，来实现互联网产品的用户界面的交互</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2020-03-31 11:45:23 &#43;0800 CST">
-      March 31, 2020
-    </time>
-    <span class="author">Huanghs</span>
-    
-      <p>2 分钟</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/blog/web%E5%9F%BA%E7%A1%80/" class="image featured">
-    
-      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200331114355.png" alt="">
-    
-  </a>
-
-
-  
-  <p>web前端是由网页制作演变而来，现在随着互联网的快速发展，前端不只是尽显于图片和文字的静态展示，还需要完成于用户的交互，以及各种功能的集合。</p>
-  <footer>
-    <a href="/blog/web%E5%9F%BA%E7%A1%80/" class="button big">阅读全文</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://hhs44.github.io/categories/web">web</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://hhs44.github.io/tags/%E5%89%8D%E7%AB%AF">前端</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -394,6 +417,23 @@
       <header>
         <h1>最新文章</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/git%E5%AE%9E%E8%B7%B5/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/git%E5%AE%9E%E8%B7%B5/">Git实践</a></h1>
+          <time class="published" datetime="">May 14, 2020</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -425,23 +465,6 @@
         </section>
         <header>
           <h1><a href="/blog/html%E5%AD%A6%E4%B9%A0%E4%B8%80/">HTML学习一</a></h1>
-          <time class="published" datetime="">March 31, 2020</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-  <a href="/blog/web%E5%9F%BA%E7%A1%80/" class="image featured">
-    
-      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200331114355.png" alt="">
-    
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/blog/web%E5%9F%BA%E7%A1%80/">web基础</a></h1>
           <time class="published" datetime="">March 31, 2020</time>
         </header>
       </article>
@@ -526,6 +549,11 @@
           <li>
             
               <a href="/categories/syntax/">syntax<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%B7%A5%E5%85%B7/">工具<span class="count">1</span></a>
             
           
           <li>
