@@ -22,7 +22,7 @@
 <meta itemprop="description" content="根据git官方文档，进行实践学习">
 <meta itemprop="datePublished" content="2020-05-14T18:46:42&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-14T18:46:42&#43;08:00" />
-<meta itemprop="wordCount" content="182">
+<meta itemprop="wordCount" content="181">
 <meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png">
 
 
@@ -232,7 +232,24 @@
 
 
   <div class="content">
-    <h1 id="常用命令">常用命令</h1>
+    <h2 id="git的三种状态和三个阶段">Git的三种状态和三个阶段：</h2>
+<p>三个状态：</p>
+<ul>
+<li>已提交（committed）</li>
+</ul>
+<p>表示数据已经安全的保存在本地数据库中。</p>
+<ul>
+<li>已修改（modified）</li>
+</ul>
+<p>表示修改了文件，但是还没保存到数据库中</p>
+<ul>
+<li>已暂存（staged）</li>
+</ul>
+<p>表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。</p>
+<p>三个阶段：工作区、暂存区以及git目录</p>
+<p>工作区，显而易见是在进行文件操作时需要的缓存区域，能够方便使用和修改，其中的文件是从git仓库的压缩数据库中提取出来的。</p>
+<p>暂存区（索引）的理解是，一个保存了下次要提交的文件列表信息</p>
+<p>git仓库就是git存储项目的元数据和对象数据库的地方。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件
 git init
 # 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配  
@@ -257,25 +274,7 @@ git diff --staged /--cached
 # 从暂存区移除文件
 # rm 删除文件，git rm 记录这个删除 
 git rm 
-</code></pre></div><h2 id="git的三种状态和三个阶段">Git的三种状态和三个阶段：</h2>
-<p>三个状态：</p>
-<ul>
-<li>已提交（committed）</li>
-</ul>
-<p>表示数据已经安全的保存在本地数据库中。</p>
-<ul>
-<li>已修改（modified）</li>
-</ul>
-<p>表示修改了文件，但是还没保存到数据库中</p>
-<ul>
-<li>已暂存（staged）</li>
-</ul>
-<p>表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。</p>
-<p>三个阶段：工作区、暂存区以及git目录</p>
-<p>工作区，显而易见是在进行文件操作时需要的缓存区域，能够方便使用和修改，其中的文件是从git仓库的压缩数据库中提取出来的。</p>
-<p>暂存区（索引）的理解是，一个保存了下次要提交的文件列表信息</p>
-<p>git仓库就是git存储项目的元数据和对象数据库的地方。</p>
-<h1 id="git的初始化前的配置">Git的初始化前的配置</h1>
+</code></pre></div><h1 id="git的初始化前的配置">Git的初始化前的配置</h1>
 <p>每台电脑只需完成一次配置，来钉子自己的git环境。</p>
 <p>查看当前所有配置 以及他们所在的文件：</p>
 <p><code>git config --list --show-origin</code></p>
@@ -333,6 +332,7 @@ git mv Readme.md readme
 </code></pre></div><h1 id="查看历史">查看历史</h1>
 <p>git log</p>
 <p>可供选项 -p &ndash;pacth ：显示每次提交引入的差异 -（num）显示提交的次数</p>
+
   </div>
   <footer>
     <ul class="stats">
@@ -432,10 +432,10 @@ git mv Readme.md readme
      
     <aside>
         <header>
-        <h4>Git实践的字数: 182</h4> 
+        <h4>Git实践的字数: 181</h4> 
         </header><nav id="TableOfContents">
   <ul>
-    <li><a href="#常用命令">常用命令</a>
+    <li>
       <ul>
         <li><a href="#git的三种状态和三个阶段">Git的三种状态和三个阶段：</a></li>
       </ul>
