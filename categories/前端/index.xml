@@ -6,30 +6,10 @@
     <description>Recent content in 前端 on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 31 Mar 2020 11:37:07 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>JavaScript学习（一）</title>
-      <link>https://hhs44.github.io/blog/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
-      <pubDate>Tue, 31 Mar 2020 11:37:07 +0800</pubDate>
-      
-      <guid>https://hhs44.github.io/blog/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
-      <description>JavaScript的学习回顾 再次认识JavaScript 一般来说，完整的JavaScript包括：
- ECMAScript，描述了该语言的语法和基本对象 文档对象模型（DOM），描述处理页面内容的方法和接口 浏览器对象模型（BOM），描述于浏览器进行交互的方法和接口  JavaScript的基本特点如下：
- 是一种解释性脚本语言（代码不进行预编译）。 主要用来向HTML页面添加交互行为。 可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离。  JavaScript常用来完成以下任务：
- 嵌入动态文本于HTML页面 对浏览器事件作出响应 读写HTML元素 在数据被提交到服务器之前验证数据 检测访客的浏览器信息 控制cookies，包括创建和修改等  JavaScript的应用程序接口（API） api是什么 API 是已经建立好的一套代码组件，可以让开发者实现原本很难甚至无法实现的程序。就像现成的家具套件之于家居建设，用一些已经切好的木板组装一个书柜，显然比自己设计，寻找合适的木材，裁切至合适的尺寸和形状，找到正确尺寸的螺钉，再组装成书柜要简单得多。
-API通常分两种：
-  浏览器api
-它内建于web浏览器中，它们可以将数据从周边计算机环境中筛选出来，还可以做实用的复杂工作。如：
- 文档对象模型API（DOM） 地理位置API（Geolocation API） 画布（Canvas）    第三方api
-  Javascript的使用方式 内部JavaScript   在准备好需要添加js的html文件
-  准备js代码：
-  &amp;lt;script&amp;gt; //在这里编写javaScript代码 &amp;lt;/script&amp;gt;  插入代码块，在结束之前插入代码块  外部JavaScript  首先准备一个js文件，并记录可以访问这个文件的相对地址或真实地址。 在html文件中将&amp;lt;script&amp;gt;替换为：  &amp;lt;script src=&amp;#34;xxx.js&amp;#34; async&amp;gt;&amp;lt;/script&amp;gt; 内联JavaScript处理器 需要使用内联的处理器
-Javascript中的常见错误 JavaScript的运行次序 当浏览器执行一段js代码时时按照从上往下 的顺序执行这段代码的，所以需要在代码书写时注意书写的顺序以及使用的对象是否在上面以及执行的代码中进行了定义。</description>
-    </item>
     
     <item>
       <title>老知识迁移（一）</title>

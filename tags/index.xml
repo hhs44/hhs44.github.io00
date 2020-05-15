@@ -21,38 +21,11 @@
     </item>
     
     <item>
-      <title>CSS</title>
-      <link>https://hhs44.github.io/tags/css/</link>
-      <pubDate>Tue, 31 Mar 2020 11:46:11 +0800</pubDate>
-      
-      <guid>https://hhs44.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>前端</title>
       <link>https://hhs44.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Tue, 31 Mar 2020 11:46:11 +0800</pubDate>
+      <pubDate>Tue, 31 Mar 2020 11:45:23 +0800</pubDate>
       
       <guid>https://hhs44.github.io/tags/%E5%89%8D%E7%AB%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTML</title>
-      <link>https://hhs44.github.io/tags/html/</link>
-      <pubDate>Tue, 31 Mar 2020 11:45:46 +0800</pubDate>
-      
-      <guid>https://hhs44.github.io/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript</title>
-      <link>https://hhs44.github.io/tags/javascript/</link>
-      <pubDate>Tue, 31 Mar 2020 11:37:07 +0800</pubDate>
-      
-      <guid>https://hhs44.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -62,6 +35,15 @@
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hhs44.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://hhs44.github.io/tags/html/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/html/</guid>
       <description></description>
     </item>
     
