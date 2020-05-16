@@ -22,7 +22,7 @@
 <meta itemprop="description" content="根据git官方文档，进行实践学习">
 <meta itemprop="datePublished" content="2020-05-14T18:46:42&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-14T18:46:42&#43;08:00" />
-<meta itemprop="wordCount" content="181">
+<meta itemprop="wordCount" content="361">
 <meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png">
 
 
@@ -210,7 +210,7 @@
     </time>
     <span class="author">Huanghs</span>
     
-      <p>1 分钟</p>
+      <p>2 分钟</p>
     
   </div>
 </header>
@@ -232,7 +232,14 @@
 
 
   <div class="content">
-    <h2 id="git的三种状态和三个阶段">Git的三种状态和三个阶段：</h2>
+    <h1 id="git实践">Git实践</h1>
+<p><strong>git</strong>是一个<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%A3%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6">分布式版本控制</a>软件，最初由<a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E7%BA%B3%E6%96%AF%C2%B7%E6%89%98%E7%93%A6%E5%85%B9">林纳斯·托瓦兹</a>创作，于2005年以<a href="https://zh.wikipedia.org/wiki/GPL">GPL</a>发布。最初目的是为更好地管理<a href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8">Linux内核</a>开发而设计。</p>
+<p>git最初的开发动力来自于<a href="https://zh.wikipedia.org/wiki/BitKeeper">BitKeeper</a>和Monotone。git最初只是作为一个可以被其他前端（比如Cogito或Stgit[<a href="https://zh.wikipedia.org/wiki/Git#cite_note-8">8]</a>）包装的后端而开发的，但后来git内核已经成熟到可以独立地用作版本控制。很多著名的软件都使用git进行版本控制[，其中包括<a href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8">Linux内核</a>、<a href="https://zh.wikipedia.org/wiki/X.Org%E6%9C%8D%E5%8A%A1%E5%99%A8">X.Org服务器</a>和<a href="https://zh.wikipedia.org/wiki/OLPC">OLPC</a>内核等项目的开发流程。</p>
+<p>&mdash;&mdash;来自wiki</p>
+<p>使用的实践的前提是，本地安装成功git，即：</p>
+<p>使用 <code>git --version</code>命令可以获得版本号<br />
+git version 2.26.2.windows.1</p>
+<h2 id="git的三种状态和三个阶段">Git的三种状态和三个阶段</h2>
 <p>三个状态：</p>
 <ul>
 <li>已提交（committed）</li>
@@ -246,53 +253,185 @@
 <li>已暂存（staged）</li>
 </ul>
 <p>表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。</p>
-<p>三个阶段：工作区、暂存区以及git目录</p>
+<p>三个阶段：</p>
+<p>工作区、暂存区以及git目录</p>
 <p>工作区，显而易见是在进行文件操作时需要的缓存区域，能够方便使用和修改，其中的文件是从git仓库的压缩数据库中提取出来的。</p>
 <p>暂存区（索引）的理解是，一个保存了下次要提交的文件列表信息</p>
 <p>git仓库就是git存储项目的元数据和对象数据库的地方。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件
-git init
-# 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配  
-# 跟踪文件 ，change to be commited ：下的文件即处于暂存状态
-#
+<h2 id="本地玩转git">本地玩转Git</h2>
+<p>本地尝试功能包含：初始化git仓库，查看和配置本地信息（用户名，邮件是必要配置），添加文件追踪，查看仓库状态，提交事务以及备注，分支操作等。</p>
+<h4 id="基本配置">基本配置</h4>
+<ol>
+<li>
+<p>初始化仓库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git init
+</code></pre></div></li>
+<li>
+<p>配置用户名和邮件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git config --global user.name &#34;John Doe&#34;
+git config --global user.email johndoe@example.com
+# 查看配置， --list 可以查看
+git config --list --show-origin
+git config user.name
+</code></pre></div></li>
+<li>
+<p>添加文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 主要使用.和*进行匹配
+git add .  # 将所有目录下的文件进行跟踪
 git add *.txt
-# 提交到git仓库，并清空暂存区
-git commit -m ‘message’
-
-# 克隆仓库
-git clone https/git
-
-# 检查当前文件状态
-git status
-git status -s
-
-# 查看修改的地方
-git diff
-
-# 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异
-git diff --staged /--cached
-# 从暂存区移除文件
-# rm 删除文件，git rm 记录这个删除 
-git rm 
-</code></pre></div><h1 id="git的初始化前的配置">Git的初始化前的配置</h1>
-<p>每台电脑只需完成一次配置，来钉子自己的git环境。</p>
-<p>查看当前所有配置 以及他们所在的文件：</p>
-<p><code>git config --list --show-origin</code></p>
-<p>首先需要配置的有用户信息：</p>
-<p><code>git config --global user.name “xxx”</code></p>
-<p><code>git config --global user.email “xxx”</code></p>
-<p>可以修改的配置有文本编辑器：关键字段是 <code>core.editor</code> <code>xxxx</code></p>
-<p>配置成功后可以使用<code>git config 关键字</code>进行配置检查</p>
-<h2 id="获取帮助">获取帮助</h2>
-<p>-h命令，，git 子命令查询如 git add -h</p>
-<h1 id="文件跟踪">文件跟踪</h1>
-<p>git add 文件 使得文件进入暂存区，开始被git跟踪文件的状态，包括修改，删除。</p>
-<p><code>git status -s</code>能够简单的显示状态，通过简单的前缀 ：</p>
-<p>A 表示被追踪的文件</p>
+</code></pre></div><p>添加文件后git会对添加文件进行追踪，追踪的参数包括修改，删除。</p>
+<p>进行这些操作后可以查看仓库的状态。</p>
+<p>添加文件时出现：LF will be replaced by CRLF 警告时：</p>
+<p>使用：<code>git config --global core.autocrlf false</code>即可去除警告。</p>
+</li>
+<li>
+<p>查看仓库状态</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git status
+git status -s 获得更简洁的报告
+</code></pre></div><p>A 表示被追踪的文件</p>
 <p>M文件被修改，</p>
 <p>？？新添加的未跟踪的文件</p>
 <p>两个占位，左栏暂存区，右栏工作区（需要commit后才能有工作区）</p>
-<h1 id="gitignore忽略文件">.gitignore忽略文件</h1>
+</li>
+<li>
+<p>提交版本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git commit -m ‘message’
+</code></pre></div><p>如果不添加 -m参数在win上会弹出安装时选择的文本编辑器进行提交信息的编写</p>
+</li>
+<li>
+<p>获取帮助</p>
+</li>
+</ol>
+<p>-h命令，，git 子命令查询如 git add -h</p>
+<ol start="7">
+<li>
+<p>获取提交历史</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git log
+</code></pre></div><p>log信息会按照提交时间的先后列出，信息包含commit，Author，date和每次提交的备注信息。</p>
+<p>主要的参数包括 -p/&ndash;patch -num（定义显示最近的几条数据）</p>
+<p>&ndash;stat：可以看到每次提交的改动信息的统计</p>
+<p>&ndash;pretty：自定义显示的结构 ：如：&ndash;pretty=oneline：每次提交的信息一行显示完</p>
+<p>自定义时使用的参数：</p>
+<p><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200516104420.png" alt="" /></p>
+</li>
+</ol>
+<h4 id="撤销操作">撤销操作</h4>
+<ul>
+<li>
+<p>重新提交</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git commit --amend # 该方法会替代上一次的提交
+</code></pre></div></li>
+<li>
+<p>取消暂存的文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git reset HEAD xxxx（文件）
+</code></pre></div></li>
+<li>
+<p>撤销对文件的修改</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git checkout --&lt;file&gt;
+</code></pre></div></li>
+</ul>
+<h4 id="打标签">打标签</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 查询标签
+git tag -l “标签(可进行匹配搜索)”
+
+# 创建标签，如果不使用-a参数 进行版本信息查询时就看不到额外的标签信息
+git tag -a v1.1 -m ‘message’
+
+# 查看版本信息
+git show v0.1
+
+# 给历史版本打标签
+git tag -a v1.2 9fceb02（部分校验和）
+
+# 删除标签 -d 
+git tag -d v1.4-lw
+
+
+如果使用远端服务器，标签需要另外push
+</code></pre></div><h4 id="git别名">Git别名</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git config --global alias.co checkout 
+
+git config --global alias.br branch 
+
+git config --global alias.ci commit
+git config --global alias.st status
+</code></pre></div><h2 id="和github一起使用">和github一起使用</h2>
+<p>简单熟悉本地git的使用后，可以进行远端操作。</p>
+<p>多次本地git库关联到github出现错误后，建议构建先创建远端的github仓库，使用<code>git clone 仓库名</code>命令克隆至本地，再进行git的使用。</p>
+<p>当然这里也根据官方文档记录本地连接远端仓库服务器的方法：</p>
+<ul>
+<li>首先查看本地git仓库是否配置远端服务器：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">get remote 
+</code></pre></div><p>如果是克隆的仓库，可以看到origin（git给克隆仓库服务器的默认名字）</p>
+<p>使用 -v 可以显示 使用的git的url，主要使用的是https/ssh</p>
+<p><strong>可以存在不止一个远端url</strong></p>
+<ul>
+<li>添加远程仓库</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># pd 别名
+git remote add pb https://github.com/paulboone/ticgit
+# 获取仓库信息，origin 无法获取？？
+git fetch pb
+必须注意 git fetch 命令只会 将数据下载到你的本地仓库——它并不会自动合并或修改你当前的工作
+</code></pre></div><ul>
+<li>推送到远程仓库</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 推送到origin 的master分支
+git push origin master
+# 展示远程仓库的url和跟踪分支信息，列出了执行git push会自动推送的远程分支
+git remote show origin  
+
+</code></pre></div><ul>
+<li>远程仓库的重命名与移除</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote rename pb paul
+
+git remote remove paul
+</code></pre></div><ul>
+<li>标签的推送（共享标签）与删除（远端）</li>
+</ul>
+<p>默认git push 不会传送标签到远端服务器仓库上。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git push origin &lt;tagname&gt;
+#  一次性提交多个标签
+git push origin --tags
+
+# 删除标签
+git push &lt;remote&gt;：refs/tags/&lt;tagname&gt;
+git push origin --delete &lt;tagname&gt;
+
+</code></pre></div><h2 id="git分支">Git分支</h2>
+<p>分支是一个很好理解的东西，创建新的分支能够保证原有的项目不受影响。也是git官方文档里称之的“必杀技特性”。git鼓励频繁的使用分支和合并。</p>
+<p>一般来说执行commit命令后git 中存在三个对象，一个是文件快照对象，树对象（记录文件结构和快照对象的索引，以及提交对象（包含指向前树对象的指针和所有提交信息。</p>
+<h4 id="创建分支">创建分支</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 创建新的分支
+git branch testing
+</code></pre></div><p>创建分支后需要知道如何指向这个分支，git中存在HEAD的特殊指针，通过它进行分支的指定。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 指向新建的分支
+git chechout testing
+
+# 创建分支并立即切换
+git checkout -b &lt;newbranchname&gt;
+</code></pre></div><h4 id="分支的合并">分支的合并</h4>
+<p>因为在新建的分支上进行修改后，快照是接续主分支的，合并分支就像将把分支的指针指向修改后的快照。在官方文档中把这一操作叫做快进。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 合并新的分支到当前分支
+git merge &lt;newbranch&gt;
+
+</code></pre></div><p>分支合并后如需要删除临时新建的分支可以使用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git branch -d &lt;branch&gt;
+</code></pre></div><p>特殊情况实例：</p>
+<p><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200516151425.png" alt="" /></p>
+<p>当新分支是在当前分支指向的快照之前分出的。如果master中修改的文件和新分支里修改的文件不是同一文件的同一部分。合并的命令不变，git会经过一系列的处理进行合并。</p>
+<p>如果产生冲突git不会继续进行，直到你解决了冲突。这里使用git status可以查看冲突的文件。</p>
+<p>使用图形化工具会有助于解决该问题。。<code>git mergetool</code></p>
+<h4 id="分支管理">分支管理</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 查看分支
+git branch
+git branch -v # 可以查看每个分支的最后一次提交
+# --merged ：查看哪些分支已经与当前分支合并
+# --no-merged 查看所有包含未合并工作的分支，分支中有未合并的工作，不能使用-d删除
+# -D 强制删除
+</code></pre></div><h1 id="gitignore忽略文件">.gitignore忽略文件</h1>
 <p>当一个git库中有不需要上传的文件时 进行配置：</p>
 <p><code>*.[oa]</code></p>
 <p><code>*~</code></p>
@@ -312,27 +451,10 @@ doc/*.txt
 # 忽略所有
 doc/**/*.txt
 </code></pre></div><p>其他.gitignore配置可以在<a href="https://github.com/github/gitignore">这里</a>看到。</p>
-<h1 id="提交">提交</h1>
-<p>git commit -m “xxxx”</p>
-<p>这里提交的是放在暂存区域的快照。</p>
-<p>使用 -a参数可以将所有跟踪过的文件暂存起来一起提交。</p>
-<h1 id="移除">移除</h1>
-<p>从git仓库中移除</p>
-<p>从工作区移除</p>
-<p>从暂存区移除</p>
 <h1 id="移动文件">移动文件</h1>
 <p>命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git mv file_from file_to
-
-git mv Readme.md readme
-
-===》 git rm  readme.md
-
-===》 git add readme
-</code></pre></div><h1 id="查看历史">查看历史</h1>
-<p>git log</p>
-<p>可供选项 -p &ndash;pacth ：显示每次提交引入的差异 -（num）显示提交的次数</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+</code></pre></div>
   </div>
   <footer>
     <ul class="stats">
@@ -432,25 +554,40 @@ git mv Readme.md readme
      
     <aside>
         <header>
-        <h4>Git实践的字数: 181</h4> 
+        <h4>Git实践的字数: 361</h4> 
         </header><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#git实践">Git实践</a>
       <ul>
-        <li><a href="#git的三种状态和三个阶段">Git的三种状态和三个阶段：</a></li>
+        <li><a href="#git的三种状态和三个阶段">Git的三种状态和三个阶段</a></li>
+        <li><a href="#本地玩转git">本地玩转Git</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#基本配置">基本配置</a></li>
+                <li><a href="#撤销操作">撤销操作</a></li>
+                <li><a href="#打标签">打标签</a></li>
+                <li><a href="#git别名">Git别名</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#和github一起使用">和github一起使用</a></li>
+        <li><a href="#git分支">Git分支</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#创建分支">创建分支</a></li>
+                <li><a href="#分支的合并">分支的合并</a></li>
+                <li><a href="#分支管理">分支管理</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#git的初始化前的配置">Git的初始化前的配置</a>
-      <ul>
-        <li><a href="#获取帮助">获取帮助</a></li>
-      </ul>
-    </li>
-    <li><a href="#文件跟踪">文件跟踪</a></li>
     <li><a href="#gitignore忽略文件">.gitignore忽略文件</a></li>
-    <li><a href="#提交">提交</a></li>
-    <li><a href="#移除">移除</a></li>
     <li><a href="#移动文件">移动文件</a></li>
-    <li><a href="#查看历史">查看历史</a></li>
   </ul>
 </nav></aside>
     <a href="#" id="toc-toggle"></a>

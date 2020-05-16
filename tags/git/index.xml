@@ -17,15 +17,26 @@
       <pubDate>Thu, 14 May 2020 18:46:42 +0800</pubDate>
       
       <guid>https://hhs44.github.io/blog/git%E5%AE%9E%E8%B7%B5/</guid>
-      <description>Git的三种状态和三个阶段： 三个状态：
+      <description>Git实践 git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。
+git最初的开发动力来自于BitKeeper和Monotone。git最初只是作为一个可以被其他前端（比如Cogito或Stgit[8]）包装的后端而开发的，但后来git内核已经成熟到可以独立地用作版本控制。很多著名的软件都使用git进行版本控制[，其中包括Linux内核、X.Org服务器和OLPC内核等项目的开发流程。
+&amp;mdash;&amp;mdash;来自wiki
+使用的实践的前提是，本地安装成功git，即：
+使用 git --version命令可以获得版本号
+git version 2.26.2.windows.1
+Git的三种状态和三个阶段 三个状态：
  已提交（committed）  表示数据已经安全的保存在本地数据库中。
  已修改（modified）  表示修改了文件，但是还没保存到数据库中
  已暂存（staged）  表示对一个已修改的文件当前版本做了标记，使之包含在下次提交的快照中。
-三个阶段：工作区、暂存区以及git目录
+三个阶段：
+工作区、暂存区以及git目录
 工作区，显而易见是在进行文件操作时需要的缓存区域，能够方便使用和修改，其中的文件是从git仓库的压缩数据库中提取出来的。
 暂存区（索引）的理解是，一个保存了下次要提交的文件列表信息
 git仓库就是git存储项目的元数据和对象数据库的地方。
-# 新建本地git仓库时，初始化本地，此时文件夹中会多出一个.git文件 git init # 提交 文件到暂存区 使用.可以上传所有文件，*可以进行匹配 # 跟踪文件 ，change to be commited ：下的文件即处于暂存状态 # git add *.txt # 提交到git仓库，并清空暂存区 git commit -m ‘message’ # 克隆仓库 git clone https/git # 检查当前文件状态 git status git status -s # 查看修改的地方 git diff # 查看已暂存的将要添加到下次提交里的内容 对比最后一次要提交文件的差异 git diff --staged /--cached # 从暂存区移除文件 # rm 删除文件，git rm 记录这个删除 git rm Git的初始化前的配置 每台电脑只需完成一次配置，来钉子自己的git环境。</description>
+本地玩转Git 本地尝试功能包含：初始化git仓库，查看和配置本地信息（用户名，邮件是必要配置），添加文件追踪，查看仓库状态，提交事务以及备注，分支操作等。
+基本配置   初始化仓库
+git init   配置用户名和邮件
+git config --global user.name &amp;#34;John Doe&amp;#34; git config --global user.email johndoe@example.com # 查看配置， --list 可以查看 git config --list --show-origin git config user.name   添加文件
+# 主要使用.和*进行匹配 git add .</description>
     </item>
     
   </channel>
