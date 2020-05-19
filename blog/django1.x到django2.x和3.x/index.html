@@ -2,31 +2,31 @@
 <html lang="zh-cn">
   <head>
   <meta charset="utf-8">
-<title>Nosql学习（一） - Huanghs blog</title>
+<title>Django1.x到django2.x和3.x - Huanghs blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="Nosql学习（一）">
-<meta itemprop="description" content="数据库有很多类型，主要分为关系型和非关系型数据库，这里简单了解一下非关系型数据库。">
-<meta itemprop="datePublished" content="2019-08-26T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-26T00:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="58">
-<meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200316000214.png">
+<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="Django1.x到django2.x和3.x">
+<meta itemprop="description" content="记录版本变化后遇到的各类坑点。目前包含pymysql，model的on-delete等">
+<meta itemprop="datePublished" content="2020-05-19T11:18:37&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-19T11:18:37&#43;08:00" />
+<meta itemprop="wordCount" content="30">
+<meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png">
 
 
 
-<meta itemprop="keywords" content="基础,mysql,mongoDB,Redis," /><meta property="og:title" content="Nosql学习（一）" />
-<meta property="og:description" content="数据库有很多类型，主要分为关系型和非关系型数据库，这里简单了解一下非关系型数据库。" />
+<meta itemprop="keywords" content="Django," /><meta property="og:title" content="Django1.x到django2.x和3.x" />
+<meta property="og:description" content="记录版本变化后遇到的各类坑点。目前包含pymysql，model的on-delete等" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hhs44.github.io/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/" />
-<meta property="og:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200316000214.png" />
-<meta property="article:published_time" content="2019-08-26T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-08-26T00:00:00+08:00" />
+<meta property="og:url" content="https://hhs44.github.io/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/" />
+<meta property="og:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png" />
+<meta property="article:published_time" content="2020-05-19T11:18:37+08:00" />
+<meta property="article:modified_time" content="2020-05-19T11:18:37+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200316000214.png"/>
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png"/>
 
-<meta name="twitter:title" content="Nosql学习（一）"/>
-<meta name="twitter:description" content="数据库有很多类型，主要分为关系型和非关系型数据库，这里简单了解一下非关系型数据库。"/>
+<meta name="twitter:title" content="Django1.x到django2.x和3.x"/>
+<meta name="twitter:description" content="记录版本变化后遇到的各类坑点。目前包含pymysql，model的on-delete等"/>
 <link rel="stylesheet" href="/css/bundle.min.97b65b88e77b0d40cc9609e4702b8d197a5ba7a5fb2ffb4e02a0a8105bce0f9b.css" integrity="sha256-l7ZbiOd7DUDMlgnkcCuNGXpbp6X7L/tOAqCoEFvOD5s=">
         <link rel="stylesheet" href="/css/add-on.css">
 
@@ -116,37 +116,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Django1.x%e5%88%b0django2.x%e5%92%8c3.x&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f" target="_blank" rel="noopener" class="share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f" target="_blank" rel="noopener" class="share-btn facebook">
         <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f&amp;title=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f&amp;title=Django1.x%e5%88%b0django2.x%e5%92%8c3.x" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f&amp;title=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f&amp;title=Django1.x%e5%88%b0django2.x%e5%92%8c3.x" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f&amp;description=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f&amp;description=Django1.x%e5%88%b0django2.x%e5%92%8c3.x" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check out this post by %e6%b5%a9%e4%b9%a6&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check out this post by Huanghs&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -223,17 +223,17 @@
   <header>
   <div class="title">
     
-        <h2><a href="/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/">Nosql学习（一）</a></h2>
+        <h2><a href="/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/">Django1.x到django2.x和3.x</a></h2>
     
     
-        <p>数据库有很多类型，主要分为关系型和非关系型数据库，这里简单了解一下非关系型数据库。</p>
+        <p>记录版本变化后遇到的各类坑点。目前包含pymysql，model的on-delete等</p>
     
 </div>
   <div class="meta">
-    <time class="published" datetime="2019-08-26 00:00:00 &#43;0800 CST">
-      August 26, 2019
+    <time class="published" datetime="2020-05-19 11:18:37 &#43;0800 CST">
+      May 19, 2020
     </time>
-    <span class="author">浩书</span>
+    <span class="author">Huanghs</span>
     
       <p>1 分钟</p>
     
@@ -248,37 +248,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Django1.x%e5%88%b0django2.x%e5%92%8c3.x&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f" target="_blank" rel="noopener" class="share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f" target="_blank" rel="noopener" class="share-btn facebook">
         <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f&amp;title=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f&amp;title=Django1.x%e5%88%b0django2.x%e5%92%8c3.x" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f&amp;title=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f&amp;title=Django1.x%e5%88%b0django2.x%e5%92%8c3.x" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f&amp;description=Nosql%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f&amp;description=Django1.x%e5%88%b0django2.x%e5%92%8c3.x" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check out this post by %e6%b5%a9%e4%b9%a6&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2fnosql%25E5%25AD%25A6%25E4%25B9%25A0%25E4%25B9%258Bmongodb%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check out this post by Huanghs&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango1.x%25E5%2588%25B0django2.x%25E5%2592%258C3.x%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -286,61 +286,32 @@
 
   </section>
   
-  <a href="/blog/nosql%E5%AD%A6%E4%B9%A0%E4%B9%8Bmongodb/" class="image featured">
+  <a href="/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/" class="image featured">
     
-      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200316000214.png" alt="">
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png" alt="">
     
   </a>
 
 
   <div class="content">
-    <h1 id="1nosql非关系型数据库">1、NoSQL（非关系型数据库）</h1>
+    <h1 id="问题列表">问题列表：</h1>
+<ol>
+<li>pymysql问题（两种方法）</li>
+<li>路由变化（和1.x不冲突，新特性）</li>
+<li>model问题（增加了必须添加的字段）</li>
+</ol>
+<h2 id="问题一pymysql问题">问题一pymysql问题：</h2>
+<p>报错为</p>
 <ul>
-<li>
-<p>nosql指的是Not Only SQL ，表示不仅仅是sql。基于数据存储模型，Nosql可以分为列族型式数据存储数据库、键-值对数据库，文档型数据库，对象型数据库，图数型数据库等。各类型的数据库也有许多自己的相关产品，如：图数据库Neon4J就广泛用于知识图谱领域，文档类型数据库MongoDB广泛应用与自然语言处理领域。</p>
-</li>
-<li>
-<p>下表按照常见的NoSQL数据库方式列存储，文档存储，键值对存储等，对其数据类型、应用场景、代表数据库，以及主要特征进行总结比对。</p>
-<img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200321234129.png"/>
-</li>
+<li>django.core.exceptions.ImproperlyConfigured: mysqlclient 1.3.13 or newer is required; you have 0.9.3.</li>
 </ul>
-<p>接下来会使用python对NoSQL数据库的操作，这选取里Mongo DB数据库</p>
-<h1 id="2python操作mongodb">2、python操作mongoDB</h1>
-<p>MongoDB是一个基于分布式文件存储的数据库，由C++编写，旨在为web应用提供可拓展的高性能数据存储解决方案。</p>
-<p>MongoDB是一个介于关系型数据库和非关系型数据库的之间的产品，是非关系数据库中功能最丰富，最像关系型数据库的。</p>
-<p>首先python3中使用的是Pymongo操作MongoDB，</p>
-<ul>
-<li>查看pymongo的版本</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pymongo
+<p>解决： base.py 第 36 行报的错，<br />
+根据你的提示路径打开 base.py，<br />
+把 35、36 行前面加 # 注释掉就好了</p>
+<p>3.0版本只需修改这个一个即可</p>
+<p>2.0版本可按照如下修改：</p>
+<p><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519110859.jpg" alt="" /></p>
 
-<span style="color:#66d9ef">print</span>(pymongo<span style="color:#f92672">.</span>__version__)
-<span style="color:#75715e">#  3.10.1</span>
-</code></pre></div><ul>
-<li>python操作MongoDB</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pymongo <span style="color:#f92672">import</span> MongoClient
-
-client <span style="color:#f92672">=</span> MongoClient(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;127.0.0.1&#39;</span>,port<span style="color:#f92672">=</span><span style="color:#ae81ff">27017</span>)
-
-db <span style="color:#f92672">=</span>client<span style="color:#f92672">.</span>pymongodb
-
-db
-<span style="color:#75715e">#Out[6]: Database(MongoClient(host=[&#39;127.0.0.1:27017&#39;], document_class=dict, tz_aware=False, connect=True), &#39;pymongodb&#39;)</span>
-</code></pre></div><ul>
-<li>插入数据和读取数据</li>
-</ul>
-<p>这里的数据是字典</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#插入数据</span>
-dic <span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#39;huang&#39;</span>,<span style="color:#e6db74">&#39;sex&#39;</span>:<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;age&#39;</span>:<span style="color:#ae81ff">25</span>}
-db<span style="color:#f92672">.</span>pycollection<span style="color:#f92672">.</span>insert(dic)
-<span style="color:#75715e">#读取数据</span>
-data <span style="color:#f92672">=</span>db<span style="color:#f92672">.</span>pycollection<span style="color:#f92672">.</span>find() <span style="color:#75715e">#这里数据是可迭代的</span>
- <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data:
-        <span style="color:#66d9ef">print</span>(x)
-        
-<span style="color:#75715e">#output：{&#39;_id&#39;: ObjectId(&#39;5e7787b15e5d088115660687&#39;), &#39;name&#39;: &#39;huang&#39;, &#39;sex&#39;: &#39;M&#39;, &#39;age&#39;: 25}</span>
-</code></pre></div>
   </div>
   <footer>
     <ul class="stats">
@@ -351,7 +322,7 @@ data <span style="color:#f92672">=</span>db<span style="color:#f92672">.</span>p
         <ul>
           
             
-            <li><a class="article-category-link" href="https://hhs44.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a></li>
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/python">python</a></li>
           
         </ul>
       </li>
@@ -364,16 +335,7 @@ data <span style="color:#f92672">=</span>db<span style="color:#f92672">.</span>p
         <ul>
           
             
-            <li><a class="article-category-link" href="https://hhs44.github.io/tags/%E5%9F%BA%E7%A1%80">基础</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://hhs44.github.io/tags/mysql">mysql</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://hhs44.github.io/tags/mongodb">mongoDB</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://hhs44.github.io/tags/redis">Redis</a></li>
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/django">Django</a></li>
           
         </ul>
       </li>
@@ -395,7 +357,7 @@ data <span style="color:#f92672">=</span>db<span style="color:#f92672">.</span>p
       </h5>
 
       
-      <input type="hidden" name="options[entryId]" value="ee6fe222ca4184ccb36f970b48b4990a">
+      <input type="hidden" name="options[entryId]" value="a0869a180901a39e2271575472c7a0cf">
       <input type='hidden' name='fields[replyThread]' value=''>
       <input type='hidden' name='fields[replyID]' value=''>
       <input type='hidden' name='fields[replyName]' value=''>
@@ -438,10 +400,8 @@ data <span style="color:#f92672">=</span>db<span style="color:#f92672">.</span>p
 
 <div class="pagination">
   
-    <a href="/blog/hibernate%E4%B8%80%E7%AE%80%E5%8D%95%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0/" class="button"><div class="previous"><div>hibernate（一）简单登陆界面实现</div></div></a>
+    <a href="/blog/git%E5%AE%9E%E8%B7%B5-%E5%9F%BA%E7%A1%80%E7%AF%87/" class="button"><div class="previous"><div>Git实践-基础篇</div></div></a>
   
-  
-    <a href="/blog/conda%E7%9A%84%E4%BD%BF%E7%94%A8/" class="button"><div class="next"><div>conda相关（一）</div></div></a>
   
 </div>
 

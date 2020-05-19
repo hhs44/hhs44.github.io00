@@ -6,10 +6,24 @@
     <description>Recent content in python on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 11:18:37 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Django1.x到django2.x和3.x</title>
+      <link>https://hhs44.github.io/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/</link>
+      <pubDate>Tue, 19 May 2020 11:18:37 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/</guid>
+      <description>问题列表：  pymysql问题（两种方法） 路由变化（和1.x不冲突，新特性） model问题（增加了必须添加的字段）  问题一pymysql问题： 报错为
+ django.core.exceptions.ImproperlyConfigured: mysqlclient 1.3.13 or newer is required; you have 0.9.3.  解决： base.py 第 36 行报的错，
+根据你的提示路径打开 base.py，
+把 35、36 行前面加 # 注释掉就好了
+3.0版本只需修改这个一个即可
+2.0版本可按照如下修改：</description>
+    </item>
     
     <item>
       <title>老知识迁移（一）</title>
