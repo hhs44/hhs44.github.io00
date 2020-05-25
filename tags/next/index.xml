@@ -20,14 +20,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>关于错误Assetrenderfailed:css/main.css</title>
-      <link>https://hhs44.github.io/blog/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFassetrenderfailed-css-main-css/</link>
-      <pubDate>Tue, 22 Jan 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://hhs44.github.io/blog/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFassetrenderfailed-css-main-css/</guid>
-      <description>第一次使用next主题时，对其配置文件进行更改时发生以上错误。 对修改的部分进行注释发现，在添加GitHub 和邮箱的链接后产生以上错误。 注释后错误消失，因为刚开始使用这个博客暂不开启这些功能。  </description>
-    </item>
-    
   </channel>
 </rss>

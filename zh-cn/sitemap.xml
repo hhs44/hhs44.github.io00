@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://hhs44.github.io/blog/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://hhs44.github.io/categories/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,17 +34,17 @@
   
   <url>
     <loc>https://hhs44.github.io/tags/django/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <loc>https://hhs44.github.io/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,12 +59,12 @@
   
   <url>
     <loc>https://hhs44.github.io/categories/python/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/tags/</loc>
-    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,6 +75,16 @@
                 hreflang="zh-cn"
                 href="https://hhs44.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/</loc>
+    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/categories/web/</loc>
+    <lastmod>2020-05-19T11:18:37+08:00</lastmod>
   </url>
   
   <url>
@@ -90,11 +100,6 @@
   <url>
     <loc>https://hhs44.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-05-14T18:46:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/categories/web/</loc>
-    <lastmod>2020-03-31T11:45:23+08:00</lastmod>
   </url>
   
   <url>
@@ -168,22 +173,12 @@
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/tags/test/</loc>
-    <lastmod>2020-03-14T23:14:42+08:00</lastmod>
+    <loc>https://hhs44.github.io/tags/automated-test/</loc>
+    <lastmod>2020-03-13T00:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/categories/test/</loc>
-    <lastmod>2020-03-14T23:14:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/blog/2020-03-14%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/</loc>
-    <lastmod>2020-03-14T23:14:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/tags/automated-test/</loc>
     <lastmod>2020-03-13T00:00:00+08:00</lastmod>
   </url>
   
@@ -410,11 +405,6 @@
   <url>
     <loc>https://hhs44.github.io/blog/hexo%E4%B8%8Egithub%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-02-06T00:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/blog/%E5%85%B3%E4%BA%8E%E9%94%99%E8%AF%AFassetrenderfailed-css-main-css/</loc>
-    <lastmod>2019-01-22T00:00:00+08:00</lastmod>
   </url>
   
 </urlset>

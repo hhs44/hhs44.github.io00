@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+  <meta charset="utf-8">
+<title>Django的模型和数据库 - Huanghs blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="Django的模型和数据库">
+<meta itemprop="description" content="翻译官方文档的模型与数据库的主题式学习，主要包含了模型可用字段和相关属性，简单了解多对多一对一多对一关系，待更新共同属性等">
+<meta itemprop="datePublished" content="2020-05-25T21:23:06&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-25T21:23:06&#43;08:00" />
+<meta itemprop="wordCount" content="230">
+<meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png">
+
+
+
+<meta itemprop="keywords" content="django," /><meta property="og:title" content="Django的模型和数据库" />
+<meta property="og:description" content="翻译官方文档的模型与数据库的主题式学习，主要包含了模型可用字段和相关属性，简单了解多对多一对一多对一关系，待更新共同属性等" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs44.github.io/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+<meta property="og:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png" />
+<meta property="article:published_time" content="2020-05-25T21:23:06+08:00" />
+<meta property="article:modified_time" content="2020-05-25T21:23:06+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png"/>
+
+<meta name="twitter:title" content="Django的模型和数据库"/>
+<meta name="twitter:description" content="翻译官方文档的模型与数据库的主题式学习，主要包含了模型可用字段和相关属性，简单了解多对多一对一多对一关系，待更新共同属性等"/>
+<link rel="stylesheet" href="/css/bundle.min.97b65b88e77b0d40cc9609e4702b8d197a5ba7a5fb2ffb4e02a0a8105bce0f9b.css" integrity="sha256-l7ZbiOd7DUDMlgnkcCuNGXpbp6X7L/tOAqCoEFvOD5s=">
+        <link rel="stylesheet" href="/css/add-on.css">
+
+</head>
+
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            博客
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> 首页</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> 博客</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> 分类</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='far fa-envelope'></i> 标签</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> 关于</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="zh-cn">zh-cn</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh-cn" class="link active">中文 (zh-cn)</a>
+  
+    
+      
+        <a href="/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f&amp;title=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f&amp;title=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f&amp;description=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by Huanghs&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
+  <header>
+    <h1>Huanghs的个人博客 </h1>
+  </header>
+  <main>
+    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/">Django的模型和数据库</a></h2>
+    
+    
+        <p>翻译官方文档的模型与数据库的主题式学习，主要包含了模型可用字段和相关属性，简单了解多对多一对一多对一关系，待更新共同属性等</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-05-25 21:23:06 &#43;0800 CST">
+      May 25, 2020
+    </time>
+    <span class="author">Huanghs</span>
+    
+      <p>2 分钟</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f&amp;title=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f&amp;title=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f&amp;description=Django%e7%9a%84%e6%a8%a1%e5%9e%8b%e5%92%8c%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by Huanghs&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2fdjango%25E7%259A%2584%25E6%25A8%25A1%25E5%259E%258B%25E5%2592%258C%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <h1 id="模型和数据库">模型和数据库</h1>
+<ul>
+<li>models（模型）：</li>
+<li>Making queries（进行查询）</li>
+<li>Aggregation（聚合）</li>
+<li>search（搜索）</li>
+<li>managers（管理人员）</li>
+<li>Performing raw SQL queries（执行原始SQL查询）</li>
+<li>Database transactions（数据库事务）</li>
+<li>Multiple databases（多个数据库）</li>
+<li>Tablespaces（表空间）</li>
+<li>Database access optimization（数据库访问优化）</li>
+<li>Database instrumentation（数据库的检测）</li>
+<li>Examples of model relationship API usage（模型关系API用法示例）</li>
+</ul>
+<h2 id="模型">模型</h2>
+<ul>
+<li>每一个模型都是一个python类，他是<code>django.db.models.Mode</code>的一个子类。</li>
+<li>每个模型的属性的要求对应一个数据库的字段。</li>
+<li>基于这些Django提供了一个自动生成的数据库访问api。</li>
+</ul>
+<h3 id="快速示例">快速示例</h3>
+<p>示例中定义了一个Person，包含了name和gender：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># django中的模板定义</span>
+<span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span><span style="color:#960050;background-color:#1e0010">（</span>modles<span style="color:#f92672">.</span>Model<span style="color:#960050;background-color:#1e0010">）：</span>
+	name <span style="color:#f92672">=</span>  modles<span style="color:#f92672">.</span>CharField<span style="color:#960050;background-color:#1e0010">（</span>max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span><span style="color:#960050;background-color:#1e0010">）</span>
+    gender <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ChatField<span style="color:#960050;background-color:#1e0010">（</span>max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">）</span>
+<span style="color:#75715e"># 构建的数据库</span>
+CREATE TABLE myapp_person (
+    <span style="color:#e6db74">&#34;id&#34;</span> serial NOT NULL PRIMARY KEY,
+    <span style="color:#e6db74">&#34;name&#34;</span> varchar(<span style="color:#ae81ff">30</span>) NOT NULL,
+    <span style="color:#e6db74">&#34;gender&#34;</span> varchar(<span style="color:#ae81ff">10</span>) NOT NULL
+);
+</code></pre></div><p>注：这里的数据库对应的表名是自动生成的，如果想自定义请了解自动设置。</p>
+<p>模板的生效需要将存在模板的app进行注册。注册后再进行迁移，就能生成model对应的数据库字段。</p>
+<h3 id="字段类型">字段类型</h3>
+<h4 id="通用字段选项">通用字段选项</h4>
+<table>
+<thead>
+<tr>
+<th align="center">字段选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">null</td>
+<td align="center">字段为空时数据库默认值为NULL</td>
+</tr>
+<tr>
+<td align="center">blank</td>
+<td align="center">字段允许为空，默认为Flase</td>
+</tr>
+<tr>
+<td align="center">choice</td>
+<td align="center">选择列表（第一个参数是模型中的值，第二个参数是可读字符）</td>
+</tr>
+<tr>
+<td align="center">db_column</td>
+<td align="center">设置数据库列的名称</td>
+</tr>
+<tr>
+<td align="center">db_index</td>
+<td align="center">是否创建数据库索引</td>
+</tr>
+<tr>
+<td align="center">default</td>
+<td align="center">默认值设置，值可以是值或者可调用的对象</td>
+</tr>
+<tr>
+<td align="center">editable</td>
+<td align="center">如果为False会再模型验证中会进行跳过</td>
+</tr>
+<tr>
+<td align="center">help_text</td>
+<td align="center">额外的帮助文本，可以和表单控件一起显示</td>
+</tr>
+<tr>
+<td align="center">primary_key</td>
+<td align="center">主键设置</td>
+</tr>
+<tr>
+<td align="center">unique</td>
+<td align="center">设置True表示值为一</td>
+</tr>
+<tr>
+<td align="center">unique_for_date</td>
+<td align="center">date里使用的，但仅考虑日期部分，同类型的还有后缀为year和month</td>
+</tr>
+<tr>
+<td align="center">verbose_name</td>
+<td align="center">设置字段的可读名称</td>
+</tr>
+<tr>
+<td align="center">validators</td>
+<td align="center">为字段运行的验证器列表</td>
+</tr>
+</tbody>
+</table>
+<h4 id="字段类型-1">字段类型</h4>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">AutoField</td>
+<td align="center">默认为integer类型，自动增加。</td>
+</tr>
+<tr>
+<td align="center">BigAutoField</td>
+<td align="center">64位的整数，</td>
+</tr>
+<tr>
+<td align="center">BigIntegerField</td>
+<td align="center">-9223372036854775808到的 数字9223372036854775807，此字段的默认表单小部件是 TextInput。</td>
+</tr>
+<tr>
+<td align="center">BinaryField</td>
+<td align="center">一个用于存储原始二进制数据的字段。</td>
+</tr>
+<tr>
+<td align="center">BooleanField</td>
+<td align="center">真假字段</td>
+</tr>
+<tr>
+<td align="center">CharField</td>
+<td align="center">存储少量字符串，必选参数max_length</td>
+</tr>
+<tr>
+<td align="center">DateField</td>
+<td align="center">日期字段，对应datetime.date</td>
+</tr>
+<tr>
+<td align="center">DateTimeField</td>
+<td align="center">日期字段，对应datetime.datetime</td>
+</tr>
+<tr>
+<td align="center">DecimalField</td>
+<td align="center">固定精度的数字</td>
+</tr>
+<tr>
+<td align="center">EmailField</td>
+<td align="center">可以检验是否为邮件字段</td>
+</tr>
+<tr>
+<td align="center">FileField</td>
+<td align="center">文件上传字段</td>
+</tr>
+<tr>
+<td align="center">FloatField</td>
+<td align="center">浮点数</td>
+</tr>
+<tr>
+<td align="center">ImageField</td>
+<td align="center">继承文件字段，但验证是否为有效图片</td>
+</tr>
+<tr>
+<td align="center">IntegerField</td>
+<td align="center">整数从-2147483648到的值2147483647</td>
+</tr>
+<tr>
+<td align="center">GenericIPAddressField</td>
+<td align="center">字符串格式的ip地址</td>
+</tr>
+<tr>
+<td align="center">SluField</td>
+<td align="center">仅包含字母数字下划线或连接符，通常在url中使用</td>
+</tr>
+<tr>
+<td align="center">TextField</td>
+<td align="center">大文本字段，默认表单小部件使Textarea</td>
+</tr>
+<tr>
+<td align="center">TimeField</td>
+<td align="center">datetime.time实例</td>
+</tr>
+<tr>
+<td align="center">URLField</td>
+<td align="center">验证URLValidtor</td>
+</tr>
+<tr>
+<td align="center">UUIDField</td>
+<td align="center">存储唯一标识符的字段</td>
+</tr>
+</tbody>
+</table>
+<p>一些前缀</p>
+<ul>
+<li>positive&mdash;-不小于零</li>
+<li>small&mdash;更小的取值范围</li>
+</ul>
+<h4 id="关联关系变量">关联关系变量</h4>
+<ul>
+<li>ForeignKey  （to，on_delete，**options）  多对一关系，在数据库中会追加_id到字段名称。</li>
+</ul>
+<p>参数：</p>
+<ol>
+<li>on_delete，外键删除时引用的对象，进行约束。
+<ul>
+<li>CASCADE：级联删除。删除外键时删除包含外键的对象</li>
+<li>PROTECT：防止外键删除</li>
+<li>SET_NULL：置空模式，删除时，外键字段被设置为空</li>
+<li>SET_DEFAULT：设置为默认值，使用该字段时需要加入一个默认值</li>
+<li>SET：自定义一个值</li>
+<li>DO_NOTHING：不得采取行动</li>
+</ul>
+</li>
+<li>limit_choices_to：可以为字段添加可用限制。</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">staff_member <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(
+    User,
+    on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE,
+    limit_choices_to<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;is_staff&#39;</span>: True},
+)
+</code></pre></div><ol start="3">
+<li>
+<p>related_name：用于从相关对象到此对象的关系名称，如果您希望Django不要创建反向关系，请将设置 <code>related_name</code>为<code>'+'</code>或以结束<code>'+'</code>。</p>
+</li>
+<li>
+<p>related_query_name：用于目标模型的反向过滤器名称的名称。</p>
+</li>
+<li>
+<p>to_field：关系所关联的相关对象上的字段</p>
+</li>
+<li>
+<p>db_constraint：值是“ True”，而且这几乎确定就是你需要的功能。将这个伪会损坏的数据的替代。甚至如此，一下场景一可能需要这样做</p>
+<ul>
+<li>你有无效的冗余数据</li>
+<li>你正在共享你的数据库</li>
+</ul>
+<p>如果将此设置为False，则访问不存在的相关对象将引发其DoesNotExist异常。</p>
+<ol start="7">
+<li>swappable：控制迁移框架的反应，如果这个ForeignKey指向一个可互换的模型。如果它为 True（默认值为 True），那么如果 ForeignKey 指向的模型与 settings.AUTH_USER_MODEL（或另一个可互换的模型设置）的当前值相匹配，则该关系将在迁移中使用对该设置的引用来存储，而不是直接对模型进行存储。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>ManyToManyFielddu：多对多关系</li>
+</ul>
+<p>一个多对多的关系。需要一个位置参数：模型关联的类，其工作原理与ForeignKey完全相同，包括递归和懒人关系。</p>
+<p>通过这个字段的:class:~django.db.models.field.related.relatedManager，关联的对象可以被添加，删除，或者创建。</p>
+<p>在幕后，Django会创建一个中间连接表来表示多对多关系。默认情况下，这个表名是使用many-to-many字段的名称和包含该字段的模型的表名来生成的。由于某些数据库不支持超过一定长度的表名，这些表名将被自动截断，并使用唯一性哈希，例如 author_books_9cdf。你可以使用 db_table 选项手动提供联接表的名称。</p>
+<p>参数（给出额外参数）：</p>
+<p>注： <code>limit_choices_to</code>当<code>ManyToManyField</code>与通过<a href="https://docs.djangoproject.com/zh-hans/2.2/ref/models/fields/#django.db.models.ManyToManyField.through"><code>through</code></a>参数指定的自定义中间表一起 用于时，此命令无效。</p>
+<ol>
+<li><strong>symmetrical</strong>：仅在定义自身为多对多细分关系时</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>(models<span style="color:#f92672">.</span>Model):
+    friends <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ManyToManyField(<span style="color:#e6db74">&#34;self&#34;</span>)
+</code></pre></div><pre><code>2. **through**：django会自动生成一个表来管理多对多关系，可以使用through指定中间表的模型
+
+3. **through_fields**：接受一个二元组，第一个是多对多关系字段被定义的那个模型的外键名称，第二个字段是目标模型的外键名称（当你的中介表中有不止一个外键指向任一（或均）参与多对多关系的模型时， 你*必须*指定``through_fields``。）
+4. **db_table**：存储多对多数据而创建的表的名称
+5. **db_constraint**：
+</code></pre>
+<ul>
+<li>OneToOneField：一对一关系</li>
+</ul>
+<p>一对一的关系。从概念上讲，这类似于ForeignKey的 unique=True，但关系的 &ldquo;反面 &ldquo;将直接返回一个对象。这作为一个模型的主键最有用，它以某种方式 &ldquo;扩展 &ldquo;了另一个模型；例如，多表继承通过从子模型到父模型的隐式一对一关系来实现。</p>
+<p>只需要一个位置参数：模型将被关联的类。这与ForeignKey的工作原理完全相同，包括所有关于递归和懒惰关系的选项。</p>
+<p>如果你没有为OneToOneField指定connection_name参数，Django将使用当前模型的小写名称作为默认值。</p>
+<p>唯一额外参数：</p>
+<ul>
+<li><strong>parent_link</strong>：当True并在继承自另一个具体模型的模型中使用时，表示这个字段应作为返回父类的链接，而不是通常通过子类隐式创建的额外的OneToOneField。</li>
+</ul>
+<h4 id="field-api-reference">Field API reference</h4>
+<h4 id="field-attribute-reference">Field attribute reference</h4>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/python">python</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/django">django</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+      
+<div>
+  <h2>说些什么</h2>
+    <form id="post-js-form" class="post-new-comment" method="POST">
+      
+      <h5 class='post-reply-notice hidden'>
+        <span class='post-reply-arrow'></span><span class='post-reply-name'></span>
+      </h5>
+
+      
+      <input type="hidden" name="options[entryId]" value="0ee3b445342ed2ad20927f46b496e1fe">
+      <input type='hidden' name='fields[replyThread]' value=''>
+      <input type='hidden' name='fields[replyID]' value=''>
+      <input type='hidden' name='fields[replyName]' value=''>
+
+      
+      <input required name='fields[name]' type='text' placeholder='您的名字（必填）'>
+      <input name='fields[website]' type='text' placeholder='您的网站'>
+      <input required name='fields[email]' type='email' placeholder='您的电邮地址（必填，用于 Gravatar 头象）'>
+      <textarea required name='fields[body]' placeholder='您的留言。可使用 Markdown。（搜索 &#39;Markdown 語法速查&#39;）' rows='10'></textarea>
+
+      
+      
+
+      
+      <p class='post-submit-notice'>
+        <strong class='post-submit-notice-text submit-success hidden'>感谢您的评论！被批准后它会立即在此站点展示。</strong>
+        <strong class='post-submit-notice-text submit-failed hidden'>很抱歉，您的提交存在错误。请确保所有必填字段都已填写正确，然后再试一次。</strong>
+      </p>
+
+      
+      <input type='submit' value='送出' class='button'>
+      <input type='submit' value='已送出' class='hidden button' disabled>
+      <input type='reset' value='重设' class='button'>
+    </form>
+</div>
+
+
+<div>
+  <h2>评论</h2>
+
+  
+    
+      <p>还沒有留言。</p>
+    
+  
+</div>
+
+    </article>
+
+
+<div class="pagination">
+  
+    <a href="/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/" class="button"><div class="previous"><div>Django1.x到django2.x和3.x-踩坑篇</div></div></a>
+  
+  
+</div>
+
+
+      </main>
+	  <div style="position: fixed; right:5px;max-width:300px; overflow:auto; top: 100px; width: 10vw; bottom:50px">
+	  <div class="post-toc">
+	 
+	<aside>
+		<header style="margin-left: 20px;">
+			<h3>Django的模型和数据库的字数: 230</h3>
+		</header><nav id="TableOfContents">
+  <ul>
+    <li><a href="#模型和数据库">模型和数据库</a>
+      <ul>
+        <li><a href="#模型">模型</a>
+          <ul>
+            <li><a href="#快速示例">快速示例</a></li>
+            <li><a href="#字段类型">字段类型</a>
+              <ul>
+                <li><a href="#通用字段选项">通用字段选项</a></li>
+                <li><a href="#字段类型-1">字段类型</a></li>
+                <li><a href="#关联关系变量">关联关系变量</a></li>
+                <li><a href="#field-api-reference">Field API reference</a></li>
+                <li><a href="#field-attribute-reference">Field attribute reference</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</aside>
+	<a href="#" id="toc-toggle"></a>
+	 
+</div>
+
+	  </div>
+
+      
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最新文章</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/">Django的模型和数据库</a></h1>
+          <time class="published" datetime="">May 25, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/django1.x%E5%88%B0django2.x%E5%92%8C3.x/">Django1.x到django2.x和3.x-踩坑篇</a></h1>
+          <time class="published" datetime="">May 19, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/git%E5%AE%9E%E8%B7%B5-%E5%9F%BA%E7%A1%80%E7%AF%87/" class="image featured">
+    
+      <img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200514185107.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/git%E5%AE%9E%E8%B7%B5-%E5%9F%BA%E7%A1%80%E7%AF%87/">Git实践-基础篇</a></h1>
+          <time class="published" datetime="">May 14, 2020</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">查看更多</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">分类</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">8</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web/">web<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hexo/">hexo<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/jetbrain/">jetbrain<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/conda/">conda<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/development/">development<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/golang/">golang<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/java/">java<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/syntax/">syntax<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/test/">test<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%B7%A5%E5%85%B7/">工具<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E9%80%9A%E4%BF%A1/">通信<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>关于</h1>
+      </header>
+      <p>test</p>
+      <footer>
+        <a href="/about" class="button">了解更多</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Huanghs blog
+      
+    . <br>
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.66.0'>Hugo</a> 驱动
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b17fef5a58c033a8a59f57c83aa975a251aecff921cbd36c12e975d530fa023b.js" integrity="sha256-sX/vWljAM6iln1fIOql1olGuz/khy9NsEul11TD6Ajs="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>
