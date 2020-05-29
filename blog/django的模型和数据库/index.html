@@ -10,7 +10,7 @@
 <meta itemprop="description" content="翻译官方文档的模型与数据库的主题式学习，主要包含了模型可用字段和相关属性，简单了解多对多一对一多对一关系，待更新共同属性等">
 <meta itemprop="datePublished" content="2020-05-25T21:23:06&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-25T21:23:06&#43;08:00" />
-<meta itemprop="wordCount" content="230">
+<meta itemprop="wordCount" content="352">
 <meta itemprop="image" content="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/20200519112402.png">
 
 
@@ -317,12 +317,12 @@
 </ul>
 <h3 id="快速示例">快速示例</h3>
 <p>示例中定义了一个Person，包含了name和gender：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># django中的模板定义</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># django中的模板定义</span>
 <span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span><span style="color:#960050;background-color:#1e0010">（</span>modles<span style="color:#f92672">.</span>Model<span style="color:#960050;background-color:#1e0010">）：</span>
 	name <span style="color:#f92672">=</span>  modles<span style="color:#f92672">.</span>CharField<span style="color:#960050;background-color:#1e0010">（</span>max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span><span style="color:#960050;background-color:#1e0010">）</span>
     gender <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ChatField<span style="color:#960050;background-color:#1e0010">（</span>max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">）</span>
-<span style="color:#75715e"># 构建的数据库</span>
+<span style="color:#75715e"># 构建的数据库</span>
 CREATE TABLE myapp_person (
     <span style="color:#e6db74">&#34;id&#34;</span> serial NOT NULL PRIMARY KEY,
     <span style="color:#e6db74">&#34;name&#34;</span> varchar(<span style="color:#ae81ff">30</span>) NOT NULL,
@@ -553,8 +553,8 @@ CREATE TABLE myapp_person (
 </code></pre></div><pre><code>2. **through**：django会自动生成一个表来管理多对多关系，可以使用through指定中间表的模型
 
 3. **through_fields**：接受一个二元组，第一个是多对多关系字段被定义的那个模型的外键名称，第二个字段是目标模型的外键名称（当你的中介表中有不止一个外键指向任一（或均）参与多对多关系的模型时， 你*必须*指定``through_fields``。）
-4. **db_table**：存储多对多数据而创建的表的名称
-5. **db_constraint**：
+    4. **db_table**：存储多对多数据而创建的表的名称
+        5. **db_constraint**：
 </code></pre>
 <ul>
 <li>OneToOneField：一对一关系</li>
@@ -566,8 +566,79 @@ CREATE TABLE myapp_person (
 <ul>
 <li><strong>parent_link</strong>：当True并在继承自另一个具体模型的模型中使用时，表示这个字段应作为返回父类的链接，而不是通常通过子类隐式创建的额外的OneToOneField。</li>
 </ul>
-<h4 id="field-api-reference">Field API reference</h4>
-<h4 id="field-attribute-reference">Field attribute reference</h4>
+<h2 id="making-queries进行查询">Making queries（进行查询）</h2>
+<p>创建数据模型后，Django会自动为您提供一个数据库抽象API，该API可让您创建，检索，更新和删除对象。</p>
+<p>保存：save()</p>
+<p>删除：delete()</p>
+<p>要从数据库检索对象，请通过模型类上的Manager构造QuerySet。</p>
+<p>QuerySet表示数据库中对象的集合。它可以有零个，一个或多个过滤器。过滤器根据给定的参数缩小查询结果的范围。用SQL术语来说，QuerySet等同于SELECT语句，而过滤器是一个限制子句，例如WHERE或LIMIT。</p>
+<p>您可以通过使用模型的Manager获得QuerySet。每个模型都有至少一个Manager，默认情况下称为对象。</p>
+<p>管理者只能通过模型类来访问，而不是通过模型实例来访问，以实现 &ldquo;表级 &ldquo;操作和 &ldquo;记录级 &ldquo;操作的分离。</p>
+<p>以下记录常用查询命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 查询所有数据</span>
+model_name<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all()
+<span style="color:#75715e"># 过滤器检索，filter和exclude</span>
+<span style="color:#75715e"># 可以使用链式查找，返回的都是QuerySet</span>
+Entry<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(headline__startswith<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;What&#39;</span>)
+<span style="color:#f92672">.</span>exclude(pub_date__gte<span style="color:#f92672">=</span>datetime<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>today())
+<span style="color:#f92672">.</span>filter(pub_date__gte<span style="color:#f92672">=</span>datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">30</span>)
+<span style="color:#75715e"># get方法获取单一的QuerySet对象</span>
+</code></pre></div><p>QuerySets是懒惰的<br />
+QuerySets是懒惰的&ndash;创建一个QuerySet的行为不涉及任何数据库活动。你可以整天把过滤器堆叠在一起，而Django不会真正运行查询，直到QuerySet被评估后才会运行。看一下这个例子。</p>
+<p>QuerySerts也可以使用切片方法。</p>
+<p>字段查询<br />
+字段查找是您如何指定SQL WHERE子句的内容。它们被指定为QuerySet方法filter（），exclude（）和get（）的关键字参数。</p>
+<p>基本lookups关键字参数的格式为field__lookuptype = value。 （这是双下划线）。</p>
+<p>但有一个例外，如果是ForeignKey，你可以指定以_id作为后缀的字段名。</p>
+<h3 id="双下划线可匹配的字段">双下划线可匹配的字段：</h3>
+<ul>
+<li>exact：完全匹配</li>
+<li>contains：区分大小写的模糊匹配</li>
+<li>startwith，endwith：以xx开始结束</li>
+<li>前面加i表示不区分大小写。</li>
+</ul>
+<h3 id="跨关系查询">跨关系查询</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 这个例子检索所有Entry与对象Blog，其name 为：&#39;Beatles Blog&#39;</span>
+Entry<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(blog__name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Beatles Blog&#39;</span>)
+<span style="color:#75715e"># 这个例子检索所有Blog具有至少一个对象Entry ，其headline包含&#39;Lennon&#39;：</span>
+Blog<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(entry__headline__contains<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Lennon&#39;</span>)
+<span style="color:#75715e"># </span>
+
+</code></pre></div><p>跨多值查询：</p>
+<h3 id="q对象和f对象的使用">Q对象和F对象的使用：</h3>
+<p>关键字参数查询（在filter（）等中）一起“与”在一起。如果需要执行更复杂的查询（例如，带有OR语句的查询），则可以使用Q对象。</p>
+<p>Q对象（django.db.models.Q）是用于封装关键字参数集合的对象。这些关键字参数在上面的“字段查找”中指定。</p>
+<p>例如，此Q对象封装了一个LIKE查询：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Q(question__startswith<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;What&#39;</span>)
+<span style="color:#75715e"># 可以使用＆和|组合Q对象。操作员。在两个Q对象上使用运算符时，将产生一个新的Q对象。</span>
+</code></pre></div><h3 id="删除对象">删除对象</h3>
+<p>删除方法方便地命名为 <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/#django.db.models.Model.delete"><code>delete()</code></a>。此方法立即删除对象，并返回删除的对象数和带有每种对象类型的删除数的字典。例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt;&gt;&gt; e.delete()
+(1, {&#39;weblog.Entry&#39;: 1})
+
+</code></pre></div><h3 id="复制模型实例">复制模型实例</h3>
+<h3 id="更新数据">更新数据</h3>
+<h3 id="queryset的缓存机制">queryset的缓存机制</h3>
+<p>querySet可以保存起来重复，或者链式使用。</p>
+<p>反复在queryset对象中获取某个索引将每次都查询数据库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt;&gt;&gt; queryset = Entry.objects.all()
+&gt;&gt;&gt; print(queryset[5]) # Queries the database
+&gt;&gt;&gt; print(queryset[5]) # Queries the database again
+</code></pre></div><p>但是，如果已经评估了整个查询集，则将检查缓存：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt;&gt;&gt; queryset = Entry.objects.all()
+&gt;&gt;&gt; [entry for entry in queryset] # Queries the database
+&gt;&gt;&gt; print(queryset[5]) # Uses cache
+&gt;&gt;&gt; print(queryset[5]) # Uses cache
+</code></pre></div><p>（简单地打印查询集不会填充缓存。这是因为对__repr __（）的调用仅返回整个查询集的一部分。）</p>
+<h3 id="一对多关系">一对多关系</h3>
+<h3 id="一些其他方法">一些其他方法：</h3>
+<ul>
+<li>add</li>
+<li>create</li>
+<li>clear</li>
+<li>set</li>
+</ul>
+<h3 id="多对多关系">多对多关系</h3>
 
   </div>
   <footer>
@@ -669,7 +740,7 @@ CREATE TABLE myapp_person (
 	 
 	<aside>
 		<header style="margin-left: 20px;">
-			<h3>Django的模型和数据库的字数: 230</h3>
+			<h3>Django的模型和数据库的字数: 352</h3>
 		</header><nav id="TableOfContents">
   <ul>
     <li><a href="#模型和数据库">模型和数据库</a>
@@ -682,10 +753,22 @@ CREATE TABLE myapp_person (
                 <li><a href="#通用字段选项">通用字段选项</a></li>
                 <li><a href="#字段类型-1">字段类型</a></li>
                 <li><a href="#关联关系变量">关联关系变量</a></li>
-                <li><a href="#field-api-reference">Field API reference</a></li>
-                <li><a href="#field-attribute-reference">Field attribute reference</a></li>
               </ul>
             </li>
+          </ul>
+        </li>
+        <li><a href="#making-queries进行查询">Making queries（进行查询）</a>
+          <ul>
+            <li><a href="#双下划线可匹配的字段">双下划线可匹配的字段：</a></li>
+            <li><a href="#跨关系查询">跨关系查询</a></li>
+            <li><a href="#q对象和f对象的使用">Q对象和F对象的使用：</a></li>
+            <li><a href="#删除对象">删除对象</a></li>
+            <li><a href="#复制模型实例">复制模型实例</a></li>
+            <li><a href="#更新数据">更新数据</a></li>
+            <li><a href="#queryset的缓存机制">queryset的缓存机制</a></li>
+            <li><a href="#一对多关系">一对多关系</a></li>
+            <li><a href="#一些其他方法">一些其他方法：</a></li>
+            <li><a href="#多对多关系">多对多关系</a></li>
           </ul>
         </li>
       </ul>

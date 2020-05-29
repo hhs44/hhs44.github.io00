@@ -18,7 +18,7 @@
       
       <guid>https://hhs44.github.io/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
       <description>模型和数据库  models（模型）： Making queries（进行查询） Aggregation（聚合） search（搜索） managers（管理人员） Performing raw SQL queries（执行原始SQL查询） Database transactions（数据库事务） Multiple databases（多个数据库） Tablespaces（表空间） Database access optimization（数据库访问优化） Database instrumentation（数据库的检测） Examples of model relationship API usage（模型关系API用法示例）  模型  每一个模型都是一个python类，他是django.db.models.Mode的一个子类。 每个模型的属性的要求对应一个数据库的字段。 基于这些Django提供了一个自动生成的数据库访问api。  快速示例 示例中定义了一个Person，包含了name和gender：
-# django中的模板定义 from django.db import models class Person（modles.Model）： name = modles.CharField（max_length=30） gender = models.ChatField（max_length=10） # 构建的数据库 CREATE TABLE myapp_person ( &amp;#34;id&amp;#34; serial NOT NULL PRIMARY KEY, &amp;#34;name&amp;#34; varchar(30) NOT NULL, &amp;#34;gender&amp;#34; varchar(10) NOT NULL ); 注：这里的数据库对应的表名是自动生成的，如果想自定义请了解自动设置。</description>
+# django中的模板定义 from django.db import modelsclass Person（modles.Model）：name = modles.CharField（max_length=30）gender = models.ChatField（max_length=10）# 构建的数据库 CREATE TABLE myapp_person (&amp;#34;id&amp;#34; serial NOT NULL PRIMARY KEY,&amp;#34;name&amp;#34; varchar(30) NOT NULL,&amp;#34;gender&amp;#34; varchar(10) NOT NULL);注：这里的数据库对应的表名是自动生成的，如果想自定义请了解自动设置。</description>
     </item>
     
     <item>
