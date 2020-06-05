@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://hhs44.github.io/blog/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://hhs44.github.io/categories/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,18 +33,18 @@
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/tags/django/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <loc>https://hhs44.github.io/tags/gil/</loc>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <loc>https://hhs44.github.io/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/</loc>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,12 +59,12 @@
   
   <url>
     <loc>https://hhs44.github.io/categories/python/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/tags/</loc>
-    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,6 +75,16 @@
                 hreflang="zh-cn"
                 href="https://hhs44.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/tags/django/</loc>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/blog/django%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2020-05-25T21:23:06+08:00</lastmod>
   </url>
   
   <url>

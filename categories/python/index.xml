@@ -6,10 +6,29 @@
     <description>Recent content in python on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2020 21:23:06 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 19:25:51 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GIL_全局解释锁</title>
+      <link>https://hhs44.github.io/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/</link>
+      <pubDate>Fri, 05 Jun 2020 19:25:51 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/</guid>
+      <description>技术背景 全局解释器锁(GIL)是一个由编程语言解释器线程持有的互斥锁(全局排他锁)，以避免与其他线程共享不安全的代码。在具有GIL的实现中，每个解释器进程总是有一个GIL。
+它是在实现Python解析器(CPython)时所引入的一个概念。
+Python中同样一段代码可以通过CPython，PyPy，Psyco等不同的Python执行环境来执行。像其中的JPython就没有GIL。然而因为CPython是大部分环境下默认的Python执行环境。
+CPython扩展必须支持GIL，以避免破坏线程。
+所以这里要先明确一点：GIL并不是Python的特性，Python完全可以不依赖于GIL.
+为什么有GIL?? 为了支持多线程,然而解决多线程之间数据完整性和状态同步的最简单方法自然就是加锁。
+有了GIL,python有两个特点:
+ 进程可以利用多核,但是开销大 多线程开销小,却无法利用多核优势  为什么要改善GIL?? Python的多线程在多核CPU上，只对于IO密集型计算产生正面效果；而当有至少有一个CPU密集型线程存在，那么多线程效率会由于GIL而大幅下降。
+换句话说特变依赖CPU的程序才会对GIL进行改善(如:计算型的程序)
+什么时候会释放GIL锁  遇到像i/o操作这种有时会有时间空闲的情况造成cpu闲置情况会释放GIL 会有一个专门的ticks进行计数,一旦ticks数值达到100这个时候会释放GIL锁,线程之间开始竞争gil锁(ticks数值可以进行设置)  互斥锁和GIl锁的关系 GIL锁:保证同一时刻只有一个线程能够使用到cpu
+互斥锁:多线程是,保证修改共享数据时有序修改,不会产生修改混乱.</description>
+    </item>
     
     <item>
       <title>Django的模型和数据库</title>
