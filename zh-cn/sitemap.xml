@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://hhs44.github.io/blog/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://hhs44.github.io/categories/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,18 +33,18 @@
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/tags/gil/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <loc>https://hhs44.github.io/tags/centos7/</loc>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <loc>https://hhs44.github.io/categories/conda/</loc>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,13 +58,13 @@
   </url>
   
   <url>
-    <loc>https://hhs44.github.io/categories/python/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <loc>https://hhs44.github.io/categories/linux/</loc>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://hhs44.github.io/tags/</loc>
-    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,6 +75,31 @@
                 hreflang="zh-cn"
                 href="https://hhs44.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/tags/yum/</loc>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/blog/yum&#43;anaconda%E5%B0%8F%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2020-06-17T14:07:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/tags/gil/</loc>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/</loc>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hhs44.github.io/categories/python/</loc>
+    <lastmod>2020-06-05T19:25:51+08:00</lastmod>
   </url>
   
   <url>
@@ -165,11 +190,6 @@
   <url>
     <loc>https://hhs44.github.io/blog/%E8%80%81%E7%9F%A5%E8%AF%86%E8%BF%81%E7%A7%BB%E4%BA%8C/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/categories/linux/</loc>
-    <lastmod>2020-03-15T00:00:00+08:00</lastmod>
   </url>
   
   <url>
@@ -310,11 +330,6 @@
   <url>
     <loc>https://hhs44.github.io/tags/theme/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hhs44.github.io/categories/conda/</loc>
-    <lastmod>2019-12-25T00:00:00+08:00</lastmod>
   </url>
   
   <url>

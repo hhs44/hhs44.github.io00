@@ -6,10 +6,31 @@
     <description>Recent content in linux on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 14:07:42 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Yum&#43;anaconda小问题</title>
+      <link>https://hhs44.github.io/blog/yum&#43;anaconda%E5%B0%8F%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 17 Jun 2020 14:07:42 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/yum&#43;anaconda%E5%B0%8F%E9%97%AE%E9%A2%98/</guid>
+      <description>yum与anaconda3冲突问题 问题描述 出错系统：centos7
+python环境：使用anacoda3安装的python3.7
+问题描述（本问题适用于使用anaocoda3安装的python3）：
+yum不能使用，会产生以下错误
+问题一：
+/root/anaconda3/lib/liblzma.so.5: version `XZ_5.1.2alpha&amp;rsquo; not found (required by /lib64/librpmio.so.3)
+解决后肯定会出现问题二：
+/usr/lib64/python2.7/site-packages/pycurl.so: undefined symbol: CRYPTO_num_locks
+解决方案   解决问题一：
+    确定是否存在XZ：
+   XZ -V # 获得版本号，若没有则进行安装，自行百度。    安装完成后，进入anaconda3/lib目录：
+   查看anaconda3位置：whereis anaconda3 进入目录：cd anaconda3/lib    建立软连接：
+   ln -s -f liblzma.so.5.x.x liblzma.so.5 此时若yum无问题一，则不需要进行下一步 下一步： rm -rf liblzma.so.5.x.x      解决问题二：</description>
+    </item>
     
     <item>
       <title>ubuntu_图形界面系统修复</title>

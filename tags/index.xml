@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 05 Jun 2020 19:25:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 14:07:42 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>centos7</title>
+      <link>https://hhs44.github.io/tags/centos7/</link>
+      <pubDate>Wed, 17 Jun 2020 14:07:42 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/centos7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yum</title>
+      <link>https://hhs44.github.io/tags/yum/</link>
+      <pubDate>Wed, 17 Jun 2020 14:07:42 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/yum/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>GIL</title>
