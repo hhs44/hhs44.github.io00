@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+  <meta charset="utf-8">
+<title>Fastapi入门学习（一） - Huanghs blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.66.0" /><meta itemprop="name" content="Fastapi入门学习（一）">
+<meta itemprop="description" content="入手一个快速接口生成框架时，在快速开发接口的同时，明白了第三方库在python开发中的重要地位。对于初学者（不是专业的后端开发者，这篇文章能带给你一些启发，能快乐的看到项目成果">
+<meta itemprop="datePublished" content="2020-07-02T20:09:25&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-02T20:09:25&#43;08:00" />
+<meta itemprop="wordCount" content="813">
+<meta itemprop="image" content="https://i.loli.net/2020/07/02/Np1dL9W36kqBzQJ.png">
+
+
+
+<meta itemprop="keywords" content="fastapi,sqlalchemy,starlette," /><meta property="og:title" content="Fastapi入门学习（一）" />
+<meta property="og:description" content="入手一个快速接口生成框架时，在快速开发接口的同时，明白了第三方库在python开发中的重要地位。对于初学者（不是专业的后端开发者，这篇文章能带给你一些启发，能快乐的看到项目成果" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs44.github.io/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" />
+<meta property="og:image" content="https://i.loli.net/2020/07/02/Np1dL9W36kqBzQJ.png" />
+<meta property="article:published_time" content="2020-07-02T20:09:25+08:00" />
+<meta property="article:modified_time" content="2020-07-02T20:09:25+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.loli.net/2020/07/02/Np1dL9W36kqBzQJ.png"/>
+
+<meta name="twitter:title" content="Fastapi入门学习（一）"/>
+<meta name="twitter:description" content="入手一个快速接口生成框架时，在快速开发接口的同时，明白了第三方库在python开发中的重要地位。对于初学者（不是专业的后端开发者，这篇文章能带给你一些启发，能快乐的看到项目成果"/>
+<link rel="stylesheet" href="/css/bundle.min.97b65b88e77b0d40cc9609e4702b8d197a5ba7a5fb2ffb4e02a0a8105bce0f9b.css" integrity="sha256-l7ZbiOd7DUDMlgnkcCuNGXpbp6X7L/tOAqCoEFvOD5s=">
+        <link rel="stylesheet" href="/css/add-on.css">
+
+</head>
+
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            博客
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> 首页</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> 博客</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> 分类</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='far fa-envelope'></i> 标签</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> 关于</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="zh-cn">zh-cn</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh-cn" class="link active">中文 (zh-cn)</a>
+  
+    
+      
+        <a href="/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f&amp;title=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f&amp;title=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f&amp;description=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %e6%b5%a9%e4%b9%a6&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="https://raw.githubusercontent.com/hhs44/cloudimg/master/img/head.jpg" class="circle" width="" alt="huang`s blog " /></a>
+  <header>
+    <h1>Huanghs的个人博客 </h1>
+  </header>
+  <main>
+    <p>不写下一些东西，就没法证明自己<br> 不多走一些路，就没法看到更多的风景</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">Fastapi入门学习（一）</a></h2>
+    
+    
+        <p>入手一个快速接口生成框架时，在快速开发接口的同时，明白了第三方库在python开发中的重要地位。对于初学者（不是专业的后端开发者，这篇文章能带给你一些启发，能快乐的看到项目成果</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-07-02 20:09:25 &#43;0800 CST">
+      July 2, 2020
+    </time>
+    <span class="author">浩书</span>
+    
+      <p>4 分钟</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89&amp;url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f&amp;title=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f&amp;title=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f&amp;description=Fastapi%e5%85%a5%e9%97%a8%e5%ad%a6%e4%b9%a0%ef%bc%88%e4%b8%80%ef%bc%89" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %e6%b5%a9%e4%b9%a6&amp;body=https%3a%2f%2fhhs44.github.io%2fblog%2ffastapi%25E5%2585%25A5%25E9%2597%25A8%25E5%25AD%25A6%25E4%25B9%25A0%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" class="image featured">
+    
+      <img src="https://i.loli.net/2020/07/02/Np1dL9W36kqBzQJ.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <h1 id="fastapi入门学习一">fastapi入门学习（一）</h1>
+<p>FastAPI框架是一个高性能，易于学习，高效编码，生产可用的python，web开发框架。</p>
+<p>但对于刚开始学习python不久的同学来说仅仅从官文学习，有一定的难度，并咩有那么易学。</p>
+<p>本篇主要从一个车辆违章查询的项目，以项目来驱动fastapi的学习。</p>
+<p>项目实现效果如下：</p>
+<p>查询页面展示：</p>
+<p><img src="https://i.loli.net/2020/07/01/x7ySB1hqZTn2U8C.png" alt="image-20200701200412814" /></p>
+<p>接口swagger ui界面：</p>
+<p><img src="https://i.loli.net/2020/07/01/SU2o63MtXNkJCEW.png" alt="image-20200701200445894" /></p>
+<h3 id="fastapi的安装和简单案例">fastapi的安装和简单案例</h3>
+<p>fastapi框架的安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install fastapi
+</code></pre></div><p>此外还需要一个能让项目跑起来的服务器，并且需要的是一个ASGI服务器</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install uvicorn
+</code></pre></div><h3 id="最简单的fastapi只需要一个文件">最简单的fastapi只需要一个文件</h3>
+<p>创建main.py：这里使用官方代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Optional
+
+<span style="color:#f92672">from</span> fastapi <span style="color:#f92672">import</span> FastAPI
+
+app <span style="color:#f92672">=</span> FastAPI()
+
+
+<span style="color:#a6e22e">@app.get</span>(<span style="color:#e6db74">&#34;/&#34;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_root</span>():
+    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;Hello&#34;</span>: <span style="color:#e6db74">&#34;World&#34;</span>}
+
+
+<span style="color:#a6e22e">@app.get</span>(<span style="color:#e6db74">&#34;/items/{item_id}&#34;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_item</span>(item_id: int, q: Optional[str] <span style="color:#f92672">=</span> None):
+    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;item_id&#34;</span>: item_id, <span style="color:#e6db74">&#34;q&#34;</span>: q}
+</code></pre></div><p>保存好后在命令行运行服务器：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">uvicorn main:app --reload
+</code></pre></div><p>访问路径 http://127.0.0.1:8000/docs/，就能看到你的第一个接口的接口文档，如下</p>
+<p><img src="https://i.loli.net/2020/07/01/gsBI6yUh4mjzRfl.png" alt="image-20200701202452760" /></p>
+<h3 id="车辆查询项目的项目结构">车辆查询项目的项目结构</h3>
+<p>本人也是对fastapi只是入门，对结构的理解暂时如下，该结构并不是一个完整web项目的需求。以后有机会再深入研究。</p>
+<p><img src="https://i.loli.net/2020/07/01/soqQpX2JkVczlCr.png" alt="image-20200701202647366" /></p>
+<p>一一介绍每个部分：</p>
+<ul>
+<li>curd ：数据库的操作，使用sqlalchmey完成，curd即是创建（create），更新（update），读取（read），删除（delete）。</li>
+<li>database：完成对数据库的连接。</li>
+<li>main：路由函数的位置，可以和flask类比。</li>
+<li>models：对数据库表结构类化，和curd，database部分的实现主要参考sqlalchmey。</li>
+<li>pagnation：自定义的分页器，完成查询后数据的分页。</li>
+<li>schemas：规范约束，响应的或者查询到数据。</li>
+</ul>
+<h3 id="完成数据库连接和模型构建部分">完成数据库连接和模型构建部分</h3>
+<p>这里使用的是mysql，并且使用mysqlclient库，如果使用的pymysql可参见第二种写法，这里创建了database.py文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> create_engine
+<span style="color:#f92672">from</span> sqlalchemy.ext.declarative <span style="color:#f92672">import</span> declarative_base
+<span style="color:#75715e"># 使用mysqlclient的情况</span>
+SQLALCHEMY_DATABASE_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mysql://username:password@localhost:3306/数据库名?charset=utf8&#34;</span>
+<span style="color:#75715e"># 使用pymysql</span>
+<span style="color:#75715e"># SQLALCHEMY_DATABASE_URL = &#34;mysql+pymysql://username:password@localhost:3306/数据库名?charset=utf8&#34;</span>
+<span style="color:#f92672">from</span> sqlalchemy.orm <span style="color:#f92672">import</span> sessionmaker
+
+engine <span style="color:#f92672">=</span> create_engine(SQLALCHEMY_DATABASE_URL)
+SessionLocal <span style="color:#f92672">=</span> sessionmaker(autocommit<span style="color:#f92672">=</span>False, autoflush<span style="color:#f92672">=</span>False, bind<span style="color:#f92672">=</span>engine)
+
+Base <span style="color:#f92672">=</span> declarative_base()
+
+</code></pre></div><p>创建models.py，该项目中主要使用了record和car两个表，record关联到car的id上。</p>
+<p>实现如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> Boolean, Column, ForeignKey, Integer, String, Date, MetaData
+<span style="color:#f92672">from</span> sqlalchemy.orm <span style="color:#f92672">import</span> relationship
+
+<span style="color:#f92672">from</span> database <span style="color:#f92672">import</span> Base, engine
+
+metadata <span style="color:#f92672">=</span> MetaData(engine)
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>(Base):
+    __tablename__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;car&#34;</span>
+
+    id <span style="color:#f92672">=</span> Column(Integer, primary_key<span style="color:#f92672">=</span>True, index<span style="color:#f92672">=</span>True, autoincrement<span style="color:#f92672">=</span>True)
+    carno <span style="color:#f92672">=</span> Column(String(<span style="color:#ae81ff">15</span>), index<span style="color:#f92672">=</span>True, )
+    owner <span style="color:#f92672">=</span> Column(String(<span style="color:#ae81ff">20</span>), index<span style="color:#f92672">=</span>True, )
+    brand <span style="color:#f92672">=</span> Column(String(<span style="color:#ae81ff">20</span>))
+<span style="color:#75715e"># 这里的配置存在疑惑，也是初次使用sqlalchemy。</span>
+    records <span style="color:#f92672">=</span> relationship(<span style="color:#e6db74">&#39;Record&#39;</span>, back_populates<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;car&#39;</span>)
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Record</span>(Base):
+    __tablename__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;record&#34;</span>
+
+    id <span style="color:#f92672">=</span> Column(Integer, primary_key<span style="color:#f92672">=</span>True, autoincrement<span style="color:#f92672">=</span>True)
+    reason <span style="color:#f92672">=</span> Column(String(<span style="color:#ae81ff">255</span>))
+    makedate <span style="color:#f92672">=</span> Column(Date)
+    punish <span style="color:#f92672">=</span> Column(String(<span style="color:#ae81ff">255</span>))
+    dealt <span style="color:#f92672">=</span> Column(Boolean, default<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    car_id <span style="color:#f92672">=</span> Column(Integer, ForeignKey(<span style="color:#e6db74">&#39;tb_car.id&#39;</span>))
+
+    car <span style="color:#f92672">=</span> relationship(<span style="color:#e6db74">&#34;Car&#34;</span>, back_populates<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;records&#34;</span>)
+
+</code></pre></div><h3 id="curd操作">curd操作</h3>
+<p>在该案例中对数据库主要有查询，更改和删除。查询条件包含时间范围，和对输入框的内容在车牌和车主姓名里进行查询。更改操作，完成对数据受理信息的更改，删除操作只是删除record记录，car表的信息不做改变。（在实际案例中，删除操作是对删除信息字段进行改变）。</p>
+<p>下面代码中实现了五个接口：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List, Any
+
+<span style="color:#f92672">from</span> pydantic.schema <span style="color:#f92672">import</span> date
+<span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> and_, or_
+<span style="color:#f92672">from</span> sqlalchemy.orm <span style="color:#f92672">import</span> Session
+
+<span style="color:#f92672">import</span> pagnation
+<span style="color:#f92672">from</span> models <span style="color:#f92672">import</span> Car, Record
+
+PAGE_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+
+<span style="color:#75715e"># 查询所有车辆信息</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_car</span>(db: Session):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    cars: List[Any] <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>query(Car)<span style="color:#f92672">.</span>all()
+    <span style="color:#66d9ef">return</span> cars
+
+<span style="color:#75715e"># 查询所有记录信息，不包含车辆信息</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_search_record</span>(db: Session):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">return</span> db<span style="color:#f92672">.</span>query(Record)<span style="color:#f92672">.</span>all()
+
+<span style="color:#75715e"># 按照条件进行查询</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_all_record</span>(db: Session, carno: str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, start: date <span style="color:#f92672">=</span> None, end: date <span style="color:#f92672">=</span> None, page: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :param carno:
+</span><span style="color:#e6db74">    :param start:
+</span><span style="color:#e6db74">    :param end:
+</span><span style="color:#e6db74">    :param page:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/api/record/?&#34;</span>
+    records <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>query(Record)
+    <span style="color:#66d9ef">if</span> carno:
+        records <span style="color:#f92672">=</span> records<span style="color:#f92672">.</span>join(Car)<span style="color:#f92672">.</span>filter(or_(
+            Car<span style="color:#f92672">.</span>carno<span style="color:#f92672">.</span>like(<span style="color:#e6db74">&#34;%&#34;</span> <span style="color:#f92672">+</span> carno <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;%&#34;</span>),
+            Car<span style="color:#f92672">.</span>owner<span style="color:#f92672">.</span>like(<span style="color:#e6db74">&#34;%&#34;</span> <span style="color:#f92672">+</span> carno <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;%&#34;</span>)))
+        url <span style="color:#f92672">+=</span> f<span style="color:#e6db74">&#34;carno={carno}&amp;&#34;</span>
+    <span style="color:#66d9ef">if</span> all([start, end]):
+        records <span style="color:#f92672">=</span> records<span style="color:#f92672">.</span>filter(and_(Record<span style="color:#f92672">.</span>makedate <span style="color:#f92672">&lt;=</span> end, Record<span style="color:#f92672">.</span>makedate <span style="color:#f92672">&gt;=</span> start))
+        url <span style="color:#f92672">+=</span> f<span style="color:#e6db74">&#34;start={start}&amp;end={end}&#34;</span>
+    count <span style="color:#f92672">=</span> (len(records<span style="color:#f92672">.</span>all()) <span style="color:#f92672">+</span> PAGE_SIZE <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> PAGE_SIZE
+    <span style="color:#66d9ef">if</span> page:
+        records <span style="color:#f92672">=</span> records<span style="color:#f92672">.</span>limit(PAGE_SIZE)<span style="color:#f92672">.</span>offset((page <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> PAGE_SIZE)
+    records <span style="color:#f92672">=</span> records<span style="color:#f92672">.</span>all()
+    <span style="color:#66d9ef">return</span> pagnation<span style="color:#f92672">.</span>pagenation(records, url, page, count)
+
+<span style="color:#75715e"># 更新record中的 dealt字段为True</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_dealt</span>(db: Session, record_id: int):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :param record_id:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">try</span>:
+        record <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>query(Record)<span style="color:#f92672">.</span>get(record_id)
+        record<span style="color:#f92672">.</span>dealt <span style="color:#f92672">=</span> True
+        db<span style="color:#f92672">.</span>add(record)
+        db<span style="color:#f92672">.</span>commit()
+        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;code&#39;</span>: <span style="color:#ae81ff">10000</span>, <span style="color:#e6db74">&#39;msg&#39;</span>: <span style="color:#e6db74">&#34;Success update car&#39;s record &#34;</span>}
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+        <span style="color:#66d9ef">print</span>(e)
+    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;code&#39;</span>: <span style="color:#ae81ff">10001</span>, <span style="color:#e6db74">&#39;msg&#39;</span>: <span style="color:#e6db74">&#34; Fail update car&#39;s record &#34;</span>}
+
+<span style="color:#75715e"># 删除一条已受理的record记录</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">del_record</span>(db: Session, record_id: int):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :param record_id:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">try</span>:
+        record <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>query(Record)<span style="color:#f92672">.</span>get(record_id)
+        <span style="color:#66d9ef">if</span> record<span style="color:#f92672">.</span>dealt:
+            db<span style="color:#f92672">.</span>delete(record)
+            db<span style="color:#f92672">.</span>commit()
+            <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;code&#39;</span>: <span style="color:#ae81ff">10000</span>, <span style="color:#e6db74">&#39;msg&#39;</span>: <span style="color:#e6db74">&#34; Success del car&#39;s record &#34;</span>}
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+        <span style="color:#66d9ef">print</span>(e)
+    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;code&#39;</span>: <span style="color:#ae81ff">10001</span>, <span style="color:#e6db74">&#39;msg&#39;</span>: <span style="color:#e6db74">&#34; Fail del car&#39;s record &#34;</span>}
+</code></pre></div><p>curd操作完成后，必不可少，会考虑到分页的需求。实现思路主要是，路由参数参数传递中添加page字段，传出参数中需要以下5个字段：</p>
+<ul>
+<li>count：总共页数</li>
+<li>currpage：当前页码</li>
+<li>nexturl：下一页接口</li>
+<li>preurl：前一页接口</li>
+<li>record：查询的记录数据</li>
+</ul>
+<p>分页器实现代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">def pagenation(record, url, currage, count: int):
+    nextnum = int(count // 1) if (currage + 1) &gt;= count else currage + 1
+    prenum = 1 if (currage - 1) == 0 else currage - 1
+    nexturl = url + f&#34;page={nextnum}&#34;
+    preurl = url + f&#34;page={prenum}&#34;
+    if currage == 0:
+        currage = 1
+    if currage &gt;= count:
+        currage = count
+    latest = {
+        &#39;count&#39;: count,
+        &#39;currpage&#39;: currage,
+        &#39;nexturl&#39;: nexturl,
+        &#39;preurl&#39;: preurl,
+        &#34;records&#34;: record,
+    }
+    return latest
+
+</code></pre></div><h3 id="schemas模块的实现">schemas模块的实现</h3>
+<p>这个对于初学着看着有点摸不着头脑。这里简单描述：该部分完成的是对于路由函数（main.py里的函数）的接受和返回的数据进行规范。</p>
+<p>对下面代码进行简单描述：</p>
+<ul>
+<li>CarBase包含了从car中需要查询到的字段，并规定了每个字段的类型</li>
+<li>Car在CarBase基础上添加了orm_mode,可以实现orm模型</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List
+
+<span style="color:#f92672">from</span> pydantic <span style="color:#f92672">import</span> BaseModel
+<span style="color:#f92672">from</span> pydantic.schema <span style="color:#f92672">import</span> date
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CarBase</span>(BaseModel):
+    carno: str
+    owner: str
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>(CarBase):
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Config</span>:
+        orm_mode <span style="color:#f92672">=</span> True
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RecordBase</span>(BaseModel):
+    reason: str
+    makedate: date
+    punish: str
+    dealt: bool
+
+<span style="color:#75715e"># 这里car实现外键数据的Car化</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Record</span>(RecordBase):
+    id: int
+    car: Car
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Config</span>:
+        orm_mode <span style="color:#f92672">=</span> True
+
+<span style="color:#75715e"># latest是查询后接口返回的数据格式，recods这里获取到的数据是一个列表</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Latest</span>(BaseModel):
+    count: int
+    currpage: int
+    nexturl: str
+    preurl: str
+    records: List[Record]
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Config</span>:
+        orm_mode <span style="color:#f92672">=</span> True
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dealt</span>(BaseModel):
+    code: int
+    msg: str
+</code></pre></div><p>这里定义完成后的调用的关键字字段是response_model。</p>
+<h3 id="最终的mianpy">最终的mian.py</h3>
+<p>以上的工作完成的都是fastapi的周边工作，fastapi主要完成的是一个接口的实现，接口文档的自动生成（生成风格是swagger UI），在该文档中还可以实现接口的测试。</p>
+<p>主要实现的步骤如下：</p>
+<ul>
+<li>
+<p>定义Fsatapi对象</p>
+</li>
+<li>
+<p>在对象中以get，post，delete，patch +路由的形式定义接口</p>
+<p>例子：get（url ，name=“文档中的名字”，description=“具体的描述”，response_model=“schemas模块中的定义”）</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fastapi <span style="color:#f92672">import</span> FastAPI, Depends
+<span style="color:#f92672">from</span> pydantic.schema <span style="color:#f92672">import</span> date
+
+<span style="color:#75715e"># 使用sqlalchemy对数据库进行crud操作</span>
+<span style="color:#f92672">from</span> sqlalchemy.orm <span style="color:#f92672">import</span> Session
+
+<span style="color:#75715e"># 导入支持访问静态文件的相关包</span>
+<span style="color:#f92672">from</span> starlette.requests <span style="color:#f92672">import</span> Request
+<span style="color:#f92672">from</span> starlette.responses <span style="color:#f92672">import</span> FileResponse
+<span style="color:#f92672">from</span> starlette.staticfiles <span style="color:#f92672">import</span> StaticFiles
+
+<span style="color:#f92672">import</span> crud
+<span style="color:#f92672">import</span> schemas
+<span style="color:#f92672">from</span> database <span style="color:#f92672">import</span> SessionLocal
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_db</span>():
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    获取事务
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    db <span style="color:#f92672">=</span> SessionLocal()
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#66d9ef">yield</span> db
+    <span style="color:#66d9ef">finally</span>:
+        db<span style="color:#f92672">.</span>close()
+
+
+app <span style="color:#f92672">=</span> FastAPI()
+
+app<span style="color:#f92672">.</span>mount(<span style="color:#e6db74">&#34;/static&#34;</span>, StaticFiles(directory<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;static&#34;</span>))
+
+
+<span style="color:#a6e22e">@app.get</span>(<span style="color:#e6db74">&#34;/&#34;</span>)
+async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request: Request):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    :param request:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">return</span> FileResponse(<span style="color:#e6db74">&#39;./static/index.html&#39;</span>)
+
+
+<span style="color:#a6e22e">@app.get</span>(<span style="color:#e6db74">&#34;/api/car&#34;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;获取车辆信息&#34;</span>, description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;获取所有车辆信息&#34;</span>)
+async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_car</span>(db: Session <span style="color:#f92672">=</span> Depends(get_db)):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    car <span style="color:#f92672">=</span> crud<span style="color:#f92672">.</span>read_car(db)
+    <span style="color:#66d9ef">return</span> car
+
+
+<span style="color:#a6e22e">@app.get</span>(<span style="color:#e6db74">&#34;/api/record/&#34;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;获取所有违章记录&#34;</span>, description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;获取所有违章记录&#34;</span>, response_model<span style="color:#f92672">=</span>schemas<span style="color:#f92672">.</span>Latest)
+async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_all_record</span>(page: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, carno: str <span style="color:#f92672">=</span> None, start: date <span style="color:#f92672">=</span> None, end: date <span style="color:#f92672">=</span> None,
+                         db: Session <span style="color:#f92672">=</span> Depends(get_db)):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param page:
+</span><span style="color:#e6db74">    :param carno:
+</span><span style="color:#e6db74">    :param start:
+</span><span style="color:#e6db74">    :param end:
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    latest <span style="color:#f92672">=</span> crud<span style="color:#f92672">.</span>read_all_record(carno<span style="color:#f92672">=</span>carno, start<span style="color:#f92672">=</span>start, end<span style="color:#f92672">=</span>end, page<span style="color:#f92672">=</span>page, db<span style="color:#f92672">=</span>db)
+    <span style="color:#66d9ef">return</span> latest
+
+
+<span style="color:#a6e22e">@app.patch</span>(<span style="color:#e6db74">&#34;/api/record/{record_id}&#34;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;update car record&#34;</span>, description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;处理违章记录&#34;</span>, response_model<span style="color:#f92672">=</span>schemas<span style="color:#f92672">.</span>Dealt)
+async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dealt_record</span>(record_id: int, db: Session <span style="color:#f92672">=</span> Depends(get_db)):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param record_id:
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    dealt <span style="color:#f92672">=</span> crud<span style="color:#f92672">.</span>update_dealt(db<span style="color:#f92672">=</span>db, record_id<span style="color:#f92672">=</span>record_id)
+    <span style="color:#66d9ef">return</span> dealt
+
+
+<span style="color:#a6e22e">@app.delete</span>(<span style="color:#e6db74">&#34;/api/record/{record_id}&#34;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;del car record&#34;</span>, description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;删除违章记录&#34;</span>, response_model<span style="color:#f92672">=</span>schemas<span style="color:#f92672">.</span>Dealt)
+async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dealt_record</span>(record_id: int, db: Session <span style="color:#f92672">=</span> Depends(get_db)):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    :param record_id:
+</span><span style="color:#e6db74">    :param db:
+</span><span style="color:#e6db74">    :return:
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    dealt <span style="color:#f92672">=</span> crud<span style="color:#f92672">.</span>del_record(db<span style="color:#f92672">=</span>db, record_id<span style="color:#f92672">=</span>record_id)
+    <span style="color:#66d9ef">return</span> dealt
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    <span style="color:#f92672">import</span> uvicorn
+
+    <span style="color:#75715e"># uvicorn main: app --reload</span>
+    uvicorn<span style="color:#f92672">.</span>run(app, host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;127.0.0.1&#39;</span>, port<span style="color:#f92672">=</span><span style="color:#ae81ff">8000</span>)
+</code></pre></div><h3 id="想看到页面的必经之路">想看到页面的必经之路</h3>
+<p><img src="https://i.loli.net/2020/07/02/ZnK54EYtmGTx3gN.png" alt="image-20200702195733568" /></p>
+<p>fastapi本身是做接口的，就像数据操作需要sqlalchemy来实现，这里实现使用到的库是starlette==0.13.4。</p>
+<p>接口的页面的静态文件在我的仓库里，后端开发不需要为自己写前端文件啦。</p>
+<p>项目源代码在<a href="https://github.com/hhs44/fastapi_example">这里</a>。</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/web">web</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/categories/python">python</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/fastapi">fastapi</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/sqlalchemy">sqlalchemy</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://hhs44.github.io/tags/starlette">starlette</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+      
+<div>
+  <h2>说些什么</h2>
+    <form id="post-js-form" class="post-new-comment" method="POST">
+      
+      <h5 class='post-reply-notice hidden'>
+        <span class='post-reply-arrow'></span><span class='post-reply-name'></span>
+      </h5>
+
+      
+      <input type="hidden" name="options[entryId]" value="bb40c3f424d53c19b115bd580fd6d40c">
+      <input type='hidden' name='fields[replyThread]' value=''>
+      <input type='hidden' name='fields[replyID]' value=''>
+      <input type='hidden' name='fields[replyName]' value=''>
+
+      
+      <input required name='fields[name]' type='text' placeholder='您的名字（必填）'>
+      <input name='fields[website]' type='text' placeholder='您的网站'>
+      <input required name='fields[email]' type='email' placeholder='您的电邮地址（必填，用于 Gravatar 头象）'>
+      <textarea required name='fields[body]' placeholder='您的留言。可使用 Markdown。（搜索 &#39;Markdown 語法速查&#39;）' rows='10'></textarea>
+
+      
+      
+
+      
+      <p class='post-submit-notice'>
+        <strong class='post-submit-notice-text submit-success hidden'>感谢您的评论！被批准后它会立即在此站点展示。</strong>
+        <strong class='post-submit-notice-text submit-failed hidden'>很抱歉，您的提交存在错误。请确保所有必填字段都已填写正确，然后再试一次。</strong>
+      </p>
+
+      
+      <input type='submit' value='送出' class='button'>
+      <input type='submit' value='已送出' class='hidden button' disabled>
+      <input type='reset' value='重设' class='button'>
+    </form>
+</div>
+
+
+<div>
+  <h2>评论</h2>
+
+  
+    
+      <p>还沒有留言。</p>
+    
+  
+</div>
+
+    </article>
+
+
+<div class="pagination">
+  
+    <a href="/blog/yum&#43;anaconda%E5%B0%8F%E9%97%AE%E9%A2%98/" class="button"><div class="previous"><div>Yum&#43;anaconda小问题</div></div></a>
+  
+  
+</div>
+
+
+      </main>
+	  <div style="position: fixed; right:5px;max-width:300px; overflow:auto; top: 100px; width: 10vw; bottom:50px">
+	  <div class="post-toc">
+	 
+	<aside>
+		<header style="margin-left: 20px;">
+			<h3>Fastapi入门学习（一）的字数: 813</h3>
+		</header><nav id="TableOfContents">
+  <ul>
+    <li><a href="#fastapi入门学习一">fastapi入门学习（一）</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#fastapi的安装和简单案例">fastapi的安装和简单案例</a></li>
+            <li><a href="#最简单的fastapi只需要一个文件">最简单的fastapi只需要一个文件</a></li>
+            <li><a href="#车辆查询项目的项目结构">车辆查询项目的项目结构</a></li>
+            <li><a href="#完成数据库连接和模型构建部分">完成数据库连接和模型构建部分</a></li>
+            <li><a href="#curd操作">curd操作</a></li>
+            <li><a href="#schemas模块的实现">schemas模块的实现</a></li>
+            <li><a href="#最终的mianpy">最终的mian.py</a></li>
+            <li><a href="#想看到页面的必经之路">想看到页面的必经之路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</aside>
+	<a href="#" id="toc-toggle"></a>
+	 
+</div>
+
+	  </div>
+
+      
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最新文章</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" class="image featured">
+    
+      <img src="https://i.loli.net/2020/07/02/Np1dL9W36kqBzQJ.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">Fastapi入门学习（一）</a></h1>
+          <time class="published" datetime="">July 2, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/yum&#43;anaconda%E5%B0%8F%E9%97%AE%E9%A2%98/" class="image featured">
+    
+      <img src="https://i.loli.net/2020/06/17/C23MHoBE8OtTZdy.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/yum&#43;anaconda%E5%B0%8F%E9%97%AE%E9%A2%98/">Yum&#43;anaconda小问题</a></h1>
+          <time class="published" datetime="">June 17, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/" class="image featured">
+    
+      <img src="https://s3.amazonaws.com/rahmonov.me/post-images/python-gil/negan.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/gil_%E5%85%A8%E5%B1%80%E8%A7%A3%E9%87%8A%E9%94%81/">GIL_全局解释锁</a></h1>
+          <time class="published" datetime="">June 5, 2020</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">查看更多</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">分类</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">10</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web/">web<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/conda/">conda<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hexo/">hexo<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/jetbrain/">jetbrain<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/development/">development<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/golang/">golang<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/java/">java<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/syntax/">syntax<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/test/">test<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%B7%A5%E5%85%B7/">工具<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E9%80%9A%E4%BF%A1/">通信<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>关于</h1>
+      </header>
+      <p>test</p>
+      <footer>
+        <a href="/about" class="button">了解更多</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/hhs44/hhs44.github.io" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="weixin://contacts/profile/22" target="_blank" rel="noopener" title="WeChat" class="fab fa-weixin"></a></li>
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=1159986871&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:1159986871@qq.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Huanghs blog
+      
+    . <br>
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.66.0'>Hugo</a> 驱动
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b17fef5a58c033a8a59f57c83aa975a251aecff921cbd36c12e975d530fa023b.js" integrity="sha256-sX/vWljAM6iln1fIOql1olGuz/khy9NsEul11TD6Ajs="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

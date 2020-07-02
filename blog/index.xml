@@ -6,10 +6,33 @@
     <description>Recent content in Blogs on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 17 Jun 2020 14:07:42 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 20:09:25 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fastapi入门学习（一）</title>
+      <link>https://hhs44.github.io/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 02 Jul 2020 20:09:25 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/blog/fastapi%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description>fastapi入门学习（一） FastAPI框架是一个高性能，易于学习，高效编码，生产可用的python，web开发框架。
+但对于刚开始学习python不久的同学来说仅仅从官文学习，有一定的难度，并咩有那么易学。
+本篇主要从一个车辆违章查询的项目，以项目来驱动fastapi的学习。
+项目实现效果如下：
+查询页面展示：
+接口swagger ui界面：
+fastapi的安装和简单案例 fastapi框架的安装
+pip install fastapi 此外还需要一个能让项目跑起来的服务器，并且需要的是一个ASGI服务器
+pip install uvicorn 最简单的fastapi只需要一个文件 创建main.py：这里使用官方代码：
+from typing import Optional from fastapi import FastAPI app = FastAPI() @app.get(&amp;#34;/&amp;#34;) def read_root(): return {&amp;#34;Hello&amp;#34;: &amp;#34;World&amp;#34;} @app.get(&amp;#34;/items/{item_id}&amp;#34;) def read_item(item_id: int, q: Optional[str] = None): return {&amp;#34;item_id&amp;#34;: item_id, &amp;#34;q&amp;#34;: q} 保存好后在命令行运行服务器：
+uvicorn main:app --reload 访问路径 http://127.0.0.1:8000/docs/，就能看到你的第一个接口的接口文档，如下
+车辆查询项目的项目结构 本人也是对fastapi只是入门，对结构的理解暂时如下，该结构并不是一个完整web项目的需求。以后有机会再深入研究。
+一一介绍每个部分：
+ curd ：数据库的操作，使用sqlalchmey完成，curd即是创建（create），更新（update），读取（read），删除（delete）。 database：完成对数据库的连接。 main：路由函数的位置，可以和flask类比。 models：对数据库表结构类化，和curd，database部分的实现主要参考sqlalchmey。 pagnation：自定义的分页器，完成查询后数据的分页。 schemas：规范约束，响应的或者查询到数据。  完成数据库连接和模型构建部分 这里使用的是mysql，并且使用mysqlclient库，如果使用的pymysql可参见第二种写法，这里创建了database.py文件。
+from sqlalchemy import create_engine from sqlalchemy.</description>
+    </item>
     
     <item>
       <title>Yum&#43;anaconda小问题</title>

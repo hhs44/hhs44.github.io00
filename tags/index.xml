@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Huanghs blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 17 Jun 2020 14:07:42 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 20:09:25 +0800</lastBuildDate>
     
 	<atom:link href="https://hhs44.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>fastapi</title>
+      <link>https://hhs44.github.io/tags/fastapi/</link>
+      <pubDate>Thu, 02 Jul 2020 20:09:25 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/fastapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlalchemy</title>
+      <link>https://hhs44.github.io/tags/sqlalchemy/</link>
+      <pubDate>Thu, 02 Jul 2020 20:09:25 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/sqlalchemy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>starlette</title>
+      <link>https://hhs44.github.io/tags/starlette/</link>
+      <pubDate>Thu, 02 Jul 2020 20:09:25 +0800</pubDate>
+      
+      <guid>https://hhs44.github.io/tags/starlette/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>centos7</title>
